@@ -1,0 +1,187 @@
+{
+  "website_info": {
+    "url": "http://sentientbiotech.in/",
+    "title": "Welcome to Sentient Biotech | Sentient Biotech Private Limited",
+    "subtitle": "Neurotech and BCI Solutions",
+    "tagline": "For Your Mental Health",
+    "generated_by": "GitHub Pages",
+    "scraped_at": "2025-01-27"
+  },
+  "contact_information": {
+    "email": "jasmeetsngh19@gmail.com",
+    "phone": "+91-7070360676"
+  },
+  "main_page": {
+    "url": "http://sentientbiotech.in/",
+    "title": "Welcome to Sentient Biotech",
+    "subtitle": "Neurotech and BCI Solutions",
+    "main_heading": "For Your Mental Health",
+    "navigation_sections": [
+      {
+        "title": "Product",
+        "url": "/product/",
+        "description": "Information about company products"
+      },
+      {
+        "title": "What is BCI?",
+        "url": "/what-is-bci/",
+        "description": "Explanation of Brain-Computer Interface technology"
+      },
+      {
+        "title": "Equilibrium Psychology for All",
+        "url": "/eqp-for-all/",
+        "description": "Information about Equilibrium Psychology approach"
+      },
+      {
+        "title": "Mental Health for All",
+        "url": "/mental-health-for-all/",
+        "description": "Company's mission for accessible mental health"
+      }
+    ]
+  },
+  "product_page": {
+    "url": "http://sentientbiotech.in/product/",
+    "title": "Our Products",
+    "subtitle": "Neurotech and BCI Solutions",
+    "main_heading": "Our Innovative Products",
+    "description": "At Sentient Biotech, we are dedicated to creating cutting-edge neurotech solutions to improve mental and physical well-being.",
+    "products": [
+      {
+        "name": "EEG Headset",
+        "description": "Our neuroimaging headset is a state-of-the-art neurofeedback device designed to monitor and optimize brain activity. It's non-invasive modalities provides real-time neurofeedback for the enhancement of mental, emotional and cognitive abilities.",
+        "features": [
+          "State-of-the-art neurofeedback device",
+          "Monitors and optimizes brain activity",
+          "Non-invasive modalities",
+          "Real-time neurofeedback",
+          "Enhances mental, emotional and cognitive abilities"
+        ]
+      },
+      {
+        "name": "Smart Wrist Wearable",
+        "description": "Our smart wrist wearable combines biofeedback with advanced sensors to track and combine physical and mental well-being. It helps users manage stress, improve sleep, and monitor daily activities with ease.",
+        "features": [
+          "Combines biofeedback with advanced sensors",
+          "Tracks physical and mental well-being",
+          "Helps manage stress",
+          "Improves sleep quality",
+          "Monitors daily activities"
+        ]
+      }
+    ]
+  },
+  "bci_page": {
+    "url": "http://sentientbiotech.in/what-is-bci/",
+    "title": "What is BCI?",
+    "subtitle": "Neurotech and BCI Solutions",
+    "main_heading": "What is BCI?",
+    "content": [
+      "A Brain-Computer Interface (BCI) is a revolutionary technology that allows direct communication between the brain and external devices. BCIs capture brain signals and translate them into commands that can control digital systems or provide real-time feedback on brain activity.",
+      "At Sentient Biotech, we leverage this cutting-edge technology to monitor brainwave patterns via our EEG headset, enabling users to receive personalized neurofeedback.",
+      "Unlike traditional approaches to mental health, BCI systems offer non-invasive, real-time insights into cognitive states like focus, relaxation, and stress.",
+      "BCIs are transforming the fields of healthcare, wellness, and neurotherapy by empowering individuals to take control of their brain activity in ways that were previously unimaginable."
+    ],
+    "key_points": [
+      "Direct communication between brain and external devices",
+      "Captures brain signals and translates them into commands",
+      "Can control digital systems or provide real-time feedback",
+      "Non-invasive approach to mental health",
+      "Real-time insights into cognitive states",
+      "Transforms healthcare, wellness, and neurotherapy",
+      "Empowers individuals to control brain activity"
+    ]
+  },
+  "equilibrium_psychology_page": {
+    "url": "http://sentientbiotech.in/eqp-for-all/",
+    "title": "Equilibrium Psychology [EqP] for All",
+    "subtitle": "Neurotech and BCI Solutions",
+    "main_heading": "Equilibrium Psychology for All",
+    "content": [
+      "Equilibrium Psychology, developed from the foundational concept of Equilibrium Thinking, represents a novel approach in the field of psychology.",
+      "The transformative power of Equilibrium Thinking in overcoming personal adversities and promoting mental wellness has paved the way for a comprehensive psychological framework that balances both negative and positive aspects of human experience.",
+      "EQ Thinking works on the binary aspect of 0's and 1's, just like the modern machines. EQ Thinking is a dual-process approach encapsulated in the phrases \"be at it\" and \"beat it.\" These concepts form the bedrock of Equilibrium Psychology, a field that integrates elements of both positive and negative psychology to foster mental resilience and growth."
+    ],
+    "key_concepts": [
+      "Equilibrium Thinking as foundational concept",
+      "Novel approach in psychology",
+      "Balances negative and positive aspects of human experience",
+      "Binary approach (0's and 1's) like modern machines",
+      "Dual-process approach",
+      "Two key phrases: 'be at it' and 'beat it'",
+      "Integrates positive and negative psychology",
+      "Fosters mental resilience and growth"
+    ]
+  },
+  "mental_health_page": {
+    "url": "http://sentientbiotech.in/mental-health-for-all/",
+    "title": "Mental Health for All",
+    "subtitle": "Neurotech and BCI Solutions",
+    "main_heading": "Mental Health for All",
+    "content": [
+      "At Sentient Biotech, we believe that mental health is a fundamental right, not a luxury.",
+      "Unfortunately, many traditional approaches to mental well-being remain inaccessible to large segments of the population.",
+      "That's why our mission is to democratize access to mental health tools through non-invasive and affordable technology.",
+      "Our products combine neurofeedback and biofeedback, empowering users to manage their mental health in real-time, without the need for medications or costly interventions.",
+      "We aim to provide a holistic solution—one that addresses both the mind and the body—so everyone can achieve mental clarity, reduce stress, and improve their overall quality of life.",
+      "By making advanced neurotechnology accessible to all, we are paving the way for a future where mental health is not just an afterthought but a central part of everyday life."
+    ],
+    "mission_statement": "Democratize access to mental health tools through non-invasive and affordable technology",
+    "key_principles": [
+      "Mental health is a fundamental right, not a luxury",
+      "Traditional approaches are often inaccessible",
+      "Non-invasive and affordable technology solutions",
+      "Real-time mental health management",
+      "No need for medications or costly interventions",
+      "Holistic approach addressing mind and body",
+      "Achieve mental clarity and reduce stress",
+      "Improve overall quality of life",
+      "Make advanced neurotechnology accessible to all"
+    ]
+  },
+  "website_structure": {
+    "total_pages": 5,
+    "pages": [
+      {
+        "name": "Home",
+        "url": "http://sentientbiotech.in/",
+        "type": "main_page"
+      },
+      {
+        "name": "Products",
+        "url": "http://sentientbiotech.in/product/",
+        "type": "product_page"
+      },
+      {
+        "name": "What is BCI?",
+        "url": "http://sentientbiotech.in/what-is-bci/",
+        "type": "educational_page"
+      },
+      {
+        "name": "Equilibrium Psychology",
+        "url": "http://sentientbiotech.in/eqp-for-all/",
+        "type": "methodology_page"
+      },
+      {
+        "name": "Mental Health for All",
+        "url": "http://sentientbiotech.in/mental-health-for-all/",
+        "type": "mission_page"
+      }
+    ]
+  },
+  "screenshots": [
+    "/Users/amanbhogal/Desktop/starscream/starscream/.playwright-mcp/sentient-biotech-main-page.png",
+    "/Users/amanbhogal/Desktop/starscream/starscream/.playwright-mcp/sentient-biotech-product-page.png",
+    "/Users/amanbhogal/Desktop/starscream/starscream/.playwright-mcp/sentient-biotech-bci-page.png",
+    "/Users/amanbhogal/Desktop/starscream/starscream/.playwright-mcp/sentient-biotech-eqp-page.png",
+    "/Users/amanbhogal/Desktop/starscream/starscream/.playwright-mcp/sentient-biotech-mental-health-page.png"
+  ],
+  "scraping_metadata": {
+    "scraped_at": "2025-01-27",
+    "scraped_by": "AI Assistant",
+    "source_url": "http://sentientbiotech.in/",
+    "data_completeness": "Complete - All available pages scraped",
+    "total_pages_scraped": 5,
+    "screenshots_taken": 5,
+    "notes": "All main pages and sub-pages successfully scraped. Website is hosted on GitHub Pages."
+  }
+}

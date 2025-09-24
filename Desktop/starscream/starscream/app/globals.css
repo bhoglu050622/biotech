@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-glass-white-strong;
+  }
+  
+  body {
+    @apply bg-deep-indigo text-white font-inter antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-deep-indigo;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-electric-cyan/30 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-electric-cyan/50;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-glass-white backdrop-blur-xl border border-glass-white-strong;
+  }
+  
+  .glass-panel-strong {
+    @apply bg-glass-white-strong backdrop-blur-xl border border-electric-cyan/20;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-electric-cyan via-violet-accent to-soft-teal bg-clip-text text-transparent;
+  }
+  
+  .gradient-border {
+    @apply relative;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    @apply absolute inset-0 rounded-lg bg-gradient-to-r from-electric-cyan via-violet-accent to-soft-teal p-[1px];
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+  }
+  
+  .neural-glow {
+    box-shadow: 
+      0 0 20px rgba(0, 230, 255, 0.3),
+      0 0 40px rgba(170, 100, 255, 0.2),
+      inset 0 0 20px rgba(107, 225, 201, 0.1);
+  }
+  
+  .neural-glow-strong {
+    box-shadow: 
+      0 0 30px rgba(0, 230, 255, 0.5),
+      0 0 60px rgba(170, 100, 255, 0.3),
+      inset 0 0 30px rgba(107, 225, 201, 0.2);
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-electric-cyan to-violet-accent text-deep-indigo font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-electric-cyan/25 focus:outline-none focus:ring-2 focus:ring-electric-cyan/50;
+  }
+  
+  .btn-secondary {
+    @apply glass-panel text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 hover:bg-glass-white-strong hover:scale-105 focus:outline-none focus:ring-2 focus:ring-electric-cyan/50;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .glass-panel {
+      @apply bg-deep-indigo border-2 border-electric-cyan;
+    }
+    
+    .gradient-text {
+      @apply text-electric-cyan;
+    }
+  }
+}
+
+/* Custom animations for neural network effects */
+@keyframes neural-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes neural-flow {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.neural-pulse {
+  animation: neural-pulse 3s ease-in-out infinite;
+}
+
+.neural-flow {
+  animation: neural-flow 4s linear infinite;
+}
+
+/* Loading states */
+.loading-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
