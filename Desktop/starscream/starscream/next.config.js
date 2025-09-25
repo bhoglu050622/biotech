@@ -1,7 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['localhost', 'vercel.app'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'localhost',
+        port: '3000',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'vercel.app',
+        pathname: '/**',
+      },
+    ],
     formats: ['image/webp', 'image/avif'],
   },
   compiler: {
@@ -10,6 +22,8 @@ const nextConfig = {
   poweredByHeader: false,
   generateEtags: false,
   compress: true,
+  trailingSlash: false,
+  output: 'standalone',
 }
 
 module.exports = nextConfig
