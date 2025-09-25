@@ -4,12 +4,6 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'localhost',
-        port: '3000',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
         hostname: 'vercel.app',
         pathname: '/**',
       },
@@ -23,7 +17,6 @@ const nextConfig = {
   generateEtags: false,
   compress: true,
   trailingSlash: false,
-  output: 'standalone',
 }
 
 module.exports = nextConfig
