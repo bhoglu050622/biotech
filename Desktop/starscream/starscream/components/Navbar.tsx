@@ -10,6 +10,7 @@ const navItems = [
   { label: 'What is BCI?', href: '#how-it-works' },
   { label: 'Equilibrium Psychology', href: '#how-it-works' },
   { label: 'Mental Health for All', href: '#use-cases' },
+  { label: 'Starscream', href: '/starscream' },
 ]
 
 export default function Navbar() {
@@ -27,9 +28,15 @@ export default function Navbar() {
 
   const handleNavClick = (href: string) => {
     setIsMobileMenuOpen(false)
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+    if (href.startsWith('/')) {
+      // External route
+      window.location.href = href
+    } else {
+      // Internal anchor link
+      const element = document.querySelector(href)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
     }
   }
 
