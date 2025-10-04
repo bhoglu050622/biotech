@@ -196,11 +196,12 @@ export default function Navbar() {
 
 
             {/* Mobile Menu Button */}
-            <HamburgerButton
-              isOpen={isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden"
-            />
+            <div className="md:hidden">
+              <HamburgerButton
+                isOpen={isMobileMenuOpen}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              />
+            </div>
           </div>
         </div>
       </motion.nav>

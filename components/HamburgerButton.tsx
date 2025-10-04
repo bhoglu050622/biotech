@@ -13,14 +13,14 @@ export default function HamburgerButton({ isOpen, onClick, className = '' }: Ham
     <motion.button
       whileTap={{ scale: 0.95 }}
       onClick={onClick}
-      className={`p-2 glass-panel rounded-lg hover:bg-glass-white-strong transition-colors duration-200 ${className}`}
+      className={`p-2 glass-panel rounded-lg hover:bg-glass-white-strong transition-colors duration-200 border border-electric-cyan/30 ${className}`}
       aria-label={isOpen ? "Close menu" : "Open menu"}
       aria-expanded={isOpen}
     >
       <div className="w-6 h-6 relative">
         {/* Top line */}
         <motion.div
-          className="absolute top-1 left-0 w-6 h-0.5 bg-white rounded-full"
+          className="absolute top-1 left-0 w-6 h-0.5 bg-white rounded-full shadow-sm"
           animate={{
             rotate: isOpen ? 45 : 0,
             y: isOpen ? 6 : 0,
@@ -33,7 +33,7 @@ export default function HamburgerButton({ isOpen, onClick, className = '' }: Ham
         
         {/* Middle line */}
         <motion.div
-          className="absolute top-3 left-0 w-6 h-0.5 bg-white rounded-full"
+          className="absolute top-3 left-0 w-6 h-0.5 bg-white rounded-full shadow-sm"
           animate={{
             opacity: isOpen ? 0 : 1,
             scale: isOpen ? 0 : 1,
@@ -46,7 +46,7 @@ export default function HamburgerButton({ isOpen, onClick, className = '' }: Ham
         
         {/* Bottom line */}
         <motion.div
-          className="absolute top-5 left-0 w-6 h-0.5 bg-white rounded-full"
+          className="absolute top-5 left-0 w-6 h-0.5 bg-white rounded-full shadow-sm"
           animate={{
             rotate: isOpen ? -45 : 0,
             y: isOpen ? -6 : 0,
