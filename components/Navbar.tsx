@@ -41,10 +41,10 @@ const navItems = [
     label: 'Solutions', 
     href: '/solutions',
     dropdown: [
-      { label: 'Defense & Aerospace', href: '/solutions#defense-aerospace' },
-      { label: 'Healthcare', href: '/solutions#healthcare' },
-      { label: 'Research & Academia', href: '/solutions#research-academia' },
-      { label: 'Simulation & Training', href: '/solutions#simulation-training' }
+      { label: 'Defense & Aerospace', href: '/solutions/defense-aerospace' },
+      { label: 'Healthcare', href: '/solutions/healthcare' },
+      { label: 'Research & Academia', href: '/solutions/research-academia' },
+      { label: 'Simulation & Training', href: '/solutions/simulation-training' }
     ]
   },
   { 
