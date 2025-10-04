@@ -70,7 +70,7 @@ export default function MobileMenu({ navItems, isOpen, onClose }: MobileMenuProp
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.2, 0.8, 0.2, 1] }}
-            className="fixed inset-0 bg-deep-indigo/90 backdrop-blur-md z-[60] md:hidden"
+            className="fixed inset-0 bg-deep-indigo/90 backdrop-blur-md z-[80] md:hidden"
             onClick={onClose}
           />
 
@@ -86,7 +86,7 @@ export default function MobileMenu({ navItems, isOpen, onClose }: MobileMenuProp
               stiffness: 300,
               damping: 30
             }}
-            className="fixed top-0 left-0 right-0 bottom-0 z-[70] md:hidden overflow-y-auto"
+            className="fixed top-0 left-0 right-0 bottom-0 z-[90] md:hidden overflow-y-auto"
           >
             {/* Mobile Menu Content */}
             <div className="min-h-screen bg-deep-indigo/95 backdrop-blur-xl">
