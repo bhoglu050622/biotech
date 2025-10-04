@@ -7,7 +7,7 @@ import { ArrowRight, Play } from 'lucide-react'
 // import TextReveal from './TextReveal'
 
 export default function Hero() {
-  const handleGetAccess = () => {
+  const handleGetEarlyAccess = () => {
     // Scroll to CTA section or open modal
     const ctaSection = document.querySelector('#cta-section')
     if (ctaSection) {
@@ -15,7 +15,7 @@ export default function Hero() {
     }
   }
 
-  const handleViewSpecifications = () => {
+  const handleSeeTheTech = () => {
     // Scroll to how it works section
     const howItWorksSection = document.querySelector('#how-it-works')
     if (howItWorksSection) {
@@ -27,25 +27,16 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Advanced Background Animation System */}
       <div className="absolute inset-0">
-        {/* Military tactical background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-military-dark via-military-navy/50 to-military-steel/30" />
+        {/* Static gradient fallback */}
+        <div className="absolute inset-0 bg-gradient-to-br from-deep-indigo via-electric-cyan/5 to-violet-accent/5" />
         
-        {/* Military tactical grid overlay */}
-        <div className="absolute inset-0 opacity-20" style={{
-          backgroundImage: `
-            linear-gradient(rgba(212, 175, 55, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(212, 175, 55, 0.1) 1px, transparent 1px)
-          `,
-          backgroundSize: '50px 50px'
-        }} />
-        
-        {/* Military tactical gradient */}
+        {/* Simple animated gradient */}
         <motion.div
           animate={{
             background: [
-              'radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 70%)',
-              'radial-gradient(circle at 80% 70%, rgba(0, 206, 209, 0.1) 0%, transparent 70%)',
-              'radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 70%)'
+              'radial-gradient(circle at 20% 30%, rgba(0, 230, 255, 0.1) 0%, transparent 70%)',
+              'radial-gradient(circle at 80% 70%, rgba(170, 100, 255, 0.1) 0%, transparent 70%)',
+              'radial-gradient(circle at 20% 30%, rgba(0, 230, 255, 0.1) 0%, transparent 70%)'
             ]
           }}
           transition={{
@@ -56,7 +47,7 @@ export default function Hero() {
           className="absolute inset-0"
         />
         
-        {/* Military tactical waveform */}
+        {/* Simple waveform */}
         <motion.svg
           className="absolute inset-0 w-full h-full opacity-30"
           viewBox="0 0 1000 300"
@@ -64,7 +55,7 @@ export default function Hero() {
         >
           <motion.path
             d="M 0 150 Q 250 100 500 150 T 1000 150"
-            stroke="#D4AF37"
+            stroke="#00E6FF"
             strokeWidth="1"
             fill="none"
             animate={{
@@ -92,33 +83,33 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
             className="text-center lg:text-left"
           >
-            {/* Military Neurotech Headline */}
+            {/* Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl military-heading leading-tight mb-6"
+              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight mb-6"
             >
-              <span className="military-gradient-text text-balance">
+              <span className="gradient-text text-balance">
                 Neurotech for
               </span>
               <br />
-              <span className="text-military-white">
+              <span className="text-white">
                 Everyday Well-Being
               </span>
             </motion.h1>
 
-            {/* Enhanced Subheadline */}
+            {/* Subheadline */}
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
-              className="text-lg sm:text-xl military-text leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0"
+              className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0"
             >
-              Advanced neurotechnology solutions that bridge military-grade precision with everyday wellness. Non-invasive brain-computer interfaces designed for optimal human performance and well-being.
+              Non-invasive BCI & biofeedback that helps you understand and improve your mind and body — real-time, accessible, humane.
             </motion.p>
 
-            {/* Neurotech CTAs */}
+            {/* CTAs */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -126,10 +117,10 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12"
             >
               <motion.button
-                whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(212, 175, 55, 0.3)" }}
+                whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0, 230, 255, 0.3)" }}
                 whileTap={{ scale: 0.95 }}
-                onClick={handleGetAccess}
-                className="btn-military-primary flex items-center justify-center space-x-2 text-lg px-8 py-4"
+                onClick={handleGetEarlyAccess}
+                className="btn-primary flex items-center justify-center space-x-2 text-lg px-8 py-4"
               >
                 <span>Get Early Access</span>
                 <ArrowRight className="w-5 h-5" />
@@ -138,32 +129,32 @@ export default function Hero() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={handleViewSpecifications}
-                className="btn-military-secondary flex items-center justify-center space-x-2 text-lg px-8 py-4"
+                onClick={handleSeeTheTech}
+                className="btn-secondary flex items-center justify-center space-x-2 text-lg px-8 py-4"
               >
                 <Play className="w-5 h-5" />
-                <span>See the Technology</span>
+                <span>See the Tech</span>
               </motion.button>
             </motion.div>
 
-            {/* Neurotech Status Indicators */}
+            {/* Trust Indicators */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm military-text"
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-white/60"
             >
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-military-green rounded-full status-operational"></div>
+                <div className="w-2 h-2 bg-electric-cyan rounded-full neural-pulse"></div>
                 <span>Non-invasive Technology</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-military-gold rounded-full status-operational"></div>
+                <div className="w-2 h-2 bg-violet-accent rounded-full neural-pulse"></div>
                 <span>Real-time Feedback</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-military-cyan rounded-full status-operational"></div>
-                <span>Privacy-First Design</span>
+                <div className="w-2 h-2 bg-soft-teal rounded-full neural-pulse"></div>
+                <span>Privacy-First</span>
               </div>
             </motion.div>
           </motion.div>
@@ -190,42 +181,42 @@ export default function Hero() {
                 }}
                 className="relative z-10"
               >
-                {/* Military System Mockup */}
+                {/* Device Mockup */}
                 <div className="relative">
-                  {/* Main system interface */}
-                  <div className="w-80 h-48 mx-auto military-panel-strong rounded-2xl p-8 military-glow">
+                  {/* Main device body */}
+                  <div className="w-80 h-48 mx-auto glass-panel-strong rounded-2xl p-8 neural-glow">
                     <div className="flex flex-col items-center space-y-4">
-                      {/* Military system visual representation */}
-                      <div className="w-24 h-16 bg-gradient-to-br from-military-gold/30 to-military-cyan/30 rounded-lg flex items-center justify-center">
-                        <div className="w-8 h-8 bg-military-navy/20 rounded-full flex items-center justify-center">
-                          <div className="w-4 h-4 bg-military-gold rounded-full status-operational"></div>
+                      {/* Device visual representation */}
+                      <div className="w-24 h-16 bg-gradient-to-br from-electric-cyan/30 to-violet-accent/30 rounded-lg flex items-center justify-center">
+                        <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                          <div className="w-4 h-4 bg-electric-cyan rounded-full neural-pulse"></div>
                         </div>
                       </div>
                       
-                      {/* Military status indicators */}
+                      {/* Status indicators */}
                       <div className="flex space-x-2">
-                        <div className="w-2 h-2 bg-military-green rounded-full status-operational"></div>
-                        <div className="w-2 h-2 bg-military-gold rounded-full status-operational" style={{ animationDelay: '0.5s' }}></div>
-                        <div className="w-2 h-2 bg-military-cyan rounded-full status-operational" style={{ animationDelay: '1s' }}></div>
+                        <div className="w-2 h-2 bg-electric-cyan rounded-full neural-pulse"></div>
+                        <div className="w-2 h-2 bg-violet-accent rounded-full neural-pulse" style={{ animationDelay: '0.5s' }}></div>
+                        <div className="w-2 h-2 bg-soft-teal rounded-full neural-pulse" style={{ animationDelay: '1s' }}></div>
                       </div>
                       
                       <div className="text-center">
-                        <h3 className="text-lg font-semibold military-subheading mb-1">NEUROTECH SYSTEM</h3>
-                        <p className="text-sm military-text">Advanced Brain-Computer Interface</p>
+                        <h3 className="text-lg font-semibold text-white mb-1">EEG Headset</h3>
+                        <p className="text-sm text-white/60">Real-time neurofeedback</p>
                       </div>
                     </div>
                   </div>
                   
-                  {/* Military tactical elements around system */}
+                  {/* Floating elements around device */}
                   <motion.div
                     animate={{ rotate: 360 }}
                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    className="absolute -top-4 -right-4 w-8 h-8 border border-military-gold/30 rounded-full"
+                    className="absolute -top-4 -right-4 w-8 h-8 border border-electric-cyan/30 rounded-full"
                   />
                   <motion.div
                     animate={{ rotate: -360 }}
                     transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                    className="absolute -bottom-4 -left-4 w-6 h-6 border border-military-cyan/30 rounded-full"
+                    className="absolute -bottom-4 -left-4 w-6 h-6 border border-violet-accent/30 rounded-full"
                   />
                 </div>
               </motion.div>
@@ -245,7 +236,7 @@ export default function Hero() {
                 >
                   <motion.path
                     d="M50 150 Q100 100 150 150 T250 150 T350 150"
-                    stroke="url(#militaryWaveGradient)"
+                    stroke="url(#waveGradient)"
                     strokeWidth="2"
                     fill="none"
                     initial={{ pathLength: 0 }}
@@ -253,10 +244,10 @@ export default function Hero() {
                     transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                   />
                   <defs>
-                    <linearGradient id="militaryWaveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#D4AF37" stopOpacity="0.8" />
-                      <stop offset="50%" stopColor="#00CED1" stopOpacity="0.6" />
-                      <stop offset="100%" stopColor="#7F8C8D" stopOpacity="0.8" />
+                    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#00E6FF" stopOpacity="0.8" />
+                      <stop offset="50%" stopColor="#AA64FF" stopOpacity="0.6" />
+                      <stop offset="100%" stopColor="#6BE1C9" stopOpacity="0.8" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -276,12 +267,12 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-military-gold/30 rounded-full flex justify-center"
+          className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-3 bg-military-gold rounded-full mt-2"
+            className="w-1 h-3 bg-electric-cyan rounded-full mt-2"
           />
         </motion.div>
       </motion.div>
