@@ -91,7 +91,7 @@ export default function MobileMenu({ navItems, isOpen, onClose }: MobileMenuProp
             {/* Mobile Menu Content */}
             <div className="min-h-screen bg-deep-indigo/95 backdrop-blur-xl">
               {/* Header with Close Button */}
-              <div className="flex items-center justify-between p-4 glass-panel-strong border-b border-glass-white-strong sticky top-0 z-10">
+              <div className="flex items-center justify-between p-4 glass-panel-strong border-b border-glass-white-strong sticky top-0 z-10 min-h-[72px]">
                 <div className="flex items-center space-x-2">
                   <div className="w-8 h-8 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-lg flex items-center justify-center">
                     <div className="w-4 h-4 bg-white rounded-full neural-pulse"></div>

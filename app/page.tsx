@@ -141,7 +141,7 @@ export default function HomePage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center pt-18 overflow-hidden">
         {/* Enhanced Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/50 to-indigo-900" />
