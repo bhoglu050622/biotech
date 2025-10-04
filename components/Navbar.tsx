@@ -108,7 +108,7 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.2, 0.8, 0.2, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-[80] transition-all duration-300 ${
           isScrolled 
             ? 'h-14 glass-panel-strong shadow-lg shadow-electric-cyan/10' 
             : 'h-18 bg-transparent'

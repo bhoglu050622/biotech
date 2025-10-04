@@ -70,47 +70,49 @@ export default function MobileMenu({ navItems, isOpen, onClose }: MobileMenuProp
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.2, 0.8, 0.2, 1] }}
-            className="fixed inset-0 bg-deep-indigo/90 backdrop-blur-md z-40"
+            className="fixed inset-0 bg-deep-indigo/90 backdrop-blur-md z-[60] md:hidden"
             onClick={onClose}
           />
 
-            {/* Mobile Menu Panel */}
-            <motion.div
-              initial={{ opacity: 0, y: -20, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -20, scale: 0.95 }}
-              transition={{ 
-                duration: 0.4, 
-                ease: [0.2, 0.8, 0.2, 1],
-                type: "spring",
-                stiffness: 300,
-                damping: 30
-              }}
-              className="fixed top-[72px] left-0 right-0 bottom-0 z-50 md:hidden"
-            >
-            {/* Header with Close Button */}
-            <div className="flex items-center justify-between p-4 glass-panel-strong border-b border-glass-white-strong">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-lg flex items-center justify-center">
-                  <div className="w-4 h-4 bg-white rounded-full neural-pulse"></div>
+          {/* Mobile Menu Panel */}
+          <motion.div
+            initial={{ opacity: 0, y: -20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -20, scale: 0.95 }}
+            transition={{ 
+              duration: 0.4, 
+              ease: [0.2, 0.8, 0.2, 1],
+              type: "spring",
+              stiffness: 300,
+              damping: 30
+            }}
+            className="fixed top-0 left-0 right-0 bottom-0 z-[70] md:hidden overflow-y-auto"
+          >
+            {/* Mobile Menu Content */}
+            <div className="min-h-screen bg-deep-indigo/95 backdrop-blur-xl">
+              {/* Header with Close Button */}
+              <div className="flex items-center justify-between p-4 glass-panel-strong border-b border-glass-white-strong sticky top-0 z-10">
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-lg flex items-center justify-center">
+                    <div className="w-4 h-4 bg-white rounded-full neural-pulse"></div>
+                  </div>
+                  <span className="text-lg font-display font-bold gradient-text">
+                    Sentient Biotech
+                  </span>
                 </div>
-                <span className="text-lg font-display font-bold gradient-text">
-                  Sentient Biotech
-                </span>
+                
+                <motion.button
+                  whileTap={{ scale: 0.9 }}
+                  onClick={onClose}
+                  className="p-2 glass-panel rounded-lg hover:bg-glass-white-strong transition-colors duration-200"
+                  aria-label="Close menu"
+                >
+                  <X className="w-6 h-6 text-white" />
+                </motion.button>
               </div>
-              
-              <motion.button
-                whileTap={{ scale: 0.9 }}
-                onClick={onClose}
-                className="p-2 glass-panel rounded-lg hover:bg-glass-white-strong transition-colors duration-200"
-                aria-label="Close menu"
-              >
-                <X className="w-6 h-6 text-white" />
-              </motion.button>
-            </div>
 
-            {/* Navigation Items */}
-            <div className="glass-panel-strong h-full overflow-y-auto">
+              {/* Navigation Items */}
+              <div className="glass-panel-strong flex-1 overflow-y-auto">
               <div className="p-4 space-y-1">
                 {navItems.map((item, index) => (
                   <motion.div
@@ -217,6 +219,7 @@ export default function MobileMenu({ navItems, isOpen, onClose }: MobileMenuProp
                   </motion.a>
                 </div>
               </motion.div>
+              </div>
             </div>
           </motion.div>
         </>
