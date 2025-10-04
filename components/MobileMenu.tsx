@@ -21,7 +21,7 @@ export default function MobileMenu({ navItems, isOpen, onClose }: MobileMenuProp
   const router = useRouter()
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 
-  // Close menu on escape key
+  // Close menu on escape key and prevent body scroll
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -33,13 +33,28 @@ export default function MobileMenu({ navItems, isOpen, onClose }: MobileMenuProp
       document.addEventListener('keydown', handleEscape)
       // Prevent body scroll when menu is open
       document.body.style.overflow = 'hidden'
+      document.body.style.position = 'fixed'
+      document.body.style.width = '100%'
+      document.body.style.top = `-${window.scrollY}px`
     } else {
+      // Restore scroll position and body styles
+      const scrollY = document.body.style.top
       document.body.style.overflow = 'unset'
+      document.body.style.position = 'unset'
+      document.body.style.width = 'unset'
+      document.body.style.top = 'unset'
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || '0') * -1)
+      }
     }
 
     return () => {
       document.removeEventListener('keydown', handleEscape)
+      // Cleanup on unmount
       document.body.style.overflow = 'unset'
+      document.body.style.position = 'unset'
+      document.body.style.width = 'unset'
+      document.body.style.top = 'unset'
     }
   }, [isOpen, onClose])
 
@@ -70,11 +85,11 @@ export default function MobileMenu({ navItems, isOpen, onClose }: MobileMenuProp
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.2, 0.8, 0.2, 1] }}
-            className="fixed inset-0 bg-deep-indigo/90 backdrop-blur-md z-[80] md:hidden"
+            className="fixed inset-0 bg-black/60 backdrop-blur-md z-[90] md:hidden"
             onClick={onClose}
           />
 
-          {/* Mobile Menu Panel */}
+          {/* Mobile Menu Panel - Full Screen Overlay */}
           <motion.div
             initial={{ opacity: 0, y: -20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -86,10 +101,10 @@ export default function MobileMenu({ navItems, isOpen, onClose }: MobileMenuProp
               stiffness: 300,
               damping: 30
             }}
-            className="fixed top-0 left-0 right-0 bottom-0 z-[90] md:hidden overflow-y-auto"
+            className="fixed inset-0 z-[100] md:hidden flex flex-col"
           >
-            {/* Mobile Menu Content */}
-            <div className="min-h-screen bg-deep-indigo/95 backdrop-blur-xl">
+            {/* Mobile Menu Content - Full Screen */}
+            <div className="flex-1 bg-deep-indigo/95 backdrop-blur-xl overflow-y-auto">
               {/* Header with Close Button */}
               <div className="flex items-center justify-between p-4 glass-panel-strong border-b border-glass-white-strong sticky top-0 z-10 min-h-[72px]">
                 <div className="flex items-center space-x-2">
@@ -112,8 +127,8 @@ export default function MobileMenu({ navItems, isOpen, onClose }: MobileMenuProp
               </div>
 
               {/* Navigation Items */}
-              <div className="glass-panel-strong flex-1 overflow-y-auto">
-              <div className="p-4 space-y-1">
+              <div className="flex-1 overflow-y-auto">
+                <div className="p-4 space-y-1">
                 {navItems.map((item, index) => (
                   <motion.div
                     key={item.label}
@@ -219,8 +234,8 @@ export default function MobileMenu({ navItems, isOpen, onClose }: MobileMenuProp
                   </motion.a>
                 </div>
               </motion.div>
-              </div>
             </div>
+          </div>
           </motion.div>
         </>
       )}
