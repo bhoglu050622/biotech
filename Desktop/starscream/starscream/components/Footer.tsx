@@ -3,20 +3,56 @@
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, ExternalLink, Heart, ArrowUp } from 'lucide-react'
 
-const navigationLinks = [
-  { label: 'Product', href: '#products' },
-  { label: 'What is BCI?', href: '#how-it-works' },
-  { label: 'Equilibrium Psychology', href: '#how-it-works' },
-  { label: 'Mental Health for All', href: '#use-cases' },
-  { label: 'Privacy Policy', href: '/privacy' },
-  { label: 'Terms of Service', href: '/terms' }
+const footerSections = [
+  {
+    heading: 'Company',
+    links: [
+      { label: 'About Us', href: '/about' },
+      { label: 'Mission & Vision', href: '/about#mission-vision' },
+      { label: 'Investors', href: '/investors' },
+      { label: 'Careers', href: '/careers' },
+      { label: 'Contact Us', href: '/contact' }
+    ]
+  },
+  {
+    heading: 'Technologies & Products',
+    links: [
+      { label: 'Technologies', href: '/technologies' },
+      { label: 'Products', href: '/products' },
+      { label: 'Solutions', href: '/solutions' },
+      { label: 'Defense & Aerospace', href: '/solutions#defense-aerospace' },
+      { label: 'Healthcare', href: '/solutions#healthcare' }
+    ]
+  },
+  {
+    heading: 'Resources',
+    links: [
+      { label: 'News & Insights', href: '/news' },
+      { label: 'Case Studies', href: '/resources#case-studies' },
+      { label: 'Whitepapers', href: '/resources#whitepapers' },
+      { label: 'FAQs', href: '/resources#faqs' }
+    ]
+  },
+  {
+    heading: 'Support',
+    links: [
+      { label: 'Customer Support', href: '/resources#support' },
+      { label: 'Contact Us', href: '/contact' },
+      { label: 'Technical Support', href: '/resources#support' },
+      { label: 'Documentation', href: '/resources#documentation' }
+    ]
+  },
+  {
+    heading: 'Legal',
+    links: [
+      { label: 'Privacy Policy', href: '/privacy' },
+      { label: 'Terms of Use', href: '/terms' },
+      { label: 'Compliance & Certifications', href: '/compliance' },
+      { label: 'Disclaimer', href: '/disclaimer' }
+    ]
+  }
 ]
 
-const socialLinks = [
-  { label: 'GitHub', href: 'https://github.com/SentientBiotech/sentient-biotech.github.io', icon: ExternalLink },
-  { label: 'Email', href: 'mailto:jasmeetsngh19@gmail.com', icon: Mail },
-  { label: 'Phone', href: 'tel:+917070360676', icon: Phone }
-]
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -45,16 +81,16 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main Footer Content */}
         <div className="py-16">
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div className="space-y-12">
             {/* Company Info */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
               viewport={{ once: true }}
-              className="lg:col-span-1"
+              className="text-center"
             >
-              <div className="flex items-center space-x-3 mb-6">
+              <div className="flex items-center justify-center space-x-3 mb-6">
                 <div className="w-10 h-10 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-lg flex items-center justify-center">
                   <div className="w-6 h-6 bg-white rounded-full neural-pulse"></div>
                 </div>
@@ -62,138 +98,111 @@ export default function Footer() {
                   Sentient Biotech
                 </span>
               </div>
-
-              <p className="text-white/70 leading-relaxed mb-6">
-                Pioneering the next generation of neurotechnology to foster holistic well-being. 
-                We create innovative, non-invasive neuroimaging devices that bridge the gap between 
-                mind and body, making mental health accessible for all.
-              </p>
-
-              <div className="flex items-center space-x-2 text-white/60">
-                <Heart className="w-4 h-4 text-electric-cyan" />
-                <span className="text-sm">Made with care for humanity's mental wellness</span>
-              </div>
             </motion.div>
 
-            {/* Navigation Links */}
+            {/* Footer Sections - All in one block */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
               viewport={{ once: true }}
-              className="lg:col-span-1"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8"
             >
-              <h3 className="text-lg font-semibold text-white mb-6">Quick Links</h3>
-              <div className="grid grid-cols-2 gap-3">
-                {navigationLinks.map((link, index) => (
-                  <motion.button
-                    key={link.label}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1, duration: 0.5 }}
-                    viewport={{ once: true }}
-                    whileHover={{ x: 5, color: '#00E6FF' }}
-                    onClick={() => handleNavClick(link.href)}
-                    className="text-left text-white/70 hover:text-electric-cyan transition-colors duration-200 text-sm"
-                  >
-                    {link.label}
-                  </motion.button>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Contact Info */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
-              viewport={{ once: true }}
-              className="lg:col-span-1"
-            >
-              <h3 className="text-lg font-semibold text-white mb-6">Get in Touch</h3>
-              <div className="space-y-4">
-                {socialLinks.map((social, index) => {
-                  const IconComponent = social.icon
-                  return (
-                    <motion.a
-                      key={social.label}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1, duration: 0.5 }}
-                      viewport={{ once: true }}
-                      whileHover={{ x: 5, scale: 1.05 }}
-                      href={social.href}
-                      target={social.href.startsWith('http') ? '_blank' : undefined}
-                      rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className="flex items-center space-x-3 text-white/70 hover:text-electric-cyan transition-colors duration-200 group"
-                    >
-                      <div className="w-8 h-8 rounded-lg glass-panel flex items-center justify-center group-hover:bg-glass-white-strong transition-colors duration-200">
-                        <IconComponent className="w-4 h-4" />
-                      </div>
-                      <span className="text-sm">
-                        {social.label === 'Email' ? 'jasmeetsngh19@gmail.com' : 
-                         social.label === 'Phone' ? '+91-7070360676' : 
-                         social.label}
-                      </span>
-                    </motion.a>
-                  )
-                })}
-              </div>
-
-              <div className="mt-8 p-4 glass-panel rounded-lg">
-                <div className="flex items-center space-x-2 mb-2">
-                  <MapPin className="w-4 h-4 text-electric-cyan" />
-                  <span className="text-sm font-medium text-white">Location</span>
+              {footerSections.map((section, sectionIndex) => (
+                <div key={section.heading}>
+                  <h3 className="text-lg font-semibold text-white mb-6 text-center md:text-left">{section.heading}</h3>
+                  <div className="space-y-3">
+                    {section.links.map((link, linkIndex) => (
+                      <motion.button
+                        key={link.label}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ delay: (sectionIndex * 0.1) + (linkIndex * 0.05), duration: 0.5 }}
+                        viewport={{ once: true }}
+                        whileHover={{ x: 5, color: '#00E6FF' }}
+                        onClick={() => handleNavClick(link.href)}
+                        className="block text-center md:text-left text-white/70 hover:text-electric-cyan transition-colors duration-200 text-sm"
+                      >
+                        {link.label}
+                      </motion.button>
+                    ))}
+                  </div>
                 </div>
-                <p className="text-white/60 text-sm">
-                  India • Global Impact
-                </p>
-              </div>
+              ))}
             </motion.div>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="py-6 border-t border-glass-white-strong">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+          <div className="space-y-6">
+            {/* Contact Information */}
             <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-white/60 text-sm"
+              className="grid md:grid-cols-3 gap-6 text-center md:text-left"
             >
-              © 2024 Sentient Biotech Private Limited. All rights reserved.
+              <div>
+                <h4 className="text-white font-semibold mb-2">Registered Office</h4>
+                <p className="text-white/60 text-sm">
+                  SENTIENT BIOTECH PRIVATE LIMITED<br />
+                  VGN Coasta, 14th Floor, Flat No.B<br />
+                  Muttukadu, Chinglepet, Kanchipuram- 603112<br />
+                  Tamil Nadu
+                </p>
+              </div>
+              <div>
+                <h4 className="text-white font-semibold mb-2">Phone</h4>
+                <p className="text-white/60 text-sm">+91-7070360676</p>
+              </div>
+              <div>
+                <h4 className="text-white font-semibold mb-2">Email</h4>
+                <p className="text-white/60 text-sm">jasmeet@sentientbiotech.in</p>
+              </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              viewport={{ once: true }}
-              className="flex items-center space-x-6 text-white/60 text-sm"
-            >
-              <span>Privacy-first technology</span>
-              <span>•</span>
-              <span>Non-invasive solutions</span>
-              <span>•</span>
-              <span>Research-backed</span>
-            </motion.div>
+            <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="text-white/60 text-sm"
+              >
+                © 2024 Sentient Biotech Private Limited. All rights reserved.
+              </motion.div>
 
-            {/* Back to Top Button */}
-            <motion.button
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.1, y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={scrollToTop}
-              className="w-10 h-10 rounded-full glass-panel flex items-center justify-center hover:bg-glass-white-strong transition-all duration-200 group"
-              aria-label="Back to top"
-            >
-              <ArrowUp className="w-5 h-5 text-white group-hover:text-electric-cyan transition-colors duration-200" />
-            </motion.button>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.8 }}
+                viewport={{ once: true }}
+                className="flex items-center space-x-6 text-white/60 text-sm"
+              >
+                <span>Privacy-first technology</span>
+                <span>•</span>
+                <span>Non-invasive solutions</span>
+                <span>•</span>
+                <span>Research-backed</span>
+              </motion.div>
+
+              {/* Back to Top Button */}
+              <motion.button
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={scrollToTop}
+                className="w-10 h-10 rounded-full glass-panel flex items-center justify-center hover:bg-glass-white-strong transition-all duration-200 group"
+                aria-label="Back to top"
+              >
+                <ArrowUp className="w-5 h-5 text-white group-hover:text-electric-cyan transition-colors duration-200" />
+              </motion.button>
+            </div>
           </div>
         </div>
       </div>
