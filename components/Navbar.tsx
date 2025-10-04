@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Mail, Phone, ChevronDown } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { useRouter } from 'next/navigation'
+import MobileMenu from './MobileMenu'
+import HamburgerButton from './HamburgerButton'
 // Theme toggle removed - keeping dark theme only
 
 const navItems = [
@@ -194,148 +196,21 @@ export default function Navbar() {
 
 
             {/* Mobile Menu Button */}
-            <motion.button
-              whileTap={{ scale: 0.95 }}
+            <HamburgerButton
+              isOpen={isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 glass-panel rounded-lg"
-              aria-label="Toggle menu"
-              aria-expanded={isMobileMenuOpen}
-            >
-              <AnimatePresence mode="wait">
-                {isMobileMenuOpen ? (
-                  <motion.div
-                    key="close"
-                    initial={{ rotate: -90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: 90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <X className="w-6 h-6 text-white" />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="menu"
-                    initial={{ rotate: 90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: -90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Menu className="w-6 h-6 text-white" />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.button>
+              className="md:hidden"
+            />
           </div>
         </div>
       </motion.nav>
 
-      {/* Mobile Menu Overlay */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-deep-indigo/80 backdrop-blur-sm z-40 md:hidden"
-              onClick={() => setIsMobileMenuOpen(false)}
-            />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: -20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: -20 }}
-              transition={{ duration: 0.3, ease: [0.2, 0.8, 0.2, 1] }}
-              className="fixed top-20 left-4 right-4 glass-panel-strong rounded-2xl p-6 z-50 md:hidden"
-            >
-              <div className="space-y-6">
-                {navItems.map((item, index) => (
-                  <div key={item.label}>
-                    <motion.button
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1, duration: 0.3 }}
-                      onClick={() => {
-                        if (item.dropdown) {
-                          setActiveDropdown(activeDropdown === item.label ? null : item.label)
-                        } else {
-                          handleNavClick(item.href)
-                        }
-                      }}
-                      className="flex items-center justify-between w-full text-left text-lg font-medium text-white hover:text-electric-cyan transition-colors duration-200 py-2"
-                    >
-                      <span>{item.label}</span>
-                      {item.dropdown && (
-                        <ChevronDown 
-                          className={`w-5 h-5 transition-transform duration-200 ${
-                            activeDropdown === item.label ? 'rotate-180' : ''
-                          }`} 
-                        />
-                      )}
-                    </motion.button>
-                    
-                    {/* Mobile Dropdown */}
-                    {item.dropdown && (
-                      <AnimatePresence>
-                        {activeDropdown === item.label && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3 }}
-                            className="overflow-hidden"
-                          >
-                            <div className="pl-4 space-y-2 mt-2">
-                              {item.dropdown.map((dropdownItem, dropdownIndex) => (
-                                <motion.button
-                                  key={dropdownItem.label}
-                                  initial={{ opacity: 0, x: -10 }}
-                                  animate={{ opacity: 1, x: 0 }}
-                                  transition={{ delay: dropdownIndex * 0.05 }}
-                                  onClick={() => handleNavClick(dropdownItem.href)}
-                                  className="block w-full text-left text-base text-white/80 hover:text-electric-cyan transition-colors duration-200 py-2"
-                                >
-                                  {dropdownItem.label}
-                                </motion.button>
-                              ))}
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    )}
-                  </div>
-                ))}
-                <div className="pt-4 border-t border-glass-white-strong">
-                  <div className="flex space-x-4">
-                    <motion.a
-                      href="mailto:jasmeet@sentientbiotech.in"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.5, duration: 0.3 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="flex-1 flex items-center justify-center space-x-2 glass-panel rounded-lg py-3 hover:bg-glass-white-strong transition-colors duration-200"
-                    >
-                      <Mail className="w-5 h-5 text-electric-cyan" />
-                      <span className="text-sm font-medium">Email</span>
-                    </motion.a>
-                    <motion.a
-                      href="tel:+917070360676"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.6, duration: 0.3 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="flex-1 flex items-center justify-center space-x-2 glass-panel rounded-lg py-3 hover:bg-glass-white-strong transition-colors duration-200"
-                    >
-                      <Phone className="w-5 h-5 text-electric-cyan" />
-                      <span className="text-sm font-medium">Call</span>
-                    </motion.a>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+      {/* Mobile Menu */}
+      <MobileMenu
+        navItems={navItems}
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+      />
     </>
   )
 }
