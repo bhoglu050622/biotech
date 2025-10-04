@@ -74,20 +74,20 @@ export default function MobileMenu({ navItems, isOpen, onClose }: MobileMenuProp
             onClick={onClose}
           />
 
-          {/* Mobile Menu Panel */}
-          <motion.div
-            initial={{ opacity: 0, y: -20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -20, scale: 0.95 }}
-            transition={{ 
-              duration: 0.4, 
-              ease: [0.2, 0.8, 0.2, 1],
-              type: "spring",
-              stiffness: 300,
-              damping: 30
-            }}
-            className="fixed top-0 left-0 right-0 z-50 md:hidden"
-          >
+            {/* Mobile Menu Panel */}
+            <motion.div
+              initial={{ opacity: 0, y: -20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -20, scale: 0.95 }}
+              transition={{ 
+                duration: 0.4, 
+                ease: [0.2, 0.8, 0.2, 1],
+                type: "spring",
+                stiffness: 300,
+                damping: 30
+              }}
+              className="fixed top-[72px] left-0 right-0 bottom-0 z-50 md:hidden"
+            >
             {/* Header with Close Button */}
             <div className="flex items-center justify-between p-4 glass-panel-strong border-b border-glass-white-strong">
               <div className="flex items-center space-x-2">
@@ -110,7 +110,7 @@ export default function MobileMenu({ navItems, isOpen, onClose }: MobileMenuProp
             </div>
 
             {/* Navigation Items */}
-            <div className="glass-panel-strong max-h-[calc(100vh-80px)] overflow-y-auto">
+            <div className="glass-panel-strong h-full overflow-y-auto">
               <div className="p-4 space-y-1">
                 {navItems.map((item, index) => (
                   <motion.div
