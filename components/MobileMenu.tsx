@@ -85,7 +85,7 @@ export default function MobileMenu({ navItems, isOpen, onClose }: MobileMenuProp
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.2, 0.8, 0.2, 1] }}
-            className="fixed inset-0 bg-black/60 backdrop-blur-md z-[90] md:hidden"
+            className="fixed inset-0 bg-black/70 backdrop-blur-lg z-[90] md:hidden"
             onClick={onClose}
           />
 
@@ -104,9 +104,9 @@ export default function MobileMenu({ navItems, isOpen, onClose }: MobileMenuProp
             className="fixed inset-0 z-[100] md:hidden flex flex-col"
           >
             {/* Mobile Menu Content - Full Screen */}
-            <div className="flex-1 bg-deep-indigo/95 backdrop-blur-xl overflow-y-auto">
+            <div className="flex-1 bg-deep-indigo/98 backdrop-blur-xl overflow-y-auto min-h-screen">
               {/* Header with Close Button */}
-              <div className="flex items-center justify-between p-4 glass-panel-strong border-b border-glass-white-strong sticky top-0 z-10 min-h-[72px]">
+              <div className="flex items-center justify-between p-4 bg-deep-indigo/95 backdrop-blur-xl border-b border-electric-cyan/20 sticky top-0 z-10 min-h-[72px]">
                 <div className="flex items-center space-x-2">
                   <div className="w-8 h-8 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-lg flex items-center justify-center">
                     <div className="w-4 h-4 bg-white rounded-full neural-pulse"></div>
@@ -127,7 +127,7 @@ export default function MobileMenu({ navItems, isOpen, onClose }: MobileMenuProp
               </div>
 
               {/* Navigation Items */}
-              <div className="flex-1 overflow-y-auto">
+              <div className="flex-1 overflow-y-auto bg-deep-indigo/95">
                 <div className="p-4 space-y-1">
                 {navItems.map((item, index) => (
                   <motion.div
@@ -212,7 +212,7 @@ export default function MobileMenu({ navItems, isOpen, onClose }: MobileMenuProp
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.3 }}
-                className="p-4 border-t border-glass-white-strong/20"
+                className="p-4 border-t border-electric-cyan/20 bg-deep-indigo/95 backdrop-blur-xl"
               >
                 <div className="grid grid-cols-2 gap-3">
                   <motion.a
