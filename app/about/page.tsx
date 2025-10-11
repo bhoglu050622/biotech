@@ -23,97 +23,82 @@ import {
 
 const milestones = [
   {
-    year: '2020',
+    year: 'July 2024',
     title: 'Company Founded',
-    description: 'Sentient Biotech Private Limited established with vision to revolutionize neurotechnology',
+    description: 'Sentient Biotech Private Limited was established with a vision to revolutionize biotechnology and neurotechnology',
     icon: Building2
   },
   {
-    year: '2021',
-    title: 'First EEG Prototype',
-    description: 'Developed breakthrough non-invasive EEG monitoring system for pilot applications',
+    year: 'December 2024',
+    title: 'Partnership',
+    description: 'Sentient Biotech Private Limited gets incubated at IIT Mandi, Himachal Pradesh',
+    icon: GraduationCap
+  },
+  {
+    year: 'April 2025',
+    title: 'First Clinical Neuroimaging Prototype',
+    description: 'Developed first iteration of a clinical grade non-invasive neuroimaging system',
     icon: Brain
   },
   {
-    year: '2022',
-    title: 'IAF Partnership',
-    description: 'Strategic collaboration with Indian Air Force for pilot headgear development',
+    year: 'October 2025',
+    title: 'Pilot Headgear Solutions',
+    description: 'Prototype Development for a Next-Gen Pilot Headgear enters final stage',
     icon: Shield
-  },
-  {
-    year: '2023',
-    title: 'DRDO Certification',
-    description: 'Achieved DRDO certification for defense-grade neurotechnology solutions',
-    icon: Award
-  },
-  {
-    year: '2024',
-    title: 'Global Expansion',
-    description: 'Expanding operations internationally with focus on aerospace and healthcare',
-    icon: Globe
   }
 ]
 
 const teamMembers = [
   {
-    name: 'Dr. Jasmeet Singh',
-    role: 'Founder & CEO',
-    expertise: 'Neurotechnology & Aerospace Engineering',
-    experience: '15+ years in defense R&D',
+    name: 'Dr. Prateep V. Philip',
+    role: 'Founder',
+    expertise: 'DGP IPS, Tamil Nadu [Retd.]',
+    experience: 'PhD, Founder of Equilibrium Psychology, 30+ years of IPS experience',
+    icon: Shield
+  },
+  {
+    name: 'Nikhil Pandey',
+    role: 'Defence Solutions Director',
+    expertise: '20+ years of experience in defence applications and solutions',
+    experience: 'Indian Army',
+    icon: Shield
+  },
+  {
+    name: 'Jasmeet Singh',
+    role: 'Co-Founder',
+    expertise: 'Doctoral Scholar in Neuroscience and Deep Learning',
+    experience: 'Head of Clinical Research',
     icon: Brain
   },
   {
-    name: 'Dr. Priya Sharma',
-    role: 'CTO',
-    expertise: 'Biomedical Signal Processing',
-    experience: '12+ years in EEG research',
+    name: 'Navneet Sharma',
+    role: 'Electrical and Electronics Engineer',
+    expertise: 'Head of Technological Development',
+    experience: 'Technology Development Lead',
     icon: Zap
-  },
-  {
-    name: 'Col. Rajesh Kumar (Retd.)',
-    role: 'Advisory Board',
-    expertise: 'Military Aviation & Safety',
-    experience: '25+ years IAF service',
-    icon: Shield
-  },
-  {
-    name: 'Dr. Anjali Patel',
-    role: 'Head of Research',
-    expertise: 'Cognitive Neuroscience',
-    experience: '10+ years in brain research',
-    icon: Target
   }
 ]
 
-const certifications = [
-  'ISO 13485:2016 - Medical Devices Quality Management',
-  'ISO 27001:2013 - Information Security Management',
-  'CE Marking - European Conformity',
-  'FDA 510(k) Clearance - Medical Device',
-  'DRDO Certification - Defense Applications',
-  'IAF Approved Supplier - Aerospace Components'
-]
-
-const values = [
+const coreValues = [
   {
-    title: 'Innovation Excellence',
-    description: 'Pioneering breakthrough technologies in neurotechnology and human-machine interfaces',
-    icon: Zap
-  },
-  {
-    title: 'Defense Commitment',
-    description: 'Dedicated to enhancing national security through advanced biometric monitoring solutions',
-    icon: Shield
-  },
-  {
-    title: 'Research Integrity',
-    description: 'Maintaining highest standards of scientific rigor and ethical research practices',
+    title: 'Scientific Integrity',
+    description: 'Every circuit, sensor, and algorithm is grounded in biotechnology and neuroscience. We build devices that honor data quality, reproducibility, and real human physiology',
     icon: Award
   },
   {
-    title: 'Global Impact',
-    description: 'Creating solutions that improve human performance and safety worldwide',
-    icon: Globe
+    title: 'Engineering with Empathy',
+    description: 'Technology should adapt to humans, not the other way around. Our hardware and software are designed for comfort, safety, and long-term usability across labs, clinics, and defense environments',
+    icon: Users
+  },
+  {
+    title: 'Ethical by Design',
+    description: 'We treat neural and physiological data as extensions of human identity. Privacy, consent, and secure on-device processing form the foundation of our every solution',
+    icon: Shield
+  },
+  {
+    title: 'Research and Purpose-Driven Innovation',
+    description: 'We create technology not just for performance, but for well-being—empowering researchers, clinicians, and pilots to understand and enhance the human experience',
+    icon: Target
   }
 ]
 
@@ -124,154 +109,101 @@ export default function AboutPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 overflow-hidden">
+      <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-display font-bold gradient-text mb-6">
-              About Sentient Biotech
+            <h1 className="text-5xl md:text-7xl font-display font-bold gradient-text mb-6">
+              About Us
             </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-              Pioneering the future of neurotechnology with cutting-edge EEG solutions and 
-              next-generation pilot headgear for defense and aerospace applications.
+            <p className="text-lg text-text-secondary max-w-3xl mx-auto">
+              Pioneering human-machine synergy through advanced biotechnology and neurotechnology
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-white/60">
-              <span className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-electric-cyan" />
-                DRDO Certified
-              </span>
-              <span className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-electric-cyan" />
-                IAF Approved
-              </span>
-              <span className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-electric-cyan" />
-                ISO 13485 Certified
-              </span>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* About Sentient Biotech */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="card-hover"
+          >
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-text-primary mb-8 text-center">
+              About Sentient Biotech
+            </h2>
+            <div className="space-y-6 text-text-secondary text-base leading-relaxed max-w-5xl mx-auto">
+              <p>
+                Founded in 2024, Sentient Biotech was born from a simple yet profound realization: the human brain remains the ultimate frontier. In an era of unprecedented technological advancement, our understanding of cognition, mental health, and human performance has yet to reach its full potential. We established ourselves with a vision to close that gap.
+              </p>
+              <p>
+                Our journey began with a dual-pronged approach, applying a unified core of neurotechnology and AI to two of humanity's most critical domains: healthcare and defense.
+              </p>
+              <p>
+                In our labs, we are simultaneously developing clinical-grade neuroimaging hardware for hospitals and creating sophisticated AI models to provide objective, data-driven insights into a spectrum of neuropsychiatric conditions.
+              </p>
+              <p>
+                At the same time, we are engineering the next-generation intelligent, helmet-mounted systems that provide a cognitive edge and enhanced situational awareness in high-stakes environments for the pilots of our nation.
+              </p>
+              <p className="text-text-primary font-medium text-lg">
+                Sentient Biotech is more than a technology company; we are a collective of scientists, engineers, and strategists driven by a common purpose. We are building the tools to decode the mind, pioneering a new era of understanding that will empower individuals, support clinicians, and strengthen national security.
+              </p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Company Overview */}
-      <section className="py-16">
+      {/* Our Journey Timeline */}
+      <section className="py-30 bg-glass-white backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="grid lg:grid-cols-2 gap-12 items-center"
+            className="text-center mb-16"
           >
-            <div>
-              <h2 className="text-3xl font-display font-bold text-white mb-6">
-                Leading Neurotechnology Innovation
-              </h2>
-              <p className="text-white/80 mb-6">
-                Sentient Biotech Private Limited stands at the forefront of neurotechnology innovation, 
-                specializing in advanced EEG solutions and next-generation pilot headgear systems. 
-                Our mission is to enhance human performance and safety through cutting-edge biometric 
-                monitoring technologies.
-              </p>
-              <p className="text-white/80 mb-8">
-                Based in Tamil Nadu, India, we serve defense, aerospace, healthcare, and research 
-                sectors with state-of-the-art solutions that meet the highest standards of quality, 
-                reliability, and performance.
-              </p>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-electric-cyan mb-2">15+</div>
-                  <div className="text-white/60">Years Experience</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-electric-cyan mb-2">50+</div>
-                  <div className="text-white/60">Projects Delivered</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-electric-cyan mb-2">100%</div>
-                  <div className="text-white/60">Client Satisfaction</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-electric-cyan mb-2">24/7</div>
-                  <div className="text-white/60">Support</div>
-                </div>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="glass-panel-strong rounded-2xl p-8">
-                <h3 className="text-xl font-semibold text-white mb-6">Our Expertise</h3>
-                <div className="space-y-4">
-                  {values.map((value, index) => (
-                    <motion.div
-                      key={value.title}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1, duration: 0.5 }}
-                      viewport={{ once: true }}
-                      className="flex items-start space-x-3"
-                    >
-                      <div className="w-8 h-8 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-lg flex items-center justify-center flex-shrink-0">
-                        <value.icon className="w-4 h-4 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="text-white font-medium mb-1">{value.title}</h4>
-                        <p className="text-white/60 text-sm">{value.description}</p>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
+            <h2 className="text-4xl lg:text-5xl font-display font-bold text-text-primary mb-4">
               Our Journey
             </h2>
-            <p className="text-white/80 max-w-2xl mx-auto">
-              From startup to industry leader, our journey has been marked by innovation, 
-              partnerships, and breakthrough achievements.
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+              Key milestones in our mission to revolutionize biotechnology and neurotechnology
             </p>
           </motion.div>
           
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-electric-cyan to-violet-accent"></div>
-            <div className="space-y-12">
+          <div className="relative max-w-5xl mx-auto">
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-blue via-accent-blue to-light-blue rounded-full"></div>
+            <div className="space-y-16">
               {milestones.map((milestone, index) => (
                 <motion.div
                   key={milestone.year}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.2, duration: 0.6 }}
+                  transition={{ delay: index * 0.1, duration: 0.4 }}
                   viewport={{ once: true }}
                   className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                 >
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="glass-panel-strong rounded-xl p-6">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <milestone.icon className="w-6 h-6 text-electric-cyan" />
-                        <span className="text-electric-cyan font-bold">{milestone.year}</span>
+                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12 text-right' : 'pl-12 text-left'}`}>
+                    <div className="card-hover group">
+                      <div className={`flex items-center space-x-3 mb-4 ${index % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
+                        <div className="w-10 h-10 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-lg flex items-center justify-center shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
+                          <milestone.icon className="w-5 h-5 text-white" />
+                        </div>
+                        <span className="text-primary-blue font-bold text-lg">{milestone.year}</span>
                       </div>
-                      <h3 className="text-white font-semibold mb-2">{milestone.title}</h3>
-                      <p className="text-white/70 text-sm">{milestone.description}</p>
+                      <h3 className="text-text-primary font-semibold text-lg mb-2">{milestone.title}</h3>
+                      <p className="text-text-secondary text-sm leading-relaxed">{milestone.description}</p>
                     </div>
                   </div>
-                  <div className="w-4 h-4 bg-electric-cyan rounded-full border-4 border-deep-indigo flex-shrink-0"></div>
+                  <div className="w-5 h-5 bg-primary-blue rounded-full border-4 border-deep-indigo flex-shrink-0 shadow-blue z-10"></div>
                   <div className="w-1/2"></div>
                 </motion.div>
               ))}
@@ -280,22 +212,21 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-16">
+      {/* Meet Our Team */}
+      <section className="py-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
-              Leadership Team
+            <h2 className="text-4xl lg:text-5xl font-display font-bold text-text-primary mb-4">
+              Meet Our Team
             </h2>
-            <p className="text-white/80 max-w-2xl mx-auto">
-              Our team combines deep expertise in neurotechnology, aerospace engineering, 
-              and defense applications to deliver cutting-edge solutions.
+            <p className="text-lg text-text-secondary max-w-3xl mx-auto">
+              Experts in Biotechnology, Neuroscience, Engineering, and Defense technology working together to push the boundaries of Human-Machine synergy
             </p>
           </motion.div>
           
@@ -303,92 +234,173 @@ export default function AboutPage() {
             {teamMembers.map((member, index) => (
               <motion.div
                 key={member.name}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
+                transition={{ delay: index * 0.08, duration: 0.4 }}
                 viewport={{ once: true }}
-                className="glass-panel-strong rounded-xl p-6 text-center"
+                className="card-hover group text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <member.icon className="w-8 h-8 text-white" />
+                <div className="w-20 h-20 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
+                  <member.icon className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-white font-semibold mb-1">{member.name}</h3>
-                <p className="text-electric-cyan text-sm mb-2">{member.role}</p>
-                <p className="text-white/60 text-xs mb-2">{member.expertise}</p>
-                <p className="text-white/50 text-xs">{member.experience}</p>
+                <h3 className="text-text-primary font-semibold text-lg mb-2">{member.name}</h3>
+                <p className="text-primary-blue text-sm mb-3 font-medium">{member.role}</p>
+                <p className="text-text-secondary text-sm mb-2 leading-relaxed">{member.expertise}</p>
+                <p className="text-text-tertiary text-xs">{member.experience}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Certifications */}
-      <section className="py-16">
+      {/* Our Core Values */}
+      <section className="py-30 bg-glass-white backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
-              Certifications & Standards
+            <h2 className="text-4xl lg:text-5xl font-display font-bold text-text-primary mb-4">
+              Our Core Values
             </h2>
-            <p className="text-white/80 max-w-2xl mx-auto">
-              We maintain the highest standards of quality, security, and compliance 
-              across all our products and services.
+            <p className="text-lg text-text-secondary max-w-3xl mx-auto">
+              The principles that guide how we design, build, and deploy technology that connects biology, behavior, and data
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => (
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {coreValues.map((value, index) => (
               <motion.div
-                key={cert}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
+                key={value.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.4 }}
                 viewport={{ once: true }}
-                className="glass-panel-strong rounded-lg p-4 flex items-center space-x-3"
+                className="card-hover group"
               >
-                <CheckCircle className="w-5 h-5 text-electric-cyan flex-shrink-0" />
-                <span className="text-white/80 text-sm">{cert}</span>
+                <div className="flex items-start space-x-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center flex-shrink-0 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
+                    <value.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-display font-bold text-text-primary mb-3">{value.title}</h3>
+                    <p className="text-text-secondary leading-relaxed">{value.description}</p>
+                  </div>
+                </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl lg:text-5xl font-display font-bold text-text-primary mb-4">
+              Our Mission & Vision
+            </h2>
+          </motion.div>
+          
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Vision */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="card-hover group"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
+                  <Target className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-2xl font-display font-bold text-text-primary">Our Vision</h3>
+              </div>
+              <p className="text-text-secondary leading-relaxed">
+                We envision a future where brain health is proactive, not reactive. A world where mental and neurological conditions are understood with objective clarity, and where every individual has access to the tools to optimize their cognitive potential. We see a future where technology augments human capability in the most demanding environments, ensuring a safer and more secure world.
+              </p>
+            </motion.div>
+
+            {/* Mission */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
+              className="card-hover group"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-secondary-blue to-accent-blue rounded-xl flex items-center justify-center shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
+                  <Zap className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-2xl font-display font-bold text-text-primary">Our Mission</h3>
+              </div>
+              <p className="text-text-secondary leading-relaxed mb-6">
+                Our mission is to create an end-to-end ecosystem for neuro-centric biotechnology. We do this by:
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-success-green flex-shrink-0 mt-0.5" />
+                  <span className="text-text-secondary">Designing & Building next-generation, multi-modal hardware for clinical, consumer, and defense applications</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-success-green flex-shrink-0 mt-0.5" />
+                  <span className="text-text-secondary">Developing powerful, foundational AI models that translate complex biological signals into actionable intelligence</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-success-green flex-shrink-0 mt-0.5" />
+                  <span className="text-text-secondary">Deploying integrated solutions that provide unprecedented insights into the heart-brain axis, cognitive states, and neurological health</span>
+                </li>
+              </ul>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-30 bg-gradient-to-br from-primary-blue via-secondary-blue to-accent-blue relative overflow-hidden">
+        {/* Subtle Pattern Overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="glass-panel-strong rounded-2xl p-8 text-center"
+            className="text-center"
           >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
-              Partner with Us
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+              Ready to Transform Your Performance
             </h2>
-            <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-              Join us in revolutionizing neurotechnology and human-machine interfaces. 
-              Let's work together to create the future of biometric monitoring.
+            <p className="text-white/90 mb-10 max-w-2xl mx-auto text-base leading-relaxed">
+              Join industry leaders who are already using our products and solutions to enhance performance and drive innovation
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-primary"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-white text-primary-blue px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-gray-50 transition-all duration-200 focus-ring shadow-soft-lg"
               >
-                Contact Our Team
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <span>Contact Our Team</span>
+                <ArrowRight className="w-5 h-5" />
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-secondary"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-200 focus-ring"
               >
                 View Our Solutions
               </motion.button>

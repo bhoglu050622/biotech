@@ -32,18 +32,18 @@ export default function ParticleBackground() {
 
     const createParticles = () => {
       const particles: Particle[] = []
-      const particleCount = Math.min(50, Math.floor((canvas.width * canvas.height) / 15000))
+      const particleCount = Math.min(40, Math.floor((canvas.width * canvas.height) / 18000))
       
-      const colors = ['#00E6FF', '#AA64FF', '#6BE1C9']
+      const colors = ['#0066FF', '#2684FF', '#4C9AFF']
       
       for (let i = 0; i < particleCount; i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
-          size: Math.random() * 2 + 1,
-          opacity: Math.random() * 0.5 + 0.2,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+          size: Math.random() * 1.5 + 0.5,
+          opacity: Math.random() * 0.3 + 0.1,
           color: colors[Math.floor(Math.random() * colors.length)]
         })
       }
@@ -77,17 +77,17 @@ export default function ParticleBackground() {
         ctx.restore()
       })
 
-      // Draw connections
+      // Draw subtle connections
       particlesRef.current.forEach((particle, i) => {
         particlesRef.current.slice(i + 1).forEach(otherParticle => {
           const dx = particle.x - otherParticle.x
           const dy = particle.y - otherParticle.y
           const distance = Math.sqrt(dx * dx + dy * dy)
 
-          if (distance < 100) {
+          if (distance < 120) {
             ctx.save()
-            ctx.globalAlpha = (100 - distance) / 100 * 0.1
-            ctx.strokeStyle = '#00E6FF'
+            ctx.globalAlpha = (120 - distance) / 120 * 0.08
+            ctx.strokeStyle = '#0066FF'
             ctx.lineWidth = 0.5
             ctx.beginPath()
             ctx.moveTo(particle.x, particle.y)
@@ -137,9 +137,9 @@ export default function ParticleBackground() {
         style={{ background: 'transparent' }}
       />
       
-      {/* Gradient overlays for depth */}
-      <div className="absolute inset-0 bg-gradient-to-br from-deep-indigo/50 via-transparent to-deep-indigo/30" />
-      <div className="absolute inset-0 bg-gradient-to-t from-deep-indigo/20 via-transparent to-transparent" />
+      {/* Subtle gradient overlays */}
+      <div className="absolute inset-0 bg-gradient-to-br from-deep-indigo/40 via-transparent to-deep-indigo/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-deep-indigo via-transparent to-transparent" />
     </motion.div>
   )
 }

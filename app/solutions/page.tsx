@@ -5,139 +5,100 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ParticleBackground from '@/components/ParticleBackground'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { 
   Shield, 
   Heart, 
   Users, 
   Target, 
   CheckCircle, 
-  ArrowRight,
-  Brain,
-  Zap,
-  Award,
-  Globe,
-  Activity,
-  Monitor,
-  Headphones,
-  Cpu
+  ArrowRight
 } from 'lucide-react'
 
 const solutions = [
   {
     title: 'Defense & Aerospace',
-    description: 'Advanced neurotechnology solutions for military and aerospace applications',
+    tagline: 'Enhancing Mission Readiness and Operator Performance',
+    description: 'In the defense and aerospace sector, the margin for error is zero. The cognitive state of the operator is as critical as the capability of the machine. Sentient Biotech provides solutions engineered to enhance human performance, accelerate decision-making, and ensure the safety and effectiveness of personnel in the most demanding environments on Earth.',
     icon: Shield,
-    features: [
-      'Pilot performance monitoring',
-      'Cognitive load assessment',
-      'Mission-critical reliability',
-      'Real-time biometric analysis'
+    capabilities: [
+      {
+        title: 'Peak Operator Performance',
+        description: 'We provide real-time cognitive state monitoring for pilots, drone operators, and command-and-control staff. By objectively measuring cognitive load and fatigue, our systems help maintain peak performance and prevent skill degradation, ensuring operators are always mission-ready.'
+      },
+      {
+        title: 'Accelerated Decision-Making',
+        description: 'Our next-generation Human-Machine Interfaces (HMIs), reduce the cognitive burden on operators. By fusing complex data into an intuitive synthetic visual format, we enable faster, more accurate decisions when seconds matter.'
+      },
+      {
+        title: 'Optimized Training Protocols',
+        description: 'Our neuro-analytic tools can be integrated into training simulators to provide an unprecedented level of insight into skill acquisition. Instructors can objectively measure a trainee\'s cognitive state, identify optimal learning conditions, and personalize training for faster and more durable skill development.'
+      }
     ],
-    benefits: [
-      'Enhanced mission success rates',
-      'Improved pilot safety',
-      'Reduced cognitive fatigue',
-      'Better decision-making under pressure'
-    ],
-    applications: ['Military Aviation', 'Defense Operations', 'Training Simulation']
+    cta: 'Discuss your Operational Needs'
   },
   {
-    title: 'Healthcare',
-    description: 'Non-invasive neurotechnology for medical diagnostics and treatment',
+    title: 'Health',
+    tagline: 'Powering the Future of Objective Patient Care',
+    description: 'For too long, the diagnosis and treatment of neurological and psychiatric disorders have relied on subjective, observational methods. Sentient Biotech is at the forefront of a new paradigm, providing healthcare professionals with objective, data-driven tools to improve patient outcomes. Our solutions integrate seamlessly into clinical workflows, offering a new level of diagnostic clarity and confidence.',
     icon: Heart,
-    features: [
-      'Neurological diagnostics',
-      'Brain-computer interfaces',
-      'Rehabilitation support',
-      'Patient monitoring'
+    capabilities: [
+      {
+        title: 'Data-Driven Diagnosis',
+        description: 'Our deep learning powered diagnostic systems, provides clinicians with objective neuro-biomarkers to support the diagnosis of conditions like MDD, ADHD, and MCI. This leads to earlier, more accurate diagnoses and personalized treatment plans.'
+      },
+      {
+        title: 'Effective Treatment Monitoring',
+        description: 'By establishing a patient\'s neural baseline, our technology allows clinicians to objectively track their response to therapies over time. This provides clear, quantitative data on whether a treatment is working, allowing for timely adjustments to the care plan.'
+      },
+      {
+        title: 'Streamlined Clinic Operations',
+        description: 'For specialized centers like sleep clinics, our automated analysis platform drastically reduces the time and resources required for manual scoring of studies. This increases patient throughput and allows specialists to focus on interpretation and care.'
+      }
     ],
-    benefits: [
-      'Faster diagnosis times',
-      'Improved treatment outcomes',
-      'Enhanced patient comfort',
-      'Better clinical insights'
-    ],
-    applications: ['Hospitals', 'Clinics', 'Research Centers', 'Rehabilitation']
+    cta: 'Transform your Clinical Practice'
   },
   {
     title: 'Research & Academia',
-    description: 'Cutting-edge tools for neuroscience research and academic studies',
+    tagline: 'Accelerating Neuroscience from Hypothesis to Discovery to Clinical Applications',
+    description: 'The pace of discovery in neuroscience is dictated by the quality of the tools available. Sentient Biotech is committed to empowering the academic community with accessible, powerful, and high-fidelity research platforms. We provide the robust hardware and flexible software needed to explore the frontiers of brain science, from fundamental cognitive research to the development of novel therapeutic approaches.',
     icon: Users,
-    features: [
-      'High-resolution data collection',
-      'Advanced signal processing',
-      'Statistical analysis tools',
-      'Research collaboration'
+    capabilities: [
+      {
+        title: 'High-Fidelity Data Acquisition',
+        description: 'Our Data acquisition platform provides a reliable, low-noise solution for capturing pristine EEG and biosignal data, forming the bedrock of reproducible, high-impact research.'
+      },
+      {
+        title: 'Novel Avenues of Inquiry',
+        description: 'Our multi-modal systems allow researchers to simultaneously investigate the central and autonomic nervous systems. This opens up new possibilities for studying the heart-brain axis, psychophysiology, and affective neuroscience.'
+      },
+      {
+        title: 'Brain-Computer Interface (BCI) Development',
+        description: 'We provide a stable and powerful platform for academic labs to design, test, and validate the next generation of BCI algorithms and human-machine interface applications.'
+      }
     ],
-    benefits: [
-      'Accelerated research',
-      'Higher data quality',
-      'Publication-ready results',
-      'Interdisciplinary collaboration'
-    ],
-    applications: ['Universities', 'Research Institutes', 'Clinical Studies', 'Academic Projects']
+    cta: 'Collaborate with us'
   },
   {
     title: 'Simulation & Training',
-    description: 'Immersive training solutions for complex operational environments',
+    tagline: 'Optimizing Skill Acquisition with Neuro-Analytics',
+    description: 'Traditional training measures performance. We measure the cognitive process behind the performance tracking load in real-time for pilots in high-stake zones. Sentient Biotech offers a revolutionary approach to simulation and training for high-stakes professions. By integrating our biosensing and AI platforms into training environments, we provide a direct window into the learner\'s cognitive state, transforming training from a one-size-fits-all process into a highly personalized and efficient program.',
     icon: Target,
-    features: [
-      'Virtual reality integration',
-      'Real-time performance feedback',
-      'Adaptive training programs',
-      'Skill assessment tools'
+    capabilities: [
+      {
+        title: 'Adaptive Training Scenarios',
+        description: 'Our systems can measure a trainee\'s cognitive load in real-time. This data can be used to dynamically adjust the difficulty of a simulation, keeping the trainee in the optimal "flow state" for rapid and durable learning.'
+      },
+      {
+        title: 'Objective Debriefing and Assessment',
+        description: 'Move beyond simple outcome-based feedback. Our analytics allow instructors to pinpoint the exact moments a trainee experienced cognitive overload, distraction, or fatigue, leading to more targeted and effective debriefing sessions.'
+      },
+      {
+        title: 'Proficiency and Skill Fade Monitoring',
+        description: 'For critical skills that degrade over time, our technology can be used to objectively assess cognitive and neural proficiency, allowing organizations to implement data-driven "refresher" training before performance drops in a real-world scenario.'
+      }
     ],
-    benefits: [
-      'Reduced training time',
-      'Higher skill retention',
-      'Cost-effective training',
-      'Standardized assessment'
-    ],
-    applications: ['Military Training', 'Medical Education', 'Professional Development', 'Skill Certification']
-  }
-]
-
-const industryStats = [
-  {
-    metric: '35%',
-    description: 'Improvement in pilot mission success rates',
-    icon: Shield
-  },
-  {
-    metric: '40%',
-    description: 'Faster neurological diagnosis times',
-    icon: Heart
-  },
-  {
-    metric: '50%',
-    description: 'Reduction in training time for complex skills',
-    icon: Target
-  },
-  {
-    metric: '99.9%',
-    description: 'System reliability and uptime',
-    icon: Award
-  }
-]
-
-const caseStudies = [
-  {
-    client: 'Indian Air Force',
-    solution: 'Pilot Headgear Systems',
-    result: '35% improvement in mission success rates',
-    icon: Shield
-  },
-  {
-    client: 'Johns Hopkins Hospital',
-    solution: 'EEG Diagnostic Systems',
-    result: '40% faster diagnosis times',
-    icon: Heart
-  },
-  {
-    client: 'MIT Research Center',
-    solution: 'Neuroscience Research Tools',
-    result: '50% faster data collection',
-    icon: Users
+    cta: 'Redefine your Training Programs'
   }
 ]
 
@@ -148,33 +109,33 @@ export default function SolutionsPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 overflow-hidden">
+      <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-display font-bold gradient-text mb-6">
+            <h1 className="text-5xl md:text-7xl font-display font-bold gradient-text mb-6">
               Solutions
             </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-              Comprehensive neurotechnology solutions tailored for defense, healthcare, 
-              research, and training applications across multiple industries.
+            <p className="text-lg text-text-secondary max-w-3xl mx-auto mb-10">
+              Transforming neurotechnology into actionable solutions across defense, healthcare, 
+              research, and training sectors.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-white/60">
-              <span className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-electric-cyan" />
-                Industry-Specific
+            <div className="flex flex-wrap justify-center gap-6">
+              <span className="flex items-center gap-2 text-text-secondary">
+                <CheckCircle className="w-5 h-5 text-success-green" />
+                <span className="font-medium">Industry-Leading</span>
               </span>
-              <span className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-electric-cyan" />
-                Proven Results
+              <span className="flex items-center gap-2 text-text-secondary">
+                <CheckCircle className="w-5 h-5 text-primary-blue" />
+                <span className="font-medium">Mission-Critical</span>
               </span>
-              <span className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-electric-cyan" />
-                Custom Solutions
+              <span className="flex items-center gap-2 text-text-secondary">
+                <CheckCircle className="w-5 h-5 text-accent-blue" />
+                <span className="font-medium">Proven Results</span>
               </span>
             </div>
           </motion.div>
@@ -182,199 +143,77 @@ export default function SolutionsPage() {
       </section>
 
       {/* Solutions Overview */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
-              Industry Solutions
-            </h2>
-            <p className="text-white/80 max-w-2xl mx-auto">
-              Tailored neurotechnology solutions designed to meet the specific needs of different industries.
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
-              <motion.div
-                key={solution.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="glass-panel-strong rounded-xl p-6"
-              >
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-lg flex items-center justify-center flex-shrink-0">
-                    <solution.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold text-xl mb-2">{solution.title}</h3>
-                    <p className="text-white/70 text-sm">{solution.description}</p>
-                  </div>
+      <section className="py-30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+          {solutions.map((solution, index) => (
+            <motion.div
+              key={solution.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.05, duration: 0.5 }}
+              viewport={{ once: true }}
+              className="card-hover group"
+            >
+              {/* Header */}
+              <div className="flex flex-col md:flex-row items-start gap-8 mb-10">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-2xl flex items-center justify-center flex-shrink-0 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
+                  <solution.icon className="w-10 h-10 text-white" />
                 </div>
-                
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="text-white font-medium mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {solution.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start space-x-2 text-sm text-white/70">
-                          <CheckCircle className="w-3 h-3 text-electric-cyan flex-shrink-0 mt-0.5" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-white font-medium mb-3">Benefits:</h4>
-                    <ul className="space-y-2">
-                      {solution.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-start space-x-2 text-sm text-white/70">
-                          <ArrowRight className="w-3 h-3 text-electric-cyan flex-shrink-0 mt-0.5" />
-                          <span>{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <div className="flex-1">
+                  <h2 className="text-3xl md:text-4xl font-display font-bold text-text-primary mb-3">
+                    {solution.title}
+                  </h2>
+                  <p className="text-xl md:text-2xl text-primary-blue font-semibold mb-4">
+                    {solution.tagline}
+                  </p>
+                  <p className="text-text-secondary leading-relaxed">
+                    {solution.description}
+                  </p>
                 </div>
-                
-                <div className="mt-4">
-                  <h4 className="text-white font-medium mb-2">Applications:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {solution.applications.map((app, appIndex) => (
-                      <span key={appIndex} className="px-3 py-1 bg-electric-cyan/20 text-electric-cyan text-xs rounded-full">
-                        {app}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
 
-      {/* Industry Stats */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
-              Proven Results
-            </h2>
-            <p className="text-white/80 max-w-2xl mx-auto">
-              Measurable improvements across all our solution areas.
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {industryStats.map((stat, index) => (
-              <motion.div
-                key={stat.metric}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="glass-panel-strong rounded-xl p-6 text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-white" />
+              {/* Capabilities */}
+              <div className="mb-10">
+                <h3 className="text-xl font-semibold text-text-primary mb-6 flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-success-green" />
+                  Our solutions enable:
+                </h3>
+                <div className="grid md:grid-cols-3 gap-6">
+                  {solution.capabilities.map((capability, capIndex) => (
+                    <motion.div
+                      key={capability.title}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: capIndex * 0.08, duration: 0.4 }}
+                      viewport={{ once: true }}
+                      className="bg-glass-white-strong backdrop-blur-sm rounded-xl p-6 border border-primary-blue/20 hover:border-primary-blue/40 transition-all duration-300 hover:shadow-soft"
+                    >
+                      <h4 className="text-text-primary font-semibold text-base mb-3">
+                        {capability.title}
+                      </h4>
+                      <p className="text-text-secondary text-sm leading-relaxed">
+                        {capability.description}
+                      </p>
+                    </motion.div>
+                  ))}
                 </div>
-                <div className="text-3xl font-bold text-electric-cyan mb-2">{stat.metric}</div>
-                <div className="text-white/80 text-sm">{stat.description}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
 
-      {/* Case Studies */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
-              Success Stories
-            </h2>
-            <p className="text-white/80 max-w-2xl mx-auto">
-              Real-world results from our industry-leading clients.
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
-              <motion.div
-                key={study.client}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="glass-panel-strong rounded-xl p-6 text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <study.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-white font-semibold mb-2">{study.client}</h3>
-                <p className="text-electric-cyan text-sm mb-3">{study.solution}</p>
-                <p className="text-white/70 text-sm">{study.result}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="glass-panel-strong rounded-2xl p-8 text-center"
-          >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
-              Ready to Transform Your Operations?
-            </h2>
-            <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our neurotechnology solutions can enhance your specific use case 
-              and deliver measurable results for your organization.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-primary"
-              >
-                Schedule Consultation
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-secondary"
-              >
-                View Case Studies
-              </motion.button>
-            </div>
-          </motion.div>
+              {/* CTA */}
+              <div className="flex justify-center pt-6">
+                <Link href="/contact">
+                  <motion.button
+                    whileHover={{ scale: 1.02, y: -2 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="btn-primary flex items-center gap-2"
+                  >
+                    {solution.cta}
+                    <ArrowRight className="w-5 h-5" />
+                  </motion.button>
+                </Link>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
