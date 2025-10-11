@@ -91,15 +91,26 @@ export default function Footer() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <a href="/" className="inline-flex items-center justify-center space-x-3 mb-4 focus-ring rounded-lg">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center shadow-blue">
-                  <div className="w-6 h-6 bg-white rounded-full subtle-pulse"></div>
+              <a href="/" className="inline-flex items-center justify-center space-x-2 sm:space-x-3 mb-4 focus-ring rounded-lg">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 rounded-xl overflow-hidden bg-white/5">
+                  <img 
+                    src="/logo.png" 
+                    alt="Sentient Biotech Logo" 
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      if (e.currentTarget.parentElement) {
+                        e.currentTarget.parentElement.className = 'w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center shadow-blue';
+                        e.currentTarget.parentElement.innerHTML = '<div class="w-6 h-6 bg-white rounded-full subtle-pulse"></div>';
+                      }
+                    }}
+                  />
                 </div>
-                <span className="text-2xl font-display font-bold gradient-text">
+                <span className="text-xl sm:text-2xl font-display font-bold gradient-text">
                   Sentient Biotech
                 </span>
               </a>
-              <p className="text-text-secondary max-w-2xl mx-auto mt-4">
+              <p className="text-text-secondary text-sm sm:text-base max-w-2xl mx-auto mt-4 px-4">
                 Pioneering human-machine synergy through advanced biotechnology and neurotechnology.
               </p>
             </motion.div>
@@ -110,17 +121,17 @@ export default function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
               viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10"
             >
               {footerSections.map((section, sectionIndex) => (
                 <div key={section.heading}>
-                  <h3 className="text-base font-semibold text-text-primary mb-4 text-center md:text-left">{section.heading}</h3>
-                  <ul className="space-y-3">
+                  <h3 className="text-sm sm:text-base font-semibold text-text-primary mb-3 sm:mb-4 text-center sm:text-left">{section.heading}</h3>
+                  <ul className="space-y-2 sm:space-y-3">
                     {section.links.map((link, linkIndex) => (
                       <li key={link.label}>
                         <button
                           onClick={() => handleNavClick(link.href)}
-                          className="block text-center md:text-left text-text-tertiary hover:text-primary-blue transition-colors duration-200 text-sm focus-ring rounded"
+                          className="block text-center sm:text-left text-text-tertiary hover:text-primary-blue transition-colors duration-200 text-xs sm:text-sm focus-ring rounded py-1"
                         >
                           {link.label}
                         </button>
@@ -142,21 +153,21 @@ export default function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="grid md:grid-cols-3 gap-8 text-center md:text-left"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-center sm:text-left"
             >
               <div>
-                <h4 className="text-text-primary font-semibold mb-2 text-sm">Registered Office</h4>
-                <p className="text-text-tertiary text-sm leading-relaxed">VGN Coasta, 14th Floor, Flat No.B, Muttukadu, Chinglepet, Kanchipuram- 603112, Tamil Nadu</p>
+                <h4 className="text-text-primary font-semibold mb-2 text-xs sm:text-sm">Registered Office</h4>
+                <p className="text-text-tertiary text-xs sm:text-sm leading-relaxed">VGN Coasta, 14th Floor, Flat No.B, Muttukadu, Chinglepet, Kanchipuram- 603112, Tamil Nadu</p>
               </div>
               <div>
-                <h4 className="text-text-primary font-semibold mb-2 text-sm">Phone</h4>
-                <a href="tel:+917070360676" className="text-text-tertiary hover:text-primary-blue text-sm transition-colors focus-ring rounded">
+                <h4 className="text-text-primary font-semibold mb-2 text-xs sm:text-sm">Phone</h4>
+                <a href="tel:+917070360676" className="text-text-tertiary hover:text-primary-blue text-xs sm:text-sm transition-colors focus-ring rounded inline-block py-1">
                   +91-7070360676
                 </a>
               </div>
-              <div>
-                <h4 className="text-text-primary font-semibold mb-2 text-sm">Email</h4>
-                <a href="mailto:jasmeet@sentientbiotech.in" className="text-text-tertiary hover:text-primary-blue text-sm transition-colors focus-ring rounded">
+              <div className="sm:col-span-2 lg:col-span-1">
+                <h4 className="text-text-primary font-semibold mb-2 text-xs sm:text-sm">Email</h4>
+                <a href="mailto:jasmeet@sentientbiotech.in" className="text-text-tertiary hover:text-primary-blue text-xs sm:text-sm transition-colors focus-ring rounded inline-block py-1 break-all">
                   jasmeet@sentientbiotech.in
                 </a>
               </div>
@@ -168,7 +179,7 @@ export default function Footer() {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-text-tertiary text-sm"
+                className="text-text-tertiary text-xs sm:text-sm text-center md:text-left"
               >
                 © 2024 Sentient Biotech Private Limited. All rights reserved.
               </motion.div>
@@ -178,21 +189,21 @@ export default function Footer() {
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.1, duration: 0.5 }}
                 viewport={{ once: true }}
-                className="flex items-center space-x-4 text-text-tertiary text-sm"
+                className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-text-tertiary text-xs sm:text-sm"
               >
                 <span className="flex items-center gap-1">
                   <div className="w-1.5 h-1.5 bg-success-green rounded-full"></div>
-                  Privacy-first
+                  <span className="whitespace-nowrap">Privacy-first</span>
                 </span>
-                <span>•</span>
+                <span className="hidden sm:inline">•</span>
                 <span className="flex items-center gap-1">
                   <div className="w-1.5 h-1.5 bg-primary-blue rounded-full"></div>
-                  Non-invasive
+                  <span className="whitespace-nowrap">Non-invasive</span>
                 </span>
-                <span>•</span>
+                <span className="hidden sm:inline">•</span>
                 <span className="flex items-center gap-1">
                   <div className="w-1.5 h-1.5 bg-accent-blue rounded-full"></div>
-                  Research-backed
+                  <span className="whitespace-nowrap">Research-backed</span>
                 </span>
               </motion.div>
 

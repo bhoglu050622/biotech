@@ -136,7 +136,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
-                className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6"
               >
                 <span className="gradient-text">
                   Redefining
@@ -152,7 +152,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
-                className="text-lg text-text-secondary leading-relaxed mb-10 max-w-2xl mx-auto lg:mx-0"
+                className="text-base sm:text-lg text-text-secondary leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto lg:mx-0"
               >
                 Revolutionizing human–machine interaction through advanced biotechnology and neurotechnology. We blend science, engineering, and human-factors to build devices that are both rigorous and intuitive for all aspects of life.
               </motion.p>
@@ -162,23 +162,23 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.5 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12"
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-10 sm:mb-12"
               >
                 <motion.button
                   whileHover={{ scale: 1.02, y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  className="btn-primary flex items-center justify-center gap-2 px-8 py-4 text-base shadow-blue"
+                  className="btn-primary flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base shadow-blue w-full sm:w-auto"
                 >
                   <span>Explore Solutions</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </motion.button>
                 
                 <motion.button
                   whileHover={{ scale: 1.02, y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  className="btn-secondary flex items-center justify-center gap-2 px-8 py-4 text-base"
+                  className="btn-secondary flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base w-full sm:w-auto"
                 >
-                  <Play className="w-5 h-5" />
+                  <Play className="w-4 h-4 sm:w-5 sm:h-5" />
                   <span>Watch Demo</span>
                 </motion.button>
               </motion.div>
@@ -188,19 +188,19 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
-                className="flex flex-wrap items-center justify-center lg:justify-start gap-6"
+                className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6"
               >
                 <div className="flex items-center space-x-2 text-text-secondary">
-                  <CheckCircle className="w-5 h-5 text-success-green" />
-                  <span className="text-sm font-medium">Non-invasive Technology</span>
+                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-success-green flex-shrink-0" />
+                  <span className="text-xs sm:text-sm font-medium">Non-invasive Technology</span>
                 </div>
                 <div className="flex items-center space-x-2 text-text-secondary">
-                  <CheckCircle className="w-5 h-5 text-primary-blue" />
-                  <span className="text-sm font-medium">Real-time Feedback</span>
+                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-primary-blue flex-shrink-0" />
+                  <span className="text-xs sm:text-sm font-medium">Real-time Feedback</span>
                 </div>
                 <div className="flex items-center space-x-2 text-text-secondary">
-                  <CheckCircle className="w-5 h-5 text-accent-blue" />
-                  <span className="text-sm font-medium">Privacy-First Design</span>
+                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-accent-blue flex-shrink-0" />
+                  <span className="text-xs sm:text-sm font-medium">Privacy-First Design</span>
                 </div>
               </motion.div>
             </motion.div>
@@ -268,7 +268,7 @@ export default function HomePage() {
       </section>
 
       {/* About Sentient Biotech Section */}
-      <section className="py-30 bg-glass-white backdrop-blur-sm">
+      <section className="py-16 sm:py-20 md:py-30 bg-glass-white backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -277,10 +277,10 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h2 className="text-4xl lg:text-5xl font-display font-bold text-text-primary mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-text-primary mb-4 sm:mb-6">
               About Sentient Biotech
             </h2>
-            <p className="text-lg text-text-secondary leading-relaxed">
+            <p className="text-base sm:text-lg text-text-secondary leading-relaxed">
               We are revolutionizing human–machine interaction through advanced biotechnology and neurotechnology that bridges the gap between mind and machine. Blending biotechnology, neuroscience, and human-factors, we are building devices that are as rigorous as well as intuitive for various aspects of life.
             </p>
           </motion.div>
@@ -288,24 +288,24 @@ export default function HomePage() {
       </section>
 
       {/* Core Pillars Section */}
-      <section className="py-30">
+      <section className="py-16 sm:py-20 md:py-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-display font-bold text-text-primary mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-text-primary mb-4">
               Core Pillars
             </h2>
-            <p className="text-lg text-text-secondary max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-text-secondary max-w-3xl mx-auto px-4">
               Our three foundational pillars driving innovation in biotechnology and neurotechnology.
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {corePillars.map((pillar, index) => (
               <motion.div
                 key={pillar.title}
@@ -315,12 +315,12 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 className="card-hover group"
               >
-                <div className="border-l-4 border-primary-blue pl-6 -ml-2">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${pillar.color} rounded-xl flex items-center justify-center mb-6 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300`}>
-                    <pillar.icon className="w-8 h-8 text-white" />
+                <div className="border-l-4 border-primary-blue pl-4 sm:pl-6 -ml-2">
+                  <div className={`w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${pillar.color} rounded-xl flex items-center justify-center mb-4 sm:mb-6 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300`}>
+                    <pillar.icon className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-display font-bold text-text-primary mb-4">{pillar.title}</h3>
-                  <p className="text-text-secondary leading-relaxed">{pillar.description}</p>
+                  <h3 className="text-xl sm:text-2xl font-display font-bold text-text-primary mb-3 sm:mb-4">{pillar.title}</h3>
+                  <p className="text-sm sm:text-base text-text-secondary leading-relaxed">{pillar.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -329,24 +329,24 @@ export default function HomePage() {
       </section>
 
       {/* Our Commitment Section */}
-      <section className="py-30 bg-glass-white backdrop-blur-sm">
+      <section className="py-16 sm:py-20 md:py-30 bg-glass-white backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-display font-bold text-text-primary mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-text-primary mb-4 sm:mb-6">
               Built on a Foundation of Trust
             </h2>
-            <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed px-4">
               At Sentient Biotech, we are committed to the highest standards of scientific rigor, data privacy, and ethical innovation. Our work is grounded in research and a "privacy-first" design philosophy, ensuring that our technologies are not only powerful but also responsible.
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {commitments.map((commitment, index) => (
               <motion.div
                 key={commitment.title}
@@ -356,11 +356,11 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 className="card group"
               >
-                <div className={`w-14 h-14 bg-gradient-to-br ${commitment.color} rounded-xl flex items-center justify-center mb-4 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300`}>
-                  <commitment.icon className="w-7 h-7 text-white" />
+                <div className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br ${commitment.color} rounded-xl flex items-center justify-center mb-3 sm:mb-4 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300`}>
+                  <commitment.icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-text-primary mb-3">{commitment.title}</h3>
-                <p className="text-text-secondary text-sm leading-relaxed">{commitment.description}</p>
+                <h3 className="text-base sm:text-lg font-semibold text-text-primary mb-2 sm:mb-3">{commitment.title}</h3>
+                <p className="text-text-secondary text-xs sm:text-sm leading-relaxed">{commitment.description}</p>
               </motion.div>
             ))}
           </div>
@@ -368,24 +368,24 @@ export default function HomePage() {
       </section>
 
       {/* Partnership Section */}
-      <section className="py-30">
+      <section className="py-16 sm:py-20 md:py-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-display font-bold text-text-primary mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-text-primary mb-4">
               Join Us in Shaping the Future
             </h2>
-            <p className="text-lg text-text-secondary max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-text-secondary max-w-3xl mx-auto px-4">
               We are actively seeking partnerships with research institutions, healthcare providers, and defense organizations to accelerate the development and deployment of our technologies.
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -462,14 +462,14 @@ export default function HomePage() {
       </section>
 
       {/* Contact & Careers Section */}
-      <section className="py-30 bg-gradient-to-br from-primary-blue via-secondary-blue to-accent-blue relative overflow-hidden">
+      <section className="py-16 sm:py-20 md:py-30 bg-gradient-to-br from-primary-blue via-secondary-blue to-accent-blue relative overflow-hidden">
         {/* Subtle Pattern Overlay */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
             {/* Contact Us */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}

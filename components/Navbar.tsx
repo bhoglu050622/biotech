@@ -117,12 +117,24 @@ export default function Navbar() {
               href="/"
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.2 }}
-              className="flex items-center space-x-3 focus-ring rounded-lg"
+              className="flex items-center space-x-2 sm:space-x-3 focus-ring rounded-lg"
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center shadow-blue">
-                <div className="w-5 h-5 bg-white rounded-full subtle-pulse"></div>
+              <div className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 rounded-xl overflow-hidden bg-white/5">
+                <img 
+                  src="/logo.png" 
+                  alt="Sentient Biotech Logo" 
+                  className="w-full h-full object-contain"
+                  onError={(e) => {
+                    // Fallback to gradient if logo fails to load
+                    e.currentTarget.style.display = 'none';
+                    if (e.currentTarget.parentElement) {
+                      e.currentTarget.parentElement.className = 'w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center shadow-blue';
+                      e.currentTarget.parentElement.innerHTML = '<div class="w-5 h-5 bg-white rounded-full subtle-pulse"></div>';
+                    }
+                  }}
+                />
               </div>
-              <span className="text-xl font-display font-bold gradient-text">
+              <span className="text-base sm:text-lg md:text-xl font-display font-bold gradient-text hidden xs:inline">
                 Sentient Biotech
               </span>
             </motion.a>
@@ -244,9 +256,9 @@ export default function Navbar() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.96, y: -20 }}
               transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-              className="fixed top-20 left-4 right-4 glass-panel-strong rounded-2xl p-6 z-50 lg:hidden shadow-soft-xl border border-primary-blue/20"
+              className="fixed top-20 left-4 right-4 max-h-[calc(100vh-6rem)] overflow-y-auto glass-panel-strong rounded-2xl p-4 sm:p-6 z-50 lg:hidden shadow-soft-xl border border-primary-blue/20"
             >
-              <div className="space-y-4">
+              <div className="space-y-2">
                 {navItems.map((item, index) => (
                   <div key={item.label}>
                     <motion.button
@@ -260,7 +272,7 @@ export default function Navbar() {
                           handleNavClick(item.href)
                         }
                       }}
-                      className="flex items-center justify-between w-full text-left text-base font-medium text-text-primary hover:text-primary-blue transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-glass-white focus-ring"
+                      className="flex items-center justify-between w-full text-left text-sm sm:text-base font-medium text-text-primary hover:text-primary-blue transition-colors duration-200 py-3 px-3 rounded-lg hover:bg-glass-white focus-ring min-h-[44px]"
                     >
                       <span>{item.label}</span>
                       {item.dropdown && (
@@ -291,7 +303,7 @@ export default function Navbar() {
                                   animate={{ opacity: 1, x: 0 }}
                                   transition={{ delay: dropdownIndex * 0.03 }}
                                   onClick={() => handleNavClick(dropdownItem.href)}
-                                  className="block w-full text-left text-sm text-text-secondary hover:text-primary-blue transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-glass-white focus-ring"
+                                  className="block w-full text-left text-xs sm:text-sm text-text-secondary hover:text-primary-blue transition-colors duration-200 py-2.5 px-3 rounded-lg hover:bg-glass-white focus-ring min-h-[44px]"
                                 >
                                   {dropdownItem.label}
                                 </motion.button>
@@ -304,14 +316,14 @@ export default function Navbar() {
                   </div>
                 ))}
                 <div className="pt-4 border-t border-primary-blue/20">
-                  <div className="flex space-x-3">
+                  <div className="flex flex-col sm:flex-row gap-3">
                     <motion.a
                       href="mailto:jasmeet@sentientbiotech.in"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.3, duration: 0.2 }}
                       whileTap={{ scale: 0.95 }}
-                      className="flex-1 flex items-center justify-center space-x-2 glass-panel rounded-lg py-3 hover:bg-glass-white-strong transition-colors duration-200 focus-ring"
+                      className="flex-1 flex items-center justify-center space-x-2 glass-panel rounded-lg py-3 hover:bg-glass-white-strong transition-colors duration-200 focus-ring min-h-[44px]"
                     >
                       <Mail className="w-5 h-5 text-primary-blue" />
                       <span className="text-sm font-medium">Email</span>
@@ -322,7 +334,7 @@ export default function Navbar() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.35, duration: 0.2 }}
                       whileTap={{ scale: 0.95 }}
-                      className="flex-1 flex items-center justify-center space-x-2 glass-panel rounded-lg py-3 hover:bg-glass-white-strong transition-colors duration-200 focus-ring"
+                      className="flex-1 flex items-center justify-center space-x-2 glass-panel rounded-lg py-3 hover:bg-glass-white-strong transition-colors duration-200 focus-ring min-h-[44px]"
                     >
                       <Phone className="w-5 h-5 text-primary-blue" />
                       <span className="text-sm font-medium">Call</span>

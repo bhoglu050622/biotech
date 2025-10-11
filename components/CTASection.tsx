@@ -59,7 +59,7 @@ export default function CTASection() {
 
   return (
     <>
-      <section id="cta-section" className="py-20 relative">
+      <section id="cta-section" className="py-16 sm:py-20 relative">
         {/* Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-electric-cyan/10 to-violet-accent/10 rounded-full blur-3xl" />
@@ -71,7 +71,7 @@ export default function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
             viewport={{ once: true }}
-            className="glass-panel-strong rounded-3xl p-12 neural-glow-strong text-center"
+            className="glass-panel-strong rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 neural-glow-strong text-center"
           >
             {/* Heartbeat Animation */}
             <motion.div
@@ -94,38 +94,38 @@ export default function CTASection() {
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4 sm:mb-6">
                 <span className="gradient-text">Join Early Access</span>
               </h2>
               
-              <p className="text-xl text-white/80 mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-white/80 mb-6 sm:mb-8 leading-relaxed">
                 Help shape the future of accessible mental health. Be among the first to experience 
                 our revolutionary neurotechnology and contribute to making mental wellness available for all.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8">
                 <motion.button
                   whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0, 230, 255, 0.3)" }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setIsModalOpen(true)}
-                  className="btn-primary text-lg px-8 py-4 flex items-center space-x-2"
+                  className="btn-primary text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 flex items-center space-x-2 w-full sm:w-auto"
                 >
                   <span>Request Early Access</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </motion.button>
 
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleContactSales}
-                  className="btn-secondary text-lg px-8 py-4 flex items-center space-x-2"
+                  className="btn-secondary text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 flex items-center space-x-2 w-full sm:w-auto"
                 >
-                  <Mail className="w-5 h-5" />
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                   <span>Contact Sales</span>
                 </motion.button>
               </div>
 
-              <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/60">
+              <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-white/60">
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-electric-cyan" />
                   <span>No commitment required</span>
@@ -164,10 +164,10 @@ export default function CTASection() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 50 }}
               transition={{ duration: 0.3, ease: [0.2, 0.8, 0.2, 1] }}
-              className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl mx-4 glass-panel-strong rounded-3xl p-8 z-50 neural-glow-strong"
+              className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl mx-4 sm:mx-6 glass-panel-strong rounded-2xl sm:rounded-3xl p-6 sm:p-8 z-50 neural-glow-strong max-h-[90vh] overflow-y-auto"
             >
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-2xl font-display font-bold text-white">
+              <div className="flex items-center justify-between mb-4 sm:mb-6">
+                <h3 className="text-xl sm:text-2xl font-display font-bold text-white">
                   Request Early Access
                 </h3>
                 <motion.button
@@ -189,11 +189,11 @@ export default function CTASection() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     onSubmit={handleSubmit}
-                    className="space-y-6"
+                    className="space-y-4 sm:space-y-6"
                   >
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
+                        <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-white mb-2">
                           Full Name *
                         </label>
                         <input
@@ -203,13 +203,13 @@ export default function CTASection() {
                           value={formData.name}
                           onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-3 glass-panel rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-electric-cyan/50 transition-all duration-200"
+                          className="w-full px-3 sm:px-4 py-2.5 sm:py-3 glass-panel rounded-lg text-sm sm:text-base text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-electric-cyan/50 transition-all duration-200"
                           placeholder="Your full name"
                         />
                       </div>
 
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+                        <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-white mb-2">
                           Email Address *
                         </label>
                         <input
@@ -219,14 +219,14 @@ export default function CTASection() {
                           value={formData.email}
                           onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-3 glass-panel rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-electric-cyan/50 transition-all duration-200"
+                          className="w-full px-3 sm:px-4 py-2.5 sm:py-3 glass-panel rounded-lg text-sm sm:text-base text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-electric-cyan/50 transition-all duration-200"
                           placeholder="your@email.com"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label htmlFor="interest" className="block text-sm font-medium text-white mb-2">
+                      <label htmlFor="interest" className="block text-xs sm:text-sm font-medium text-white mb-2">
                         Primary Interest
                       </label>
                       <select
@@ -234,7 +234,7 @@ export default function CTASection() {
                         name="interest"
                         value={formData.interest}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 glass-panel rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-electric-cyan/50 transition-all duration-200"
+                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 glass-panel rounded-lg text-sm sm:text-base text-white focus:outline-none focus:ring-2 focus:ring-electric-cyan/50 transition-all duration-200"
                       >
                         <option value="">Select your primary interest</option>
                         <option value="eeg-headset">EEG Headset</option>
@@ -248,7 +248,7 @@ export default function CTASection() {
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
+                      <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-white mb-2">
                         Additional Message
                       </label>
                       <textarea
@@ -257,7 +257,7 @@ export default function CTASection() {
                         value={formData.message}
                         onChange={handleInputChange}
                         rows={4}
-                        className="w-full px-4 py-3 glass-panel rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-electric-cyan/50 transition-all duration-200 resize-none"
+                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 glass-panel rounded-lg text-sm sm:text-base text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-electric-cyan/50 transition-all duration-200 resize-none"
                         placeholder="Tell us more about your interest or any questions you have..."
                       />
                     </div>
@@ -267,7 +267,7 @@ export default function CTASection() {
                       disabled={isSubmitting}
                       whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
                       whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
-                      className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-300 ${
+                      className={`w-full py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-semibold text-sm sm:text-base md:text-lg transition-all duration-300 ${
                         isSubmitting
                           ? 'bg-glass-white text-white/50 cursor-not-allowed'
                           : 'btn-primary'

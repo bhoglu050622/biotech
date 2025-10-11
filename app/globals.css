@@ -65,34 +65,34 @@
       0 0 60px rgba(0, 102, 255, 0.15);
   }
   
-  /* Button Styles */
+  /* Button Styles - Responsive */
   .btn-primary {
-    @apply bg-primary-blue text-white font-semibold px-6 py-3 rounded-lg 
-           transition-all duration-300 
+    @apply bg-primary-blue text-white font-semibold px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg 
+           transition-all duration-300 text-sm sm:text-base
            hover:bg-secondary-blue hover:shadow-blue 
            focus:outline-none focus:ring-2 focus:ring-primary-blue/50 focus:ring-offset-2 focus:ring-offset-deep-indigo
            active:scale-95;
   }
   
   .btn-secondary {
-    @apply bg-white/10 backdrop-blur-sm text-white border border-white/20 font-semibold px-6 py-3 rounded-lg 
-           transition-all duration-300 
+    @apply bg-white/10 backdrop-blur-sm text-white border border-white/20 font-semibold px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg 
+           transition-all duration-300 text-sm sm:text-base
            hover:bg-white/20 hover:border-white/30
            focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-deep-indigo
            active:scale-95;
   }
   
   .btn-outline {
-    @apply bg-transparent text-primary-blue border-2 border-primary-blue font-semibold px-6 py-3 rounded-lg 
-           transition-all duration-300 
+    @apply bg-transparent text-primary-blue border-2 border-primary-blue font-semibold px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg 
+           transition-all duration-300 text-sm sm:text-base
            hover:bg-primary-blue hover:text-white hover:shadow-blue
            focus:outline-none focus:ring-2 focus:ring-primary-blue/50 focus:ring-offset-2 focus:ring-offset-deep-indigo
            active:scale-95;
   }
   
-  /* Card Styles */
+  /* Card Styles - Responsive */
   .card {
-    @apply bg-glass-white-strong backdrop-blur-sm border border-primary-blue/20 rounded-xl p-8
+    @apply bg-glass-white-strong backdrop-blur-sm border border-primary-blue/20 rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8
            transition-all duration-300
            hover:border-primary-blue/40 hover:shadow-soft-lg;
   }
@@ -123,6 +123,37 @@
   
   .backface-hidden {
     backface-visibility: hidden;
+  }
+  
+  /* Responsive Typography Utilities */
+  .text-responsive-sm {
+    @apply text-xs sm:text-sm;
+  }
+  
+  .text-responsive-base {
+    @apply text-sm sm:text-base;
+  }
+  
+  .text-responsive-lg {
+    @apply text-base sm:text-lg;
+  }
+  
+  .text-responsive-xl {
+    @apply text-lg sm:text-xl;
+  }
+  
+  /* Responsive Spacing Utilities */
+  .spacing-responsive {
+    @apply space-y-4 sm:space-y-6 md:space-y-8;
+  }
+  
+  .gap-responsive {
+    @apply gap-4 sm:gap-6 md:gap-8;
+  }
+  
+  /* Touch Target - Minimum 44x44px for mobile accessibility */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
   }
   
   /* Reduced motion support */
@@ -266,14 +297,14 @@ a.link {
   @apply text-primary-blue hover:text-accent-blue transition-colors duration-200 underline-offset-4 hover:underline;
 }
 
-/* Professional Input Styles */
+/* Professional Input Styles - Responsive */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea,
 select {
-  @apply w-full px-4 py-3 bg-glass-white-strong border border-primary-blue/20 rounded-lg
-         text-white placeholder-text-tertiary
+  @apply w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-glass-white-strong border border-primary-blue/20 rounded-lg
+         text-sm sm:text-base text-white placeholder-text-tertiary
          focus:outline-none focus:ring-2 focus:ring-primary-blue/50 focus:border-primary-blue/50
          transition-all duration-200;
 }
