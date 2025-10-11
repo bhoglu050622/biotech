@@ -1,0 +1,100 @@
+{
+  "repository_info": {
+    "name": "sentient-biotech.github.io",
+    "owner": "SentientBiotech",
+    "full_name": "SentientBiotech/sentient-biotech.github.io",
+    "url": "https://github.com/SentientBiotech/sentient-biotech.github.io",
+    "description": "No description, website, or topics provided.",
+    "visibility": "Public",
+    "default_branch": "main",
+    "created_date": "Unknown",
+    "last_updated": "October 21, 2024",
+    "language": "Unknown",
+    "topics": [],
+    "website": null,
+    "license": null
+  },
+  "repository_stats": {
+    "stars": 0,
+    "watchers": 1,
+    "forks": 0,
+    "issues": 0,
+    "pull_requests": 0,
+    "releases": 0,
+    "packages": 0
+  },
+  "company_info": {
+    "company_name": "Sentient Biotech Private Limited",
+    "mission": "Pioneering the next generation of neurotechnology to foster holistic well-being",
+    "description": "At Sentient Biotech Private Limited, we are pioneering the next generation of neurotechnology to foster holistic well-being. Our mission is to create innovative, non-invasive neuroimaging devices that bridge the gap between mind and body, helping people gain deeper insights into their mental and physical health from a holistic perspective.",
+    "approach": "By harnessing the power of neurofeedback and biofeedback, we develop solutions that empower individuals to take charge of their well-being. Our flagship products—a state-of-the-art EEG headset and a smart wrist wearable—integrate cutting-edge research in Brain-Computer Interfaces (BCIs) with a user-friendly approach, making mental health accessible for all. We believe in harnessing technology for the betterment of humanity, providing personalized, real-time feedback to enhance mental and physical performance naturally.",
+    "products": [
+      {
+        "name": "EEG Headset",
+        "description": "State-of-the-art EEG headset for neurofeedback applications"
+      },
+      {
+        "name": "Smart Wrist Wearable",
+        "description": "Smart wrist wearable device for biofeedback applications"
+      }
+    ],
+    "technologies": [
+      "Neurofeedback",
+      "Biofeedback",
+      "Brain-Computer Interfaces (BCIs)",
+      "Non-invasive neuroimaging",
+      "Real-time feedback systems"
+    ],
+    "focus_areas": [
+      "Mental health",
+      "Physical health",
+      "Holistic well-being",
+      "Neurotechnology",
+      "Personalized feedback"
+    ]
+  },
+  "repository_structure": {
+    "files": [
+      {
+        "name": "README.md",
+        "type": "file",
+        "path": "README.md",
+        "description": "Main documentation file containing company information"
+      }
+    ],
+    "directories": [],
+    "total_files": 1,
+    "total_directories": 0
+  },
+  "commit_history": {
+    "total_commits": 3,
+    "commits": [
+      {
+        "sha": "d21068eab151d3ff0f55cef6117d023f5c83fc0c",
+        "message": "Update README.md",
+        "author": "SentientBiotech",
+        "date": "October 21, 2024, 12:05 PM GMT+5:30",
+        "url": "https://github.com/SentientBiotech/sentient-biotech.github.io/commit/d21068eab151d3ff0f55cef6117d023f5c83fc0c"
+      },
+      {
+        "sha": "da19dd9b939b188ff74b8b8a833999eac14080c4",
+        "message": "Initial commit",
+        "author": "SentientBiotech",
+        "date": "Unknown",
+        "url": "https://github.com/SentientBiotech/sentient-biotech.github.io/commit/da19dd9b939b188ff74b8b8a833999eac14080c4"
+      }
+    ]
+  },
+  "readme_content": {
+    "title": "About",
+    "content": "At Sentient Biotech Private Limited, we are pioneering the next generation of neurotechnology to foster holistic well-being. Our mission is to create innovative, non-invasive neuroimaging devices that bridge the gap between mind and body, helping people gain deeper insights into their mental and physical health from a holistic perspective.\n\nBy harnessing the power of neurofeedback and biofeedback, we develop solutions that empower individuals to take charge of their well-being. Our flagship products—a state-of-the-art EEG headset and a smart wrist wearable—integrate cutting-edge research in Brain-Computer Interfaces (BCIs) with a user-friendly approach, making mental health accessible for all. We believe in harnessing technology for the betterment of humanity, providing personalized, real-time feedback to enhance mental and physical performance naturally.",
+    "raw_url": "https://github.com/SentientBiotech/sentient-biotech.github.io/raw/refs/heads/main/README.md"
+  },
+  "scraping_metadata": {
+    "scraped_at": "2025-01-27",
+    "scraped_by": "AI Assistant",
+    "source_url": "https://github.com/SentientBiotech/sentient-biotech.github.io",
+    "data_completeness": "Complete - All available public data extracted",
+    "notes": "Repository contains only README.md file with company information. No additional files, releases, or packages found."
+  }
+}
