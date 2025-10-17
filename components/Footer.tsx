@@ -50,7 +50,8 @@ const footerSections = [
     heading: 'Legal',
     links: [
       { label: 'Terms & Conditions', href: '/terms' },
-      { label: 'Privacy Policy', href: '/privacy' }
+      { label: 'Privacy Policy', href: '/privacy' },
+      { label: 'Disclaimer', href: '/disclaimer' }
     ]
   }
 ]
