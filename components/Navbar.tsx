@@ -12,38 +12,41 @@ const navItems = [
   },
   { 
     label: 'About Us', 
-    href: '/about',
+    href: '/who-we-are',
     dropdown: [
-      { label: 'About Sentient Biotech', href: '/about' },
-      { label: 'Mission & Vision', href: '/mission-vision' }
+      { label: 'Who We Are', href: '/who-we-are' },
+      { label: 'Mission & Vision', href: '/mission-vision' },
+      { label: 'Core Values', href: '/core-values' }
     ]
   },
   { 
     label: 'Technologies', 
     href: '/technologies',
     dropdown: [
-      { label: 'Neurotech Systems', href: '/technologies#neurotech-systems' },
-      { label: 'Pilot Wearable Solutions', href: '/technologies#pilot-wearable' },
-      { label: 'AI-driven Biometric Monitoring', href: '/technologies#ai-biometric' },
-      { label: 'Human-machine Interface (HMI)', href: '/technologies#hmi' }
+      { label: 'Neurotechnology', href: '/technologies/neurotechnology' },
+      { label: 'Artificial Intelligence & Machine Learning', href: '/technologies/ai-machine-learning' },
+      { label: 'Bio-Integrated Sensors', href: '/technologies/bio-integrated-sensors' },
+      { label: 'XR and AR Systems', href: '/technologies/xr-ar-systems' },
+      { label: 'Human-Machine Interface (HMI)', href: '/technologies/hmi' },
+      { label: 'Data Fusion and Visualization', href: '/technologies/data-fusion' }
     ]
   },
   { 
     label: 'Products', 
-    href: '#products',
+    href: '/eeg-solutions',
     dropdown: [
-      { label: 'Electroencephalogram (EEG) Solutions', href: '/eeg-solutions' },
+      { label: 'EEG Systems', href: '/eeg-solutions' },
       { label: 'Next-Generation Pilot Headgear', href: '/starscream' }
     ]
   },
   { 
-    label: 'Solutions', 
-    href: '/solutions',
+    label: 'Industries', 
+    href: '/industries',
     dropdown: [
-      { label: 'Defense & Aerospace', href: '/solutions#defense-aerospace' },
-      { label: 'Healthcare', href: '/solutions#healthcare' },
-      { label: 'Research & Academia', href: '/solutions#research-academia' },
-      { label: 'Simulation & Training', href: '/solutions#simulation-training' }
+      { label: 'Defense & Aerospace', href: '/industries/defence-aerospace' },
+      { label: 'Healthcare', href: '/industries/healthcare' },
+      { label: 'Research & Academia', href: '/industries/research-academia' },
+      { label: 'Simulation & Training', href: '/industries/simulation-training' }
     ]
   },
   { 
@@ -52,16 +55,12 @@ const navItems = [
   },
   { 
     label: 'News & Insights', 
-    href: '#news',
+    href: '/news',
     dropdown: [
       { label: 'Latest News', href: '/news' },
       { label: 'Case Studies', href: '/case-studies' },
       { label: 'FAQs', href: '/faqs' }
     ]
-  },
-  { 
-    label: 'Careers', 
-    href: '/careers' 
   },
   { 
     label: 'Contact Us', 
@@ -119,22 +118,26 @@ export default function Navbar() {
               transition={{ duration: 0.2 }}
               className="flex items-center space-x-2 sm:space-x-3 focus-ring rounded-lg"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 rounded-xl overflow-hidden bg-white/5">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 rounded-xl overflow-hidden">
                 <img 
                   src="/logo.png" 
                   alt="Sentient Biotech Logo" 
                   className="w-full h-full object-contain"
+                  style={{ 
+                    filter: 'brightness(0) invert(1)',
+                    WebkitFilter: 'brightness(0) invert(1)'
+                  }}
                   onError={(e) => {
                     // Fallback to gradient if logo fails to load
                     e.currentTarget.style.display = 'none';
                     if (e.currentTarget.parentElement) {
-                      e.currentTarget.parentElement.className = 'w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center shadow-blue';
-                      e.currentTarget.parentElement.innerHTML = '<div class="w-5 h-5 bg-white rounded-full subtle-pulse"></div>';
+                      e.currentTarget.parentElement.className = 'w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center shadow-blue';
+                      e.currentTarget.parentElement.innerHTML = '<div class="w-6 h-6 bg-white rounded-full subtle-pulse"></div>';
                     }
                   }}
                 />
               </div>
-              <span className="text-base sm:text-lg md:text-xl font-display font-bold gradient-text hidden xs:inline">
+              <span className="text-sm sm:text-base md:text-lg font-display font-bold text-white hidden xs:inline">
                 Sentient Biotech
               </span>
             </motion.a>
@@ -153,12 +156,12 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.05, duration: 0.3 }}
                     onClick={() => !item.dropdown && handleNavClick(item.href)}
-                    className="relative flex items-center space-x-1 px-3 py-2 text-[15px] font-medium text-text-secondary hover:text-text-primary transition-colors duration-200 rounded-lg hover:bg-glass-white group focus-ring"
+                    className="relative flex items-center space-x-1 px-3 py-2 text-[15px] font-medium text-white hover:text-white transition-colors duration-200 rounded-lg hover:bg-glass-white group focus-ring"
                   >
                     <span>{item.label}</span>
                     {item.dropdown && (
                       <ChevronDown 
-                        className={`w-4 h-4 transition-transform duration-200 ${
+                        className={`w-4 h-4 text-white transition-transform duration-200 ${
                           activeDropdown === item.label ? 'rotate-180' : ''
                         }`} 
                       />
@@ -188,7 +191,7 @@ export default function Navbar() {
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: dropdownIndex * 0.03, duration: 0.2 }}
                                 onClick={() => handleNavClick(dropdownItem.href)}
-                                className="w-full text-left px-4 py-3 text-[15px] text-text-secondary hover:text-text-primary hover:bg-glass-white transition-all duration-200 focus-ring"
+                                className="w-full text-left px-4 py-3 text-[15px] text-white hover:text-white hover:bg-glass-white transition-all duration-200 focus-ring"
                               >
                                 {dropdownItem.label}
                               </motion.button>
@@ -272,12 +275,12 @@ export default function Navbar() {
                           handleNavClick(item.href)
                         }
                       }}
-                      className="flex items-center justify-between w-full text-left text-sm sm:text-base font-medium text-text-primary hover:text-primary-blue transition-colors duration-200 py-3 px-3 rounded-lg hover:bg-glass-white focus-ring min-h-[44px]"
+                      className="flex items-center justify-between w-full text-left text-sm sm:text-base font-medium text-white hover:text-white transition-colors duration-200 py-3 px-3 rounded-lg hover:bg-glass-white focus-ring min-h-[44px]"
                     >
                       <span>{item.label}</span>
                       {item.dropdown && (
                         <ChevronDown 
-                          className={`w-5 h-5 transition-transform duration-200 ${
+                          className={`w-5 h-5 text-white transition-transform duration-200 ${
                             activeDropdown === item.label ? 'rotate-180' : ''
                           }`} 
                         />
@@ -303,7 +306,7 @@ export default function Navbar() {
                                   animate={{ opacity: 1, x: 0 }}
                                   transition={{ delay: dropdownIndex * 0.03 }}
                                   onClick={() => handleNavClick(dropdownItem.href)}
-                                  className="block w-full text-left text-xs sm:text-sm text-text-secondary hover:text-primary-blue transition-colors duration-200 py-2.5 px-3 rounded-lg hover:bg-glass-white focus-ring min-h-[44px]"
+                                  className="block w-full text-left text-xs sm:text-sm text-white hover:text-white transition-colors duration-200 py-2.5 px-3 rounded-lg hover:bg-glass-white focus-ring min-h-[44px]"
                                 >
                                   {dropdownItem.label}
                                 </motion.button>

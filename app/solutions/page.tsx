@@ -4,6 +4,7 @@ import { Suspense } from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ParticleBackground from '@/components/ParticleBackground'
+import CommonCTA from '@/components/CommonCTA'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { 
@@ -143,7 +144,7 @@ export default function SolutionsPage() {
       </section>
 
       {/* Solutions Overview */}
-      <section className="py-30">
+      <section className="py-30 bg-glass-white backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
           {solutions.map((solution, index) => (
             <motion.div
@@ -216,6 +217,8 @@ export default function SolutionsPage() {
           ))}
         </div>
       </section>
+
+      <CommonCTA />
 
       <Footer />
     </main>

@@ -5,46 +5,32 @@ import { Brain, Eye, Zap, Shield, Target, Wifi, Battery, Cpu } from 'lucide-reac
 
 const features = [
   {
-    icon: Brain,
-    title: "Neural Interface",
-    description: "Direct brain-computer interface for instant command execution and enhanced situational awareness.",
+    icon: Eye,
+    title: "Total Situational Awareness",
+    description: "A wide-field-of-view augmented reality interface fuses flight data, sensor feeds, and threat intelligence into a single, unified display, allowing the pilot to see and understand everything without looking down.",
     color: "text-electric-cyan",
     bgColor: "bg-electric-cyan/10"
   },
   {
-    icon: Eye,
-    title: "Advanced HUD",
-    description: "360-degree augmented reality display with threat detection, navigation, and mission-critical data.",
+    icon: Brain,
+    title: "Pilot State Monitoring",
+    description: "A suite of non-invasive biosensors integrated into the helmet lining continuously monitors the pilot's cognitive load and fatigue levels, providing alerts to maintain peak performance and safety.",
     color: "text-violet-accent",
     bgColor: "bg-violet-accent/10"
   },
   {
-    icon: Zap,
-    title: "Lightning Response",
-    description: "Sub-10ms response time for critical decisions with AI-powered threat assessment and recommendations.",
+    icon: Target,
+    title: "Intuitive HCI-Ready Control",
+    description: "The system is built on a Human-Computer Interface (HCI) ready architecture, paving the way for future integration of thought-driven commands for non-critical systems, enabling true hands-free operation.",
     color: "text-soft-teal",
     bgColor: "bg-soft-teal/10"
   },
   {
     icon: Shield,
-    title: "Battle Protection",
-    description: "Advanced ballistic protection with integrated life support systems and emergency protocols.",
+    title: "Uncompromising Performance",
+    description: "Constructed from advanced, lightweight composite materials, the headgear provides superior protection and comfort for long-duration missions without sacrificing agility.",
     color: "text-electric-cyan",
     bgColor: "bg-electric-cyan/10"
-  },
-  {
-    icon: Target,
-    title: "Precision Targeting",
-    description: "AI-enhanced targeting systems with predictive analytics and real-time threat prioritization.",
-    color: "text-violet-accent",
-    bgColor: "bg-violet-accent/10"
-  },
-  {
-    icon: Wifi,
-    title: "Secure Comms",
-    description: "Quantum-encrypted communication systems with multi-channel redundancy and jamming resistance.",
-    color: "text-soft-teal",
-    bgColor: "bg-soft-teal/10"
   }
 ]
 
@@ -87,15 +73,12 @@ export default function StarscreamFeatures() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-6">
-            <span className="gradient-text">Advanced</span> Technology
+            <span className="gradient-text">The System's</span> Pillars
           </h2>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto">
-            Cutting-edge systems designed for the most demanding combat environments
-          </p>
         </motion.div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 gap-8 mb-20">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}

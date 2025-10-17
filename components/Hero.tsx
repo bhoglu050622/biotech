@@ -91,11 +91,7 @@ export default function Hero() {
               className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight mb-6"
             >
               <span className="gradient-text text-balance">
-                Neurotech for
-              </span>
-              <br />
-              <span className="text-white">
-                Everyday Well-Being
+                Redefining Human–Machine Synergy
               </span>
             </motion.h1>
 
@@ -106,7 +102,7 @@ export default function Hero() {
               transition={{ delay: 0.4, duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
               className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0"
             >
-              Non-invasive BCI & biofeedback that helps you understand and improve your mind and body — real-time, accessible, humane.
+              Integrating Biotechnology, Neurotechnology, and Artificial Intelligence to Enhance Human Cognition, Performance, and Safety.
             </motion.p>
 
             {/* CTAs */}
@@ -122,7 +118,7 @@ export default function Hero() {
                 onClick={handleGetEarlyAccess}
                 className="btn-primary flex items-center justify-center space-x-2 text-lg px-8 py-4"
               >
-                <span>Get Early Access</span>
+                <span>Explore Our Innovations</span>
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
               

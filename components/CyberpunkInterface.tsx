@@ -47,6 +47,22 @@ export default function CyberpunkInterface() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        {/* Intro Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16 max-w-4xl mx-auto"
+        >
+          <p className="text-lg md:text-xl text-white/80 leading-relaxed">
+            Our Intelligent Helmet Mounted System [IHMS] functions as a seamless cognitive extension for the modern aviator. 
+            Developed under the <span className="text-electric-cyan font-semibold">"Make in India"</span> initiative, our helmet is engineered to 
+            process and display mission-critical data intuitively on the visor, monitor pilot biometrics, and reduce reaction time, 
+            ensuring a decisive advantage in any operational theatre. It is not just a piece of equipment; 
+            it is a <span className="text-electric-cyan font-semibold">force multiplier</span>.
+          </p>
+        </motion.div>
+
         {/* Main Interface Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 min-h-screen">
           

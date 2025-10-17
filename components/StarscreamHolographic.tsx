@@ -109,23 +109,26 @@ export default function StarscreamHolographic() {
             transition={{ duration: 2, repeat: Infinity }}
             className="text-6xl sm:text-7xl lg:text-8xl font-display font-bold mb-6"
           >
-            <span className="gradient-text">STARSCREAM</span>
+            <span className="gradient-text">Starscream</span>
           </motion.div>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
-            className="text-2xl text-white/80 font-mono"
-          >
-            NEXT-GENERATION COMBAT HELMET
-          </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
-            className="text-sm text-electric-cyan font-mono mt-2"
+            className="text-lg text-electric-cyan font-mono mt-2 mb-4"
           >
-            SYSTEM STATUS: ONLINE | MISSION READY
+            "Redefining Vision, Awareness & Safety in Aerial Combat"
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2, duration: 1 }}
+            className="text-white/80 max-w-4xl mx-auto text-lg leading-relaxed"
+          >
+            Our Intelligent Helmet Mounted System [IHMS] functions as a seamless cognitive extension for the modern aviator. 
+            Developed under the "Make in India" initiative, our helmet is engineered to process and display mission-critical 
+            data intuitively on the visor, monitor pilot biometrics, and reduce reaction time, ensuring a decisive advantage 
+            in any operational theatre. It is not just a piece of equipment; it is a force multiplier.
           </motion.div>
         </motion.div>
 
@@ -346,7 +349,7 @@ export default function StarscreamHolographic() {
             transition={{ duration: 2, repeat: Infinity }}
             className="text-lg text-white/60 font-mono"
           >
-            ADVANCED COMBAT SYSTEMS • NEURAL INTERFACE • AI-POWERED THREAT DETECTION
+            DEVELOPED UNDER "MAKE IN INDIA" • COGNITIVE EXTENSION • FORCE MULTIPLIER
           </motion.div>
         </motion.div>
       </div>

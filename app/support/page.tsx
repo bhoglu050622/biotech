@@ -4,6 +4,7 @@ import { Suspense } from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ParticleBackground from '@/components/ParticleBackground'
+import CommonCTA from '@/components/CommonCTA'
 import { motion } from 'framer-motion'
 import { 
   Headphones, 
@@ -550,6 +551,8 @@ export default function SupportPage() {
           </motion.div>
         </div>
       </section>
+
+      <CommonCTA />
 
       <Footer />
     </main>

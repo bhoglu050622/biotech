@@ -4,6 +4,7 @@ import { Suspense } from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ParticleBackground from '@/components/ParticleBackground'
+import CommonCTA from '@/components/CommonCTA'
 import { motion } from 'framer-motion'
 import { 
   Brain, 
@@ -74,8 +75,11 @@ export default function InvestorsPage() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-display font-bold gradient-text mb-6">
-              Investing in the Next Frontier of Human Potential
+              INVESTORS
             </h1>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6">
+              Investing in the Next Frontier of Human Potential
+            </h2>
             <p className="text-xl text-white/80 max-w-4xl mx-auto mb-8">
               Sentient Biotech is positioned at the intersection of three of the most transformative global trends: 
               artificial intelligence, neurotechnology, and data-driven healthcare. We are developing a foundational 
@@ -94,7 +98,7 @@ export default function InvestorsPage() {
       </section>
 
       {/* Investment Thesis Section */}
-      <section className="py-16">
+      <section className="py-16 bg-glass-white backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -178,50 +182,7 @@ export default function InvestorsPage() {
         </div>
       </section>
 
-      {/* Call to Action Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="glass-panel-strong rounded-2xl p-8 md:p-12 text-center"
-          >
-            <div className="w-20 h-20 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-full flex items-center justify-center mx-auto mb-6">
-              <Target className="w-10 h-10 text-white" />
-            </div>
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
-              Join Us
-            </h2>
-            <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-              We are currently engaging with select seed-stage investors and strategic partners who share our vision 
-              for the future. If you are an accredited investor and wish to learn more about our mission, technology, 
-              and business plan, please contact us to request an investment memorandum.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <motion.a
-                href="mailto:jasmeet@sentientbiotech.in"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-primary inline-flex items-center"
-              >
-                <Mail className="w-5 h-5 mr-2" />
-                jasmeet@sentientbiotech.in
-              </motion.a>
-              <motion.a
-                href="/contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-secondary inline-flex items-center"
-              >
-                Request Investment Memorandum
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </motion.a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <CommonCTA />
 
       <Footer />
     </main>

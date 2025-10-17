@@ -4,13 +4,12 @@ import { Suspense } from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ParticleBackground from '@/components/ParticleBackground'
+import CommonCTA from '@/components/CommonCTA'
 import { motion } from 'framer-motion'
 import { 
   Shield, 
   Brain, 
-  TrendingUp, 
   Users, 
-  Award, 
   CheckCircle, 
   ArrowRight,
   ExternalLink,
@@ -106,17 +105,6 @@ const industries = [
   { name: 'Research', count: 1, icon: Users }
 ]
 
-const keyMetrics = [
-  {
-    metric: '35%',
-    description: 'Average Performance Improvement',
-    icon: TrendingUp
-  },
-  { metric: '99.9%', description: 'System Reliability', icon: Award },
-  { metric: '50+', description: 'Successful Deployments', icon: CheckCircle },
-  { metric: '15+', description: 'Countries Served', icon: MapPin }
-]
-
 export default function CaseStudiesPage() {
   return (
     <main className="relative min-h-screen bg-deep-indigo">
@@ -143,38 +131,8 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* Key Metrics */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
-          >
-            {keyMetrics.map((metric, index) => (
-              <motion.div
-                key={metric.metric}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="glass-panel-strong rounded-xl p-6 text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <metric.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-electric-cyan mb-2">{metric.metric}</div>
-                <div className="text-white/80 text-sm">{metric.description}</div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
       {/* Industry Filter */}
-      <section className="py-8">
+      <section className="py-8 bg-glass-white backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -261,7 +219,7 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Case Studies Grid */}
-      <section className="py-16">
+      <section className="py-16 bg-glass-white backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -327,43 +285,7 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="glass-panel-strong rounded-2xl p-8 text-center"
-          >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
-              Ready to Create Your Success Story?
-            </h2>
-            <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our neurotechnology solutions can transform your operations 
-              and deliver measurable results for your organization.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-primary"
-              >
-                Schedule Consultation
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-secondary"
-              >
-                Download Case Studies
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <CommonCTA />
 
       <Footer />
     </main>

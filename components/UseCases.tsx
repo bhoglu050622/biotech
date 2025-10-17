@@ -8,10 +8,7 @@ import {
   Heart, 
   Zap, 
   Shield, 
-  Activity,
-  TrendingUp,
-  Users,
-  Clock
+  Activity
 } from 'lucide-react'
 
 const useCases = [
@@ -92,27 +89,6 @@ const useCases = [
     ],
     gradient: 'from-soft-teal to-violet-accent',
     bgGradient: 'from-soft-teal/10 to-violet-accent/10'
-  }
-]
-
-const stats = [
-  {
-    icon: Users,
-    value: '10M+',
-    label: 'People with mental health needs',
-    description: 'Worldwide who could benefit from accessible neurotech'
-  },
-  {
-    icon: TrendingUp,
-    value: '85%',
-    label: 'Improvement rate',
-    description: 'In stress management with regular neurofeedback training'
-  },
-  {
-    icon: Clock,
-    value: '24/7',
-    label: 'Continuous monitoring',
-    description: 'Real-time insights into your mental and physical well-being'
   }
 ]
 
@@ -207,61 +183,6 @@ export default function UseCases() {
             )
           })}
         </div>
-
-        {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
-          viewport={{ once: true }}
-          className="glass-panel-strong rounded-3xl p-12 neural-glow-strong"
-        >
-          <div className="text-center mb-12">
-            <h3 className="text-2xl sm:text-3xl font-display font-bold mb-4">
-              <span className="gradient-text">Impact & Results</span>
-            </h3>
-            <p className="text-white/70 max-w-2xl mx-auto">
-              Our technology is designed to make a meaningful difference in people's lives, 
-              with measurable improvements in mental health and well-being.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {stats.map((stat, index) => {
-              const IconComponent = stat.icon
-              return (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.2, duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
-                  viewport={{ once: true }}
-                  className="text-center"
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ duration: 0.3 }}
-                    className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-electric-cyan to-violet-accent flex items-center justify-center"
-                  >
-                    <IconComponent className="w-10 h-10 text-white" />
-                  </motion.div>
-                  
-                  <div className="text-4xl sm:text-5xl font-display font-bold gradient-text mb-2">
-                    {stat.value}
-                  </div>
-                  
-                  <div className="text-lg font-semibold text-white mb-2">
-                    {stat.label}
-                  </div>
-                  
-                  <p className="text-white/60 text-sm leading-relaxed">
-                    {stat.description}
-                  </p>
-                </motion.div>
-              )
-            })}
-          </div>
-        </motion.div>
 
         {/* Bottom CTA */}
         <motion.div

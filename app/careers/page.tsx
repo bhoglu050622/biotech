@@ -3,6 +3,7 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ParticleBackground from '@/components/ParticleBackground'
+import CommonCTA from '@/components/CommonCTA'
 import { motion } from 'framer-motion'
 import { 
   Users, 
@@ -51,8 +52,11 @@ export default function CareersPage() {
             className="text-center"
           >
             <h1 className="text-5xl md:text-7xl font-display font-bold gradient-text mb-6">
-              Work on Problems that Matter
+              CAREERS
             </h1>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6">
+              "Work on Problems that Matter"
+            </h2>
             <div className="text-base text-text-secondary max-w-4xl mx-auto space-y-6 leading-relaxed">
               <p>
                 At Sentient Biotech, we are tackling some of the most complex and meaningful challenges of our time. We are a team of scientists, engineers, and visionaries dedicated to building technology that will redefine mental healthcare and enhance national security.
@@ -66,7 +70,7 @@ export default function CareersPage() {
       </section>
 
       {/* Why Join Section */}
-      <section className="py-30">
+      <section className="py-30 bg-glass-white backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -105,50 +109,7 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Call to Action Section */}
-      <section className="py-30 bg-gradient-to-br from-primary-blue via-secondary-blue to-accent-blue relative overflow-hidden">
-        {/* Subtle Pattern Overlay */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
-              Join Our Team
-            </h2>
-            <div className="text-white/90 mb-10 max-w-3xl mx-auto space-y-4 text-base leading-relaxed">
-              <p>
-                While we don't have any open positions currently, we are always looking for exceptional individuals who are passionate about our mission.
-              </p>
-              <p>
-                If you are a top performer in your field and want to build the future with us, please send your resume and a cover letter explaining your vision to:
-              </p>
-              <a 
-                href="mailto:jasmeet@sentientbiotech.in" 
-                className="text-white hover:text-gray-100 transition-colors duration-200 font-semibold text-lg inline-block underline underline-offset-4"
-              >
-                jasmeet@sentientbiotech.in
-              </a>
-            </div>
-            <motion.a
-              href="mailto:jasmeet@sentientbiotech.in"
-              whileHover={{ scale: 1.02, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-3 bg-white text-primary-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-200 focus-ring shadow-soft-lg"
-            >
-              Express Your Interest
-              <ArrowRight className="w-5 h-5" />
-            </motion.a>
-          </motion.div>
-        </div>
-      </section>
+      <CommonCTA />
 
       <Footer />
     </main>

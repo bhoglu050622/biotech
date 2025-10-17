@@ -8,14 +8,14 @@
   "theme_color": "#0B1020",
   "icons": [
     {
-      "src": "/favicon.ico",
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='white'/><circle cx='50' cy='50' r='30' fill='%230066ff'/></svg>",
       "sizes": "any",
-      "type": "image/x-icon"
+      "type": "image/svg+xml"
     },
     {
-      "src": "/apple-touch-icon.png",
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' fill='white'/><circle cx='90' cy='90' r='50' fill='%230066ff'/></svg>",
       "sizes": "180x180",
-      "type": "image/png"
+      "type": "image/svg+xml"
     }
   ]
 }

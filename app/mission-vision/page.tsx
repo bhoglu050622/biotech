@@ -4,6 +4,7 @@ import { Suspense } from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ParticleBackground from '@/components/ParticleBackground'
+import CommonCTA from '@/components/CommonCTA'
 import { motion } from 'framer-motion'
 import { 
   Target, 
@@ -17,8 +18,7 @@ import {
   ArrowRight,
   Brain,
   Heart,
-  Lightbulb,
-  TrendingUp
+  Lightbulb
 } from 'lucide-react'
 
 const missionPillars = [
@@ -118,29 +118,6 @@ const coreValues = [
   }
 ]
 
-const impactMetrics = [
-  {
-    metric: '35%',
-    description: 'Improvement in pilot mission success rates',
-    icon: TrendingUp
-  },
-  {
-    metric: '40%',
-    description: 'Faster neurological diagnosis times',
-    icon: Brain
-  },
-  {
-    metric: '50%',
-    description: 'Reduction in training time for new pilots',
-    icon: Award
-  },
-  {
-    metric: '99.9%',
-    description: 'System reliability and uptime',
-    icon: Shield
-  }
-]
-
 export default function MissionVisionPage() {
   return (
     <main className="relative min-h-screen bg-deep-indigo">
@@ -160,236 +137,88 @@ export default function MissionVisionPage() {
               Mission & Vision
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
+              "We envision a future where human potential is amplified through seamless integration with advanced neurotechnology and biotechnology solutions"
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Mission & Vision Cards */}
+      <section className="py-16 bg-glass-white backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-text-primary mb-4">
+              Our Mission & Vision
+            </h2>
+            <p className="text-text-secondary max-w-3xl mx-auto">
               Driving the future of neurotechnology through innovation, excellence, 
               and unwavering commitment to human performance and safety.
             </p>
           </motion.div>
-        </div>
-      </section>
 
-      {/* Mission Statement */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <div className="glass-panel-strong rounded-2xl p-8 max-w-4xl mx-auto">
-              <Target className="w-16 h-16 text-electric-cyan mx-auto mb-6" />
-              <h2 className="text-3xl font-display font-bold text-white mb-6">
-                Our Mission
-              </h2>
-              <p className="text-xl text-white/80 leading-relaxed">
-                To revolutionize human-machine interfaces through cutting-edge neurotechnology, 
-                enhancing performance and safety in defense, aerospace, and healthcare applications 
-                while maintaining the highest standards of innovation, reliability, and ethical practice.
-              </p>
-            </div>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {missionPillars.map((pillar, index) => (
-              <motion.div
-                key={pillar.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="glass-panel-strong rounded-xl p-6 text-center"
-              >
-                <div className={`w-12 h-12 bg-gradient-to-br ${pillar.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>
-                  <pillar.icon className="w-6 h-6 text-white" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Mission Card */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="glass-panel-strong rounded-2xl p-8 sm:p-10"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center">
+                  <Target className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-white font-semibold mb-3">{pillar.title}</h3>
-                <p className="text-white/70 text-sm">{pillar.description}</p>
-              </motion.div>
-            ))}
+                <h3 className="text-2xl sm:text-3xl font-display font-bold text-white">
+                  Our Mission
+                </h3>
+              </div>
+              <div className="space-y-4 text-white/80 leading-relaxed">
+                <p>
+                  At Sentient Biotech Private Limited, our mission is to redefine the boundaries of human potential through the convergence of biotechnology, artificial intelligence, and cognitive science. We are dedicated to developing technologies that not only enhance human capability but also deepen our understanding of the mind and body.
+                </p>
+                <p>
+                  Our goal is to create innovations that serve both healthcare and defense, empowering medical professionals to diagnose and treat with precision, and enabling defense personnel to perform beyond conventional human limits. Through continuous research, ethical innovation, and a commitment to excellence, we strive to build a future where technology works in harmony with humanity.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Vision Card */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="glass-panel-strong rounded-2xl p-8 sm:p-10"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-secondary-blue to-accent-blue rounded-xl flex items-center justify-center">
+                  <Eye className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-display font-bold text-white">
+                  Our Vision
+                </h3>
+              </div>
+              <div className="space-y-4 text-white/80 leading-relaxed">
+                <p>
+                  Our vision is to become a global leader in next-generation neurotechnology, driving the evolution of intelligent systems that seamlessly integrate human intuition with machine intelligence. We envision a world where technology augments rather than replaces human ability, a future in which every individual can achieve optimal mental, physical, and operational performance.
+                </p>
+                <p>
+                  Sentient Biotech aims to set new standards in innovation, safety, and human advancement, creating transformative solutions that redefine how we think, heal, and protect.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Vision Statement */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <div className="glass-panel-strong rounded-2xl p-8 max-w-4xl mx-auto">
-              <Eye className="w-16 h-16 text-violet-accent mx-auto mb-6" />
-              <h2 className="text-3xl font-display font-bold text-white mb-6">
-                Our Vision
-              </h2>
-              <p className="text-xl text-white/80 leading-relaxed">
-                To be the global leader in neurotechnology solutions, creating a world where 
-                human-machine interfaces seamlessly enhance human capabilities, improve safety, 
-                and unlock new possibilities for human performance across all sectors.
-              </p>
-            </div>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {visionGoals.map((goal, index) => (
-              <motion.div
-                key={goal.year}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.2, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="glass-panel-strong rounded-xl p-6"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-lg flex items-center justify-center flex-shrink-0">
-                    <goal.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <div className="flex items-center space-x-2 mb-2">
-                      <span className="text-electric-cyan font-bold">{goal.year}</span>
-                      <span className="text-white/60">•</span>
-                      <span className="text-white font-semibold">{goal.title}</span>
-                    </div>
-                    <p className="text-white/70 text-sm">{goal.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Core Values */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
-              Core Values
-            </h2>
-            <p className="text-white/80 max-w-2xl mx-auto">
-              Our values guide every decision, innovation, and partnership we pursue.
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {coreValues.map((value, index) => (
-              <motion.div
-                key={value.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="glass-panel-strong rounded-xl p-6"
-              >
-                <div className="flex items-start space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-lg flex items-center justify-center flex-shrink-0">
-                    <value.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-2">{value.title}</h3>
-                    <p className="text-white/70 text-sm">{value.description}</p>
-                  </div>
-                </div>
-                <ul className="space-y-2">
-                  {value.details.map((detail, detailIndex) => (
-                    <li key={detailIndex} className="flex items-center space-x-2 text-sm text-white/60">
-                      <CheckCircle className="w-4 h-4 text-electric-cyan flex-shrink-0" />
-                      <span>{detail}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Impact Metrics */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
-              Our Impact
-            </h2>
-            <p className="text-white/80 max-w-2xl mx-auto">
-              Measurable results that demonstrate our commitment to excellence and innovation.
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {impactMetrics.map((metric, index) => (
-              <motion.div
-                key={metric.metric}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                viewport={{ once: true }}
-                className="glass-panel-strong rounded-xl p-6 text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <metric.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-electric-cyan mb-2">{metric.metric}</div>
-                <p className="text-white/70 text-sm">{metric.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="glass-panel-strong rounded-2xl p-8 text-center"
-          >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
-              Join Our Mission
-            </h2>
-            <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-              Be part of the future of neurotechnology. Together, we can create solutions 
-              that enhance human performance and safety across the globe.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-primary"
-              >
-                Partner with Us
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-secondary"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <CommonCTA />
 
       <Footer />
     </main>

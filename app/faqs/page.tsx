@@ -4,6 +4,7 @@ import { Suspense, useState } from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ParticleBackground from '@/components/ParticleBackground'
+import CommonCTA from '@/components/CommonCTA'
 import { motion, AnimatePresence } from 'framer-motion'
 import { 
   ChevronDown, 
@@ -19,154 +20,54 @@ import {
 } from 'lucide-react'
 
 const faqCategories = [
-  { name: 'All', count: 20, icon: HelpCircle },
-  { name: 'Products', count: 6, icon: Brain },
-  { name: 'Technical', count: 5, icon: Zap },
-  { name: 'Support', count: 4, icon: Users },
-  { name: 'Security', count: 3, icon: Shield },
-  { name: 'General', count: 2, icon: Globe }
+  { name: 'All', count: 6, icon: HelpCircle },
+  { name: 'General', count: 2, icon: Globe },
+  { name: 'Technology', count: 2, icon: Brain },
+  { name: 'Partnerships', count: 2, icon: Users }
 ]
 
 const faqs = [
   {
     id: 1,
-    question: 'What is the accuracy of your EEG systems?',
-    answer: 'Our EEG systems achieve 99.9% accuracy in neural signal acquisition and processing. This high accuracy is achieved through advanced signal processing algorithms, high-resolution sensors, and real-time artifact removal capabilities.',
-    category: 'Products',
-    tags: ['EEG', 'Accuracy', 'Signal Processing']
+    question: 'What does Sentient Biotech do?',
+    answer: 'Sentient Biotech is an advanced neurotechnology company that develops integrated hardware and AI software solutions. We build tools to objectively diagnose and monitor brain health, and we create systems to enhance human performance and safety in high-stakes environments like defense and aerospace.',
+    category: 'General',
+    tags: ['Company', 'Neurotechnology', 'Overview']
   },
   {
     id: 2,
-    question: 'How secure are your systems for defense applications?',
-    answer: 'Our systems meet the highest security standards including MIL-STD-461F for EMI/EMC, AES-256 encryption for data transmission, and secure authentication protocols. All systems are designed with defense-grade security from the ground up.',
-    category: 'Security',
-    tags: ['Security', 'Defense', 'Encryption']
+    question: 'Is my data safe and private?',
+    answer: 'Absolutely. Data privacy and security are foundational to our design philosophy. All data is anonymized and encrypted, and we adhere to the strictest global standards for handling sensitive health and personal information.',
+    category: 'General',
+    tags: ['Privacy', 'Security', 'Data Protection']
   },
   {
     id: 3,
-    question: 'What certifications do your products have?',
-    answer: 'Our products are certified to ISO 13485:2016 for medical devices, have CE marking for European markets, FDA 510(k) clearance for medical applications, and meet MIL-STD-810G environmental standards for defense use.',
-    category: 'General',
-    tags: ['Certifications', 'Standards', 'Compliance']
+    question: 'How can EEG be used for diagnosis?',
+    answer: 'Your brain produces constant electrical activity (brainwaves), which can be recorded by an electroencephalogram (EEG). Different neurological and psychiatric conditions are associated with distinct, often subtle, patterns or "biomarkers" in this activity. Our deep learning modules are trained on thousands of hours of data to recognize these patterns with a high degree of accuracy, providing objective support for clinical diagnosis.',
+    category: 'Technology',
+    tags: ['EEG', 'Diagnosis', 'Brainwaves']
   },
   {
     id: 4,
-    question: 'How long does the battery last on wireless EEG systems?',
-    answer: 'Our wireless EEG systems provide 8+ hours of continuous operation on a single charge. The battery life can be extended to 12+ hours with optimized settings for specific applications.',
-    category: 'Technical',
-    tags: ['Battery', 'Wireless', 'Performance']
+    question: 'What is the "heart-brain axis"?',
+    answer: 'The heart-brain axis refers to the constant, bidirectional communication between the heart and the brain. Your cognitive and emotional states can influence your heart rate, and conversely, your cardiovascular health can impact your brain function. Our multi-modal devices, which can measure signals from both organs, allow for a more holistic understanding of a person\'s overall health and wellness.',
+    category: 'Technology',
+    tags: ['Heart-Brain Axis', 'Multi-modal', 'Wellness']
   },
   {
     id: 5,
-    question: 'Can your systems be used in harsh environments?',
-    answer: 'Yes, our systems are designed to operate in extreme conditions. They meet MIL-STD-810G standards for temperature (-40°C to +70°C), humidity (0-95% RH), vibration, and altitude (up to 15,000m).',
-    category: 'Technical',
-    tags: ['Environment', 'Durability', 'Standards']
+    question: 'Is Sentient Biotech seeking investment?',
+    answer: 'Yes, we are currently engaging with seed-stage investors and strategic partners who share our vision. Accredited investors can learn more by visiting our "Investors" page or contacting us directly.',
+    category: 'Partnerships',
+    tags: ['Investment', 'Seed-stage', 'Investors']
   },
   {
     id: 6,
-    question: 'What kind of training do you provide?',
-    answer: 'We provide comprehensive training programs including system operation, data analysis, maintenance procedures, and troubleshooting. Training can be conducted on-site, remotely, or at our facilities in Chennai.',
-    category: 'Support',
-    tags: ['Training', 'Support', 'Education']
-  },
-  {
-    id: 7,
-    question: 'How do you ensure data privacy and compliance?',
-    answer: 'We implement strict data privacy measures including GDPR compliance, HIPAA compliance for healthcare applications, and defense-grade security protocols. All data is encrypted both in transit and at rest.',
-    category: 'Security',
-    tags: ['Privacy', 'Compliance', 'Data Protection']
-  },
-  {
-    id: 8,
-    question: 'What is the setup time for your EEG systems?',
-    answer: 'Our EEG systems can be set up and operational within 15-30 minutes depending on the configuration. The modular design and intuitive software make installation and calibration straightforward.',
-    category: 'Technical',
-    tags: ['Setup', 'Installation', 'Time']
-  },
-  {
-    id: 9,
-    question: 'Do you provide custom solutions for specific applications?',
-    answer: 'Yes, we offer custom development services for specialized applications. Our team works closely with clients to understand requirements and develop tailored solutions that meet specific needs.',
-    category: 'Products',
-    tags: ['Custom', 'Development', 'Solutions']
-  },
-  {
-    id: 10,
-    question: 'What support options are available?',
-    answer: 'We provide 24/7 technical support for defense contracts, standard business hours support for other applications, remote diagnostics, on-site service, and comprehensive documentation and training materials.',
-    category: 'Support',
-    tags: ['Support', '24/7', 'Service']
-  },
-  {
-    id: 11,
-    question: 'How do you handle software updates and maintenance?',
-    answer: 'We provide regular software updates with new features and improvements. Updates can be installed remotely or on-site. We also offer maintenance contracts that include regular system health checks and preventive maintenance.',
-    category: 'Support',
-    tags: ['Updates', 'Maintenance', 'Software']
-  },
-  {
-    id: 12,
-    question: 'What is the warranty period for your products?',
-    answer: 'Our products come with a 2-year comprehensive warranty covering hardware defects and software issues. Extended warranty options are available for critical applications.',
-    category: 'General',
-    tags: ['Warranty', 'Coverage', 'Support']
-  },
-  {
-    id: 13,
-    question: 'Can your systems integrate with existing infrastructure?',
-    answer: 'Yes, our systems are designed with open APIs and standard protocols to ensure seamless integration with existing IT infrastructure, hospital systems, and defense networks.',
-    category: 'Technical',
-    tags: ['Integration', 'APIs', 'Compatibility']
-  },
-  {
-    id: 14,
-    question: 'What is the data storage capacity?',
-    answer: 'Our systems include 32GB of internal storage with options for external storage expansion. Data can also be streamed to cloud storage or local servers for long-term archiving.',
-    category: 'Technical',
-    tags: ['Storage', 'Data', 'Capacity']
-  },
-  {
-    id: 15,
-    question: 'How do you ensure system reliability?',
-    answer: 'We implement multiple layers of redundancy, continuous system monitoring, predictive maintenance algorithms, and rigorous testing protocols to ensure 99.9% system uptime and reliability.',
-    category: 'Products',
-    tags: ['Reliability', 'Uptime', 'Monitoring']
-  },
-  {
-    id: 16,
-    question: 'What are the power requirements for your systems?',
-    answer: 'Our systems are designed for low power consumption and can operate on standard AC power, DC power, or battery power. Power consumption ranges from 5W to 15W depending on the configuration.',
-    category: 'Technical',
-    tags: ['Power', 'Consumption', 'Requirements']
-  },
-  {
-    id: 17,
-    question: 'Do you provide data analysis and reporting tools?',
-    answer: 'Yes, we provide comprehensive data analysis software with real-time visualization, automated reporting, statistical analysis tools, and customizable dashboards for different user needs.',
-    category: 'Products',
-    tags: ['Analysis', 'Reporting', 'Software']
-  },
-  {
-    id: 18,
-    question: 'What is the lead time for product delivery?',
-    answer: 'Standard products are typically delivered within 4-6 weeks. Custom solutions may require 8-12 weeks depending on complexity. Rush delivery options are available for urgent requirements.',
-    category: 'Support',
-    tags: ['Delivery', 'Lead Time', 'Shipping']
-  },
-  {
-    id: 19,
-    question: 'How do you handle international shipping and customs?',
-    answer: 'We have experience with international shipping and can assist with customs documentation, export licenses, and compliance requirements for different countries and regions.',
-    category: 'Support',
-    tags: ['Shipping', 'International', 'Customs']
-  },
-  {
-    id: 20,
-    question: 'What research and development capabilities do you have?',
-    answer: 'We maintain a dedicated R&D team with expertise in neuroscience, signal processing, AI/ML, and hardware design. We collaborate with leading research institutions and continuously invest in innovation.',
-    category: 'Products',
-    tags: ['R&D', 'Innovation', 'Research']
+    question: 'How can my hospital or research institution collaborate with you?',
+    answer: 'We are actively seeking clinical and academic partners for validation studies and research collaborations. Please reach out to us through our "Contact Us" page to discuss your specific area of interest. We would be delighted to explore how our platforms can support your work.',
+    category: 'Partnerships',
+    tags: ['Collaboration', 'Clinical', 'Research']
   }
 ]
 
@@ -202,7 +103,7 @@ export default function FAQsPage() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-display font-bold gradient-text mb-6">
-              Frequently Asked Questions
+              FAQs [Frequently Asked Questions]
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
               Find answers to common questions about our neurotechnology solutions, 
@@ -213,7 +114,7 @@ export default function FAQsPage() {
       </section>
 
       {/* Search and Filter */}
-      <section className="py-8">
+      <section className="py-8 bg-glass-white backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -351,42 +252,7 @@ export default function FAQsPage() {
         </div>
       </section>
 
-      {/* Contact Support */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="glass-panel-strong rounded-2xl p-8 text-center"
-          >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
-              Still Have Questions?
-            </h2>
-            <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-              Can't find the answer you're looking for? Our expert team is here to help 
-              with any questions about our neurotechnology solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-primary"
-              >
-                Contact Support
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-secondary"
-              >
-                Schedule Demo
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <CommonCTA />
 
       <Footer />
     </main>

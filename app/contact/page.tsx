@@ -4,6 +4,8 @@ import { Suspense, useState } from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ParticleBackground from '@/components/ParticleBackground'
+import BackToTop from '@/components/BackToTop'
+import JsonLd, { organizationSchema, generateBreadcrumbSchema } from '@/components/JsonLd'
 import { motion } from 'framer-motion'
 import { 
   Mail, 
@@ -106,8 +108,49 @@ export default function ContactPage() {
     message: ''
   })
 
+  const [errors, setErrors] = useState<Record<string, string>>({})
+  const [touched, setTouched] = useState<Record<string, boolean>>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+
+  // Validation rules
+  const validateField = (name: string, value: string): string => {
+    switch (name) {
+      case 'name':
+        if (!value.trim()) return 'Name is required'
+        if (value.trim().length < 2) return 'Name must be at least 2 characters'
+        if (!/^[a-zA-Z\s]+$/.test(value)) return 'Name should only contain letters'
+        return ''
+      
+      case 'email':
+        if (!value.trim()) return 'Email is required'
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return 'Please enter a valid email address'
+        return ''
+      
+      case 'phone':
+        if (value && !/^[\d\s\-+()]+$/.test(value)) return 'Please enter a valid phone number'
+        if (value && value.replace(/\D/g, '').length < 10) return 'Phone number must be at least 10 digits'
+        return ''
+      
+      case 'inquiryType':
+        if (!value) return 'Please select an inquiry type'
+        return ''
+      
+      case 'subject':
+        if (!value.trim()) return 'Subject is required'
+        if (value.trim().length < 5) return 'Subject must be at least 5 characters'
+        return ''
+      
+      case 'message':
+        if (!value.trim()) return 'Message is required'
+        if (value.trim().length < 10) return 'Message must be at least 10 characters'
+        if (value.trim().length > 1000) return 'Message must not exceed 1000 characters'
+        return ''
+      
+      default:
+        return ''
+    }
+  }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -115,10 +158,55 @@ export default function ContactPage() {
       ...prev,
       [name]: value
     }))
+
+    // Real-time validation
+    if (touched[name]) {
+      const error = validateField(name, value)
+      setErrors(prev => ({
+        ...prev,
+        [name]: error
+      }))
+    }
+  }
+
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target
+    setTouched(prev => ({
+      ...prev,
+      [name]: true
+    }))
+
+    const error = validateField(name, value)
+    setErrors(prev => ({
+      ...prev,
+      [name]: error
+    }))
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+
+    // Validate all fields
+    const newErrors: Record<string, string> = {}
+    Object.keys(formData).forEach(key => {
+      const error = validateField(key, formData[key as keyof typeof formData])
+      if (error) newErrors[key] = error
+    })
+
+    setErrors(newErrors)
+    setTouched({
+      name: true,
+      email: true,
+      inquiryType: true,
+      subject: true,
+      message: true
+    })
+
+    // If there are errors, don't submit
+    if (Object.keys(newErrors).some(key => newErrors[key])) {
+      return
+    }
+
     setIsSubmitting(true)
     
     // Simulate form submission
@@ -139,13 +227,23 @@ export default function ContactPage() {
         subject: '',
         message: ''
       })
+      setErrors({})
+      setTouched({})
     }, 3000)
   }
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://sentientbiotech.in' },
+    { name: 'Contact Us', url: 'https://sentientbiotech.in/contact' }
+  ])
+
   return (
     <main className="relative min-h-screen bg-deep-indigo">
+      <JsonLd data={organizationSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <ParticleBackground />
       <Navbar />
+      <BackToTop />
       
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 overflow-hidden">
@@ -182,7 +280,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Methods */}
-      <section className="py-16">
+      <section className="py-16 bg-glass-white backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -266,10 +364,23 @@ export default function ContactPage() {
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan"
+                        onBlur={handleBlur}
+                        className={`w-full px-4 py-3 bg-white/5 border rounded-lg text-white placeholder-white/50 focus:outline-none transition-colors ${
+                          errors.name && touched.name
+                            ? 'border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500'
+                            : 'border-white/10 focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan'
+                        }`}
                         placeholder="Your full name"
                       />
+                      {errors.name && touched.name && (
+                        <motion.p
+                          initial={{ opacity: 0, y: -5 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="text-red-400 text-xs mt-1"
+                        >
+                          {errors.name}
+                        </motion.p>
+                      )}
                     </div>
                     <div>
                       <label className="block text-white text-sm font-medium mb-2">
@@ -280,10 +391,23 @@ export default function ContactPage() {
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan"
+                        onBlur={handleBlur}
+                        className={`w-full px-4 py-3 bg-white/5 border rounded-lg text-white placeholder-white/50 focus:outline-none transition-colors ${
+                          errors.email && touched.email
+                            ? 'border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500'
+                            : 'border-white/10 focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan'
+                        }`}
                         placeholder="your.email@company.com"
                       />
+                      {errors.email && touched.email && (
+                        <motion.p
+                          initial={{ opacity: 0, y: -5 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="text-red-400 text-xs mt-1"
+                        >
+                          {errors.email}
+                        </motion.p>
+                      )}
                     </div>
                   </div>
                   
@@ -297,7 +421,8 @@ export default function ContactPage() {
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan"
+                        onBlur={handleBlur}
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan transition-colors"
                         placeholder="Your company name"
                       />
                     </div>
@@ -310,9 +435,23 @@ export default function ContactPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan"
+                        onBlur={handleBlur}
+                        className={`w-full px-4 py-3 bg-white/5 border rounded-lg text-white placeholder-white/50 focus:outline-none transition-colors ${
+                          errors.phone && touched.phone
+                            ? 'border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500'
+                            : 'border-white/10 focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan'
+                        }`}
                         placeholder="+91-XXXXXXXXXX"
                       />
+                      {errors.phone && touched.phone && (
+                        <motion.p
+                          initial={{ opacity: 0, y: -5 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="text-red-400 text-xs mt-1"
+                        >
+                          {errors.phone}
+                        </motion.p>
+                      )}
                     </div>
                   </div>
                   
@@ -324,8 +463,12 @@ export default function ContactPage() {
                       name="inquiryType"
                       value={formData.inquiryType}
                       onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan"
+                      onBlur={handleBlur}
+                      className={`w-full px-4 py-3 bg-white/5 border rounded-lg text-white focus:outline-none transition-colors ${
+                        errors.inquiryType && touched.inquiryType
+                          ? 'border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500'
+                          : 'border-white/10 focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan'
+                      }`}
                     >
                       <option value="">Select inquiry type</option>
                       {inquiryTypes.map((type) => (
@@ -334,6 +477,15 @@ export default function ContactPage() {
                         </option>
                       ))}
                     </select>
+                    {errors.inquiryType && touched.inquiryType && (
+                      <motion.p
+                        initial={{ opacity: 0, y: -5 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="text-red-400 text-xs mt-1"
+                      >
+                        {errors.inquiryType}
+                      </motion.p>
+                    )}
                   </div>
                   
                   <div>
@@ -345,25 +497,54 @@ export default function ContactPage() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan"
+                      onBlur={handleBlur}
+                      className={`w-full px-4 py-3 bg-white/5 border rounded-lg text-white placeholder-white/50 focus:outline-none transition-colors ${
+                        errors.subject && touched.subject
+                          ? 'border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500'
+                          : 'border-white/10 focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan'
+                      }`}
                       placeholder="Brief subject of your inquiry"
                     />
+                    {errors.subject && touched.subject && (
+                      <motion.p
+                        initial={{ opacity: 0, y: -5 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="text-red-400 text-xs mt-1"
+                      >
+                        {errors.subject}
+                      </motion.p>
+                    )}
                   </div>
                   
                   <div>
-                    <label className="block text-white text-sm font-medium mb-2">
-                      Message *
+                    <label className="block text-white text-sm font-medium mb-2 flex items-center justify-between">
+                      <span>Message *</span>
+                      <span className={`text-xs ${formData.message.length > 1000 ? 'text-red-400' : 'text-white/50'}`}>
+                        {formData.message.length}/1000
+                      </span>
                     </label>
                     <textarea
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      required
+                      onBlur={handleBlur}
                       rows={4}
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan resize-none"
+                      className={`w-full px-4 py-3 bg-white/5 border rounded-lg text-white placeholder-white/50 focus:outline-none resize-none transition-colors ${
+                        errors.message && touched.message
+                          ? 'border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500'
+                          : 'border-white/10 focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan'
+                      }`}
                       placeholder="Please provide details about your inquiry..."
                     />
+                    {errors.message && touched.message && (
+                      <motion.p
+                        initial={{ opacity: 0, y: -5 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="text-red-400 text-xs mt-1"
+                      >
+                        {errors.message}
+                      </motion.p>
+                    )}
                   </div>
                   
                   <motion.button

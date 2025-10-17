@@ -1,34 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Play, ArrowRight, Star, Award, Users } from 'lucide-react'
-
-const testimonials = [
-  {
-    name: "Captain Sarah Chen",
-    role: "F-35 Pilot, USAF",
-    content: "The Starscream helmet has revolutionized my combat effectiveness. The neural interface gives me split-second decision making capabilities I never thought possible.",
-    rating: 5
-  },
-  {
-    name: "Major James Rodriguez",
-    role: "Test Pilot, Lockheed Martin",
-    content: "This is the future of aerial combat. The HUD integration and AI assistance have made complex missions feel effortless.",
-    rating: 5
-  },
-  {
-    name: "Lieutenant Alex Kim",
-    role: "Fighter Pilot, ROKAF",
-    content: "The protection and comfort are unmatched. I can focus entirely on the mission knowing the helmet has my back.",
-    rating: 5
-  }
-]
-
-const achievements = [
-  { icon: Award, label: "Military Approved", value: "100%" },
-  { icon: Users, label: "Active Pilots", value: "500+" },
-  { icon: Star, label: "Mission Success", value: "99.8%" }
-]
+import { Play, ArrowRight } from 'lucide-react'
 
 export default function StarscreamShowcase() {
   return (
@@ -92,73 +65,6 @@ export default function StarscreamShowcase() {
               <h3 className="text-2xl font-bold text-white mb-2">Starscream in Action</h3>
               <p className="text-white/80">Watch the helmet in real combat scenarios</p>
             </div>
-          </div>
-        </motion.div>
-
-        {/* Testimonials */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <h3 className="text-3xl font-bold text-white text-center mb-12">What Pilots Say</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="glass-panel-strong rounded-2xl p-8 neural-glow"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-electric-cyan fill-current" />
-                  ))}
-                </div>
-                <p className="text-white/80 mb-6 leading-relaxed">"{testimonial.content}"</p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-white/60 text-sm">{testimonial.role}</div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Achievements */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="glass-panel-strong rounded-3xl p-12 neural-glow"
-        >
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-white mb-4">Mission Statistics</h3>
-            <p className="text-white/70">Real-world performance data</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {achievements.map((achievement, index) => (
-              <motion.div
-                key={achievement.label}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-electric-cyan/20 to-violet-accent/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <achievement.icon className="w-8 h-8 text-electric-cyan" />
-                </div>
-                <div className="text-4xl font-bold text-white mb-2">{achievement.value}</div>
-                <div className="text-white/60">{achievement.label}</div>
-              </motion.div>
-            ))}
           </div>
         </motion.div>
 

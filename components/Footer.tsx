@@ -1,26 +1,40 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, ExternalLink, Heart, ArrowUp } from 'lucide-react'
+import { Mail, Phone, MapPin, ExternalLink, Heart, ArrowUp, Youtube, Linkedin, Facebook, Instagram, Twitter } from 'lucide-react'
 
 const footerSections = [
   {
     heading: 'Company',
     links: [
-      { label: 'About Us', href: '/about' },
+      { label: 'Who We Are', href: '/who-we-are' },
       { label: 'Mission & Vision', href: '/mission-vision' },
+      { label: 'Core Values', href: '/core-values' },
       { label: 'Investors', href: '/investors' },
       { label: 'Careers', href: '/careers' },
       { label: 'Contact Us', href: '/contact' }
     ]
   },
   {
-    heading: 'Technologies & Products',
+    heading: 'Technologies',
     links: [
-      { label: 'Technologies', href: '/technologies' },
-      { label: 'EEG Solutions', href: '/eeg-solutions' },
-      { label: 'Next-Generation Pilot Headgear', href: '/starscream' },
-      { label: 'Solutions', href: '/solutions' }
+      { label: 'Neurotechnology', href: '/technologies/neurotechnology' },
+      { label: 'AI & Machine Learning', href: '/technologies/ai-machine-learning' },
+      { label: 'Bio-Integrated Sensors', href: '/technologies/bio-integrated-sensors' },
+      { label: 'XR and AR Systems', href: '/technologies/xr-ar-systems' },
+      { label: 'Human-Machine Interface', href: '/technologies/hmi' },
+      { label: 'Data Fusion', href: '/technologies/data-fusion' }
+    ]
+  },
+  {
+    heading: 'Products & Industries',
+    links: [
+      { label: 'EEG Systems', href: '/eeg-solutions' },
+      { label: 'Pilot Headgear', href: '/starscream' },
+      { label: 'Defense & Aerospace', href: '/industries/defence-aerospace' },
+      { label: 'Healthcare', href: '/industries/healthcare' },
+      { label: 'Research & Academia', href: '/industries/research-academia' },
+      { label: 'Simulation & Training', href: '/industries/simulation-training' }
     ]
   },
   {
@@ -28,26 +42,15 @@ const footerSections = [
     links: [
       { label: 'News & Insights', href: '/news' },
       { label: 'Case Studies', href: '/case-studies' },
-      { label: 'Support Center', href: '/support' },
-      { label: 'FAQs', href: '/faqs' }
-    ]
-  },
-  {
-    heading: 'Support',
-    links: [
-      { label: 'Support Center', href: '/support' },
-      { label: 'Customer Support', href: '/support' },
-      { label: 'Training Programs', href: '/support' },
-      { label: 'Technical Documentation', href: '/support' }
+      { label: 'FAQs', href: '/faqs' },
+      { label: 'Support', href: '/support' }
     ]
   },
   {
     heading: 'Legal',
     links: [
-      { label: 'Privacy Policy', href: '/privacy' },
-      { label: 'Terms of Use', href: '/terms' },
-      { label: 'Compliance & Certifications', href: '#compliance' },
-      { label: 'Disclaimer', href: '#disclaimer' }
+      { label: 'Terms & Conditions', href: '/terms' },
+      { label: 'Privacy Policy', href: '/privacy' }
     ]
   }
 ]
@@ -81,8 +84,8 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main Footer Content */}
-        <div className="py-20">
-          <div className="space-y-16">
+        <div className="py-12">
+          <div className="space-y-8">
             {/* Company Info */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -91,28 +94,116 @@ export default function Footer() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <a href="/" className="inline-flex items-center justify-center space-x-2 sm:space-x-3 mb-4 focus-ring rounded-lg">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 rounded-xl overflow-hidden bg-white/5">
+              <a href="/" className="inline-flex items-center justify-center space-x-2 sm:space-x-3 mb-2 focus-ring rounded-lg">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 flex-shrink-0 rounded-xl overflow-hidden">
                   <img 
                     src="/logo.png" 
                     alt="Sentient Biotech Logo" 
                     className="w-full h-full object-contain"
+                    style={{ 
+                      filter: 'brightness(0) invert(1)',
+                      WebkitFilter: 'brightness(0) invert(1)'
+                    }}
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                       if (e.currentTarget.parentElement) {
-                        e.currentTarget.parentElement.className = 'w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center shadow-blue';
-                        e.currentTarget.parentElement.innerHTML = '<div class="w-6 h-6 bg-white rounded-full subtle-pulse"></div>';
+                        e.currentTarget.parentElement.className = 'w-40 h-40 sm:w-48 sm:h-48 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center shadow-blue';
+                        e.currentTarget.parentElement.innerHTML = '<div class="w-20 h-20 bg-white rounded-full subtle-pulse"></div>';
                       }
                     }}
                   />
                 </div>
-                <span className="text-xl sm:text-2xl font-display font-bold gradient-text">
+                <span className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-white">
                   Sentient Biotech
                 </span>
               </a>
-              <p className="text-text-secondary text-sm sm:text-base max-w-2xl mx-auto mt-4 px-4">
+              <p className="text-text-secondary text-sm sm:text-base max-w-2xl mx-auto mt-2 px-4">
                 Pioneering human-machine synergy through advanced biotechnology and neurotechnology.
               </p>
+              
+              {/* Social Media Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+                viewport={{ once: true }}
+                className="mt-4"
+              >
+                <h4 className="text-text-primary font-semibold mb-3 text-sm sm:text-base">Follow Sentient Biotech Across All Platforms!</h4>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <motion.a
+                    href="https://www.youtube.com/@SentientBiotech"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center justify-center w-10 h-10 bg-red-600 hover:bg-red-700 rounded-full text-white transition-colors duration-200 focus-ring"
+                    aria-label="YouTube"
+                  >
+                    <Youtube className="w-5 h-5" />
+                  </motion.a>
+                  
+                  <motion.a
+                    href="https://www.linkedin.com/in/sentient-biotech-1a2968389/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center justify-center w-10 h-10 bg-blue-600 hover:bg-blue-700 rounded-full text-white transition-colors duration-200 focus-ring"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                  </motion.a>
+                  
+                  <motion.a
+                    href="https://www.facebook.com/profile.php?id=61582059542899"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center justify-center w-10 h-10 bg-blue-800 hover:bg-blue-900 rounded-full text-white transition-colors duration-200 focus-ring"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="w-5 h-5" />
+                  </motion.a>
+                  
+                  <motion.a
+                    href="https://www.quora.com/profile/Sentient-Biotech"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center justify-center w-10 h-10 bg-red-500 hover:bg-red-600 rounded-full text-white transition-colors duration-200 focus-ring"
+                    aria-label="Quora"
+                  >
+                    <ExternalLink className="w-5 h-5" />
+                  </motion.a>
+                  
+                  <motion.a
+                    href="https://www.instagram.com/sentientbiotech/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center justify-center w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-full text-white transition-colors duration-200 focus-ring"
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="w-5 h-5" />
+                  </motion.a>
+                  
+                  <motion.a
+                    href="https://x.com/SentientBiotech"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center justify-center w-10 h-10 bg-gray-900 hover:bg-black rounded-full text-white transition-colors duration-200 focus-ring"
+                    aria-label="Twitter (X)"
+                  >
+                    <Twitter className="w-5 h-5" />
+                  </motion.a>
+                </div>
+              </motion.div>
             </motion.div>
 
             {/* Footer Sections */}
@@ -153,74 +244,36 @@ export default function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-center sm:text-left"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-center"
             >
               <div>
-                <h4 className="text-text-primary font-semibold mb-2 text-xs sm:text-sm">Registered Office</h4>
+                <h4 className="text-text-primary font-semibold mb-2 text-xs sm:text-sm">Address</h4>
                 <p className="text-text-tertiary text-xs sm:text-sm leading-relaxed">VGN Coasta, 14th Floor, Flat No.B, Muttukadu, Chinglepet, Kanchipuram- 603112, Tamil Nadu</p>
               </div>
               <div>
-                <h4 className="text-text-primary font-semibold mb-2 text-xs sm:text-sm">Phone</h4>
+                <h4 className="text-text-primary font-semibold mb-2 text-xs sm:text-sm">Call Us</h4>
                 <a href="tel:+917070360676" className="text-text-tertiary hover:text-primary-blue text-xs sm:text-sm transition-colors focus-ring rounded inline-block py-1">
-                  +91-7070360676
+                  +91-70703-60676
                 </a>
               </div>
               <div className="sm:col-span-2 lg:col-span-1">
-                <h4 className="text-text-primary font-semibold mb-2 text-xs sm:text-sm">Email</h4>
-                <a href="mailto:jasmeet@sentientbiotech.in" className="text-text-tertiary hover:text-primary-blue text-xs sm:text-sm transition-colors focus-ring rounded inline-block py-1 break-all">
-                  jasmeet@sentientbiotech.in
+                <h4 className="text-text-primary font-semibold mb-2 text-xs sm:text-sm">Write to us</h4>
+                <a href="mailto:support@sentientbiotech.in" className="text-text-tertiary hover:text-primary-blue text-xs sm:text-sm transition-colors focus-ring rounded inline-block py-1 break-all">
+                  support@sentientbiotech.in
                 </a>
               </div>
             </motion.div>
 
-            <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 pt-6 border-t border-primary-blue/10">
+            <div className="flex flex-col items-center justify-center space-y-4 pt-6 border-t border-primary-blue/10">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-text-tertiary text-xs sm:text-sm text-center md:text-left"
+                className="text-text-tertiary text-xs sm:text-sm text-center"
               >
                 © 2024 Sentient Biotech Private Limited. All rights reserved.
               </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.1, duration: 0.5 }}
-                viewport={{ once: true }}
-                className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-text-tertiary text-xs sm:text-sm"
-              >
-                <span className="flex items-center gap-1">
-                  <div className="w-1.5 h-1.5 bg-success-green rounded-full"></div>
-                  <span className="whitespace-nowrap">Privacy-first</span>
-                </span>
-                <span className="hidden sm:inline">•</span>
-                <span className="flex items-center gap-1">
-                  <div className="w-1.5 h-1.5 bg-primary-blue rounded-full"></div>
-                  <span className="whitespace-nowrap">Non-invasive</span>
-                </span>
-                <span className="hidden sm:inline">•</span>
-                <span className="flex items-center gap-1">
-                  <div className="w-1.5 h-1.5 bg-accent-blue rounded-full"></div>
-                  <span className="whitespace-nowrap">Research-backed</span>
-                </span>
-              </motion.div>
-
-              {/* Back to Top Button */}
-              <motion.button
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={scrollToTop}
-                className="hidden md:flex w-10 h-10 rounded-lg glass-panel-strong items-center justify-center hover:bg-primary-blue/10 transition-all duration-200 group focus-ring"
-                aria-label="Back to top"
-              >
-                <ArrowUp className="w-5 h-5 text-text-secondary group-hover:text-primary-blue transition-colors duration-200" />
-              </motion.button>
             </div>
           </div>
         </div>

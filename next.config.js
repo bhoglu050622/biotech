@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  trailingSlash: true,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -16,7 +19,6 @@ const nextConfig = {
   poweredByHeader: false,
   generateEtags: false,
   compress: true,
-  trailingSlash: false,
 }
 
 module.exports = nextConfig
