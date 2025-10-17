@@ -78,19 +78,14 @@ export default function InvestorsPage() {
               INVESTORS
             </h1>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6">
-              Investing in the Next Frontier of Human Potential
+              Partnering for a Future of Intelligence and Innovation
             </h2>
             <p className="text-xl text-white/80 max-w-4xl mx-auto mb-8">
-              Sentient Biotech is positioned at the intersection of three of the most transformative global trends: 
-              artificial intelligence, neurotechnology, and data-driven healthcare. We are developing a foundational 
-              technology stack to address critical, unmet needs in both the commercial healthcare and national defense 
-              sectors, creating a unique and powerful investment opportunity.
+              Sentient Biotech Private Limited stands at the intersection of neurotechnology, AI, XR systems, and bio-integrated solutions. We are transforming industries such as defence, healthcare, academia, and simulation with intelligent technologies that enhance human cognition, operational efficiency, and decision-making.
             </p>
             <div className="glass-panel-strong rounded-xl p-6 max-w-4xl mx-auto">
               <p className="text-white/90 text-lg">
-                Our vision is to build the definitive end-to-end ecosystem for understanding the human brain. 
-                The current approaches to mental health are largely subjective, and the technology available for 
-                enhancing human capability has only scratched the surface of its potential. We are changing that.
+                We invite investors to join us in this journey of innovation, addressing some of the most critical challenges across sectors while creating sustainable value.
               </p>
             </div>
           </motion.div>
