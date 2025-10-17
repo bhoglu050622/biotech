@@ -31,7 +31,9 @@ import {
   Plane,
   Bot,
   MousePointer,
-  Eye
+  Eye,
+  Headphones,
+  Hand
 } from 'lucide-react'
 
 const ourTechnologies = [
@@ -57,14 +59,14 @@ const ourTechnologies = [
     href: '/technologies/bio-integrated-sensors'
   },
   {
-    icon: Eye,
+    icon: Headphones,
     title: 'XR and AR Systems',
     description: 'Extended and Augmented reality platforms integrated with neurotechnology for immersive training, real-time simulations, and enhanced visualization.',
     color: 'from-light-blue to-primary-blue',
     href: '/technologies/xr-ar-systems'
   },
   {
-    icon: MousePointer,
+    icon: Hand,
     title: 'Human-Machine Interface (HMI)',
     description: 'Advanced HMI systems integrating neural signals, gesture controls, and visual overlays for intuitive control and real-time feedback.',
     color: 'from-primary-blue to-accent-blue',
