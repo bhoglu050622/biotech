@@ -36,6 +36,25 @@ import {
   Hand
 } from 'lucide-react'
 
+// Custom Icon Components
+const AIIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <text x="12" y="16" textAnchor="middle" fontSize="8" fontWeight="bold" fill="currentColor">AI</text>
+  </svg>
+)
+
+const XRARIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <text x="12" y="16" textAnchor="middle" fontSize="6" fontWeight="bold" fill="currentColor">XR/AR</text>
+  </svg>
+)
+
+const HMIIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <text x="12" y="16" textAnchor="middle" fontSize="7" fontWeight="bold" fill="currentColor">HMI</text>
+  </svg>
+)
+
 const ourTechnologies = [
   {
     icon: Brain,
@@ -45,7 +64,7 @@ const ourTechnologies = [
     href: '/technologies/neurotechnology'
   },
   {
-    icon: Bot,
+    icon: AIIcon,
     title: 'Artificial Intelligence & Machine Learning',
     description: 'AI and machine learning algorithms that turn complex biological and environmental data into actionable insights for healthcare and defense applications.',
     color: 'from-secondary-blue to-accent-blue',
@@ -59,14 +78,14 @@ const ourTechnologies = [
     href: '/technologies/bio-integrated-sensors'
   },
   {
-    icon: Headphones,
+    icon: XRARIcon,
     title: 'XR and AR Systems',
     description: 'Extended and Augmented reality platforms integrated with neurotechnology for immersive training, real-time simulations, and enhanced visualization.',
     color: 'from-light-blue to-primary-blue',
     href: '/technologies/xr-ar-systems'
   },
   {
-    icon: Hand,
+    icon: HMIIcon,
     title: 'Human-Machine Interface (HMI)',
     description: 'Advanced HMI systems integrating neural signals, gesture controls, and visual overlays for intuitive control and real-time feedback.',
     color: 'from-primary-blue to-accent-blue',
