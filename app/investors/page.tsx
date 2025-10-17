@@ -26,7 +26,7 @@ const dualMarkets = [
     title: 'Revolutionizing Healthcare',
     description: 'The global mental health crisis and the demand for effective neurological diagnostics represent a massive market in need of objective, scalable tools. Our Neuroimaging products and Deep-Learning Modules are designed to become the new standard for clinical diagnosis and monitoring.',
     icon: Brain,
-    gradient: 'from-primary-emerald to-secondary-emerald'
+    gradient: 'from-secondary-blue to-accent-blue'
   },
   {
     title: 'Modernizing National Security',
