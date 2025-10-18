@@ -83,7 +83,7 @@ const applications = [
 
 export default function AIMLPage() {
   return (
-    <main className="relative min-h-screen bg-deep-indigo">
+    <main className="relative min-h-screen bg-primary-blue">
       <ParticleBackground />
       <Navbar />
       
@@ -156,8 +156,8 @@ export default function AIMLPage() {
                 viewport={{ once: true }}
                 className="card-hover group"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-secondary-blue to-accent-blue rounded-xl flex items-center justify-center mb-6 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
-                  <capability.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-secondary-green to-accent-light-blue rounded-xl flex items-center justify-center mb-6 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
+                  <capability.icon className="w-8 h-8 text-primary-white" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-display font-bold text-text-primary mb-4">{capability.title}</h3>
                 <p className="text-text-secondary leading-relaxed text-sm">{capability.description}</p>
@@ -168,8 +168,8 @@ export default function AIMLPage() {
       </section>
 
       {/* Advanced Research */}
-      <section className="py-16 sm:py-20 bg-glass-white backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 section-enhanced thematic-bg-secondary">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -177,13 +177,13 @@ export default function AIMLPage() {
             viewport={{ once: true }}
             className="max-w-5xl mx-auto"
           >
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-primary mb-6 sm:mb-8 text-center">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-primary-white mb-6 sm:mb-8 text-center">
               Advanced Research
             </h2>
-            <p className="text-text-secondary mb-8 text-center leading-relaxed">
+            <p className="text-white/85 mb-8 text-center leading-relaxed font-medium">
               Our AI research is dedicated to creating systems that continuously evolve. We focus on hybrid models that blend human reasoning with computational learning, ensuring our solutions remain adaptive and explainable.
             </p>
-            <div className="space-y-4">
+            <div className="list-enhanced">
               {researchAreas.map((area, index) => (
                 <motion.div
                   key={index}
@@ -191,10 +191,10 @@ export default function AIMLPage() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.4 }}
                   viewport={{ once: true }}
-                  className="flex items-start gap-3"
+                  className="list-enhanced-item"
                 >
-                  <CheckCircle className="w-5 h-5 text-primary-blue mt-0.5 flex-shrink-0" />
-                  <p className="text-text-secondary leading-relaxed text-sm">{area}</p>
+                  <CheckCircle className="bullet-icon-accent" />
+                  <p className="bullet-text leading-relaxed text-sm">{area}</p>
                 </motion.div>
               ))}
             </div>
@@ -230,8 +230,8 @@ export default function AIMLPage() {
                 viewport={{ once: true }}
                 className="card-hover group"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-accent-blue to-light-blue rounded-xl flex items-center justify-center mb-6 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
-                  <application.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-accent-light-blue to-secondary-green rounded-xl flex items-center justify-center mb-6 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
+                  <application.icon className="w-8 h-8 text-primary-white" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-display font-bold text-text-primary mb-4">{application.title}</h3>
                 <p className="text-text-secondary leading-relaxed text-sm">{application.description}</p>

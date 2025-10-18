@@ -26,7 +26,7 @@ const missionPillars = [
     title: 'Defense Innovation',
     description: 'Enhancing national security through advanced neurotechnology solutions for military applications',
     icon: Shield,
-    color: 'from-primary-blue to-secondary-blue'
+    color: 'from-primary-blue to-secondary-green'
   },
   {
     title: 'Human Performance',
@@ -120,7 +120,7 @@ const coreValues = [
 
 export default function MissionVisionPage() {
   return (
-    <main className="relative min-h-screen bg-deep-indigo">
+    <main className="relative min-h-screen bg-primary-blue">
       <ParticleBackground />
       <Navbar />
       
@@ -144,8 +144,8 @@ export default function MissionVisionPage() {
       </section>
 
       {/* Mission & Vision Cards */}
-      <section className="py-16 bg-glass-white backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 section-enhanced thematic-bg-secondary">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -169,13 +169,13 @@ export default function MissionVisionPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="glass-panel-strong rounded-2xl p-8 sm:p-10"
+              className="card-thematic relative group"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center">
-                  <Target className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-primary-blue to-secondary-green rounded-xl flex items-center justify-center">
+                  <Target className="w-6 h-6 text-primary-white" />
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-display font-bold text-white">
+                <h3 className="text-2xl sm:text-3xl font-display font-bold text-primary-white">
                   Our Mission
                 </h3>
               </div>
@@ -195,13 +195,13 @@ export default function MissionVisionPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="glass-panel-strong rounded-2xl p-8 sm:p-10"
+              className="card-thematic relative group"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-secondary-blue to-accent-blue rounded-xl flex items-center justify-center">
-                  <Eye className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-secondary-green to-accent-light-blue rounded-xl flex items-center justify-center">
+                  <Eye className="w-6 h-6 text-primary-white" />
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-display font-bold text-white">
+                <h3 className="text-2xl sm:text-3xl font-display font-bold text-primary-white">
                   Our Vision
                 </h3>
               </div>

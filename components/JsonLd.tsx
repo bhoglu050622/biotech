@@ -18,7 +18,7 @@ export const organizationSchema = {
   name: 'Sentient Biotech Private Limited',
   alternateName: 'Sentient Biotech',
   url: 'https://sentientbiotech.in',
-  logo: 'https://sentientbiotech.in/logo.png',
+  logo: 'https://sentientbiotech.in/logo.webp',
   description: 'Non-invasive BCI & biofeedback that helps you understand and improve your mind and body — real-time, accessible, humane.',
   foundingDate: '2024',
   founders: [
@@ -34,7 +34,7 @@ export const organizationSchema = {
   },
   contactPoint: {
     '@type': 'ContactPoint',
-    email: 'jasmeet@sentientbiotech.in',
+    email: 'support@sentientbiotech.in',
     contactType: 'Customer Service',
     availableLanguage: ['English']
   },
@@ -78,7 +78,7 @@ export const eegProductSchema = {
 export const starscreamProductSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
-  name: 'Starscream - Next-Generation Pilot Headgear',
+  name: 'Starscream - Starscream',
   description: 'Advanced pilot headgear integrating neurotechnology, extended reality, and AI-driven biometric monitoring for enhanced situational awareness and cognitive performance.',
   brand: {
     '@type': 'Brand',
@@ -142,7 +142,7 @@ export const generateArticleSchema = (article: {
     name: 'Sentient Biotech Private Limited',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://sentientbiotech.in/logo.png'
+      url: 'https://sentientbiotech.in/logo.webp'
     }
   },
   image: article.image || 'https://sentientbiotech.in/og-image.jpg'

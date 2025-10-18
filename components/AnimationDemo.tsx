@@ -54,7 +54,7 @@ export default function AnimationDemo() {
       className="fixed bottom-8 right-8 z-50 glass-panel-strong rounded-2xl p-4 neural-glow"
     >
       <div className="text-center mb-4">
-        <h3 className="text-sm font-semibold text-white mb-2">Animation Controls</h3>
+        <h3 className="text-sm font-semibold text-primary-white mb-2">Animation Controls</h3>
         
         {/* Mode Selector */}
         <div className="flex space-x-2 mb-4">
@@ -92,8 +92,8 @@ export default function AnimationDemo() {
           onClick={handlePlayPause}
           className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-200 ${
             isPlaying 
-              ? 'bg-violet-accent text-white' 
-              : 'bg-electric-cyan text-deep-indigo'
+              ? 'bg-violet-accent text-primary-white' 
+              : 'bg-accent-light-blue text-deep-indigo'
           }`}
           title={isPlaying ? 'Pause Animation' : 'Play Animation'}
         >

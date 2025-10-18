@@ -63,7 +63,7 @@ const hmiApplications = [
 
 export default function HMIPage() {
   return (
-    <main className="relative min-h-screen bg-deep-indigo">
+    <main className="relative min-h-screen bg-primary-blue">
       <ParticleBackground />
       <Navbar />
       
@@ -121,7 +121,7 @@ export default function HMIPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-display font-bold text-white mb-4">
+            <h2 className="text-4xl font-display font-bold text-primary-white mb-4">
               Our HMI Philosophy in Practice
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-orange-500 mx-auto rounded-full"></div>
@@ -145,10 +145,10 @@ export default function HMIPage() {
                       transition={{ type: "spring", stiffness: 300 }}
                       className={`w-24 h-24 bg-gradient-to-br ${application.gradient} rounded-2xl flex items-center justify-center mb-6 shadow-lg`}
                     >
-                      <application.icon className="w-12 h-12 text-white" />
+                      <application.icon className="w-12 h-12 text-primary-white" />
                     </motion.div>
                     
-                    <h3 className="text-3xl font-display font-bold text-white mb-4">
+                    <h3 className="text-3xl font-display font-bold text-primary-white mb-4">
                       {application.title}
                     </h3>
                     
@@ -159,7 +159,7 @@ export default function HMIPage() {
                   
                   {/* Right Column - Features */}
                   <div className="md:col-span-3 flex flex-col justify-center">
-                    <h4 className="text-white font-semibold text-lg mb-4 flex items-center">
+                    <h4 className="text-primary-white font-semibold text-lg mb-4 flex items-center">
                       <Zap className="w-5 h-5 text-electric-cyan mr-2" />
                       Key Capabilities
                     </h4>
@@ -200,11 +200,11 @@ export default function HMIPage() {
             className="glass-panel-strong rounded-3xl p-12 text-center relative overflow-hidden"
           >
             {/* Background gradient effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-electric-cyan/10 via-violet-accent/10 to-fuchsia-pink/10 pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-accent-light-blue/10 via-violet-accent/10 to-fuchsia-pink/10 pointer-events-none"></div>
             
             <div className="relative z-10">
               <Brain className="w-16 h-16 mx-auto mb-6 text-electric-cyan" />
-              <h2 className="text-4xl font-display font-bold text-white mb-4">
+              <h2 className="text-4xl font-display font-bold text-primary-white mb-4">
                 Experience the Future of Neurotechnology
               </h2>
               <p className="text-white/80 mb-8 max-w-2xl mx-auto text-lg">

@@ -15,7 +15,7 @@ function HeroBackgroundFallback() {
   return (
     <div className="absolute inset-0">
       {/* Static gradient fallback */}
-      <div className="absolute inset-0 bg-gradient-to-br from-deep-indigo via-electric-cyan/5 to-violet-accent/5" />
+      <div className="absolute inset-0 bg-gradient-to-br from-deep-indigo via-electric-cyan/5 to-secondary-green/5" />
       
       {/* Simple animated gradient */}
       <motion.div

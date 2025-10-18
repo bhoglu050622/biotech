@@ -66,7 +66,7 @@ const coreValues = [
 
 export default function CoreValuesPage() {
   return (
-    <main className="relative min-h-screen bg-deep-indigo">
+    <main className="relative min-h-screen bg-primary-blue">
       <ParticleBackground />
       <Navbar />
       
@@ -90,8 +90,8 @@ export default function CoreValuesPage() {
       </section>
 
       {/* Core Values */}
-      <section className="py-16 sm:py-20 md:py-30 bg-glass-white backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 md:py-30 section-enhanced thematic-bg-primary">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
             {coreValues.map((value, index) => (
               <motion.div
@@ -100,50 +100,30 @@ export default function CoreValuesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.4 }}
                 viewport={{ once: true }}
-                className="card-hover group"
+                className="card-thematic group relative"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center flex-shrink-0 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
-                    <value.icon className="w-7 h-7 text-white" />
-                  </div>
+                  <motion.div 
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    className="w-16 h-16 bg-gradient-to-br from-primary-blue to-secondary-green rounded-xl flex items-center justify-center flex-shrink-0 shadow-blue group-hover:shadow-blue-lg transition-all duration-300"
+                  >
+                    <value.icon className="w-8 h-8 text-primary-white" />
+                  </motion.div>
                   <div className="flex-1">
-                    <h3 className="text-xl sm:text-2xl font-display font-bold text-text-primary mb-3">{value.title}</h3>
-                    <p className="text-text-secondary leading-relaxed">{value.description}</p>
+                    <h3 className="text-xl sm:text-2xl font-display font-bold text-primary-white mb-4 card-title-hover">{value.title}</h3>
+                    <p className="text-white/85 leading-relaxed text-base font-medium">{value.description}</p>
                   </div>
                 </div>
+                
+                {/* Enhanced visual effects */}
+                <div className="absolute top-4 right-4 w-2 h-2 bg-electric-cyan rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 w-1 h-1 bg-violet-accent rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-300"></div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 sm:py-20 md:py-30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="card-hover max-w-5xl mx-auto text-center"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-text-primary mb-6 sm:mb-8">
-              Ready to transform your Performance
-            </h2>
-            <p className="text-base sm:text-lg text-text-secondary leading-relaxed mb-8">
-              Join Industry leaders who are already using our products and solutions to enhance performance and drive innovation
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-blue to-secondary-blue text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-blue hover:shadow-blue-lg transition-all duration-300"
-            >
-              Get Started
-              <ArrowRight className="w-5 h-5" />
-            </motion.button>
-          </motion.div>
-        </div>
-      </section>
 
       <CommonCTA />
 

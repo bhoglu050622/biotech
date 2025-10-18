@@ -26,7 +26,7 @@ const applications = [
 
 export default function HealthcarePage() {
   return (
-    <main className="relative min-h-screen bg-deep-indigo">
+    <main className="relative min-h-screen bg-primary-blue">
       <ParticleBackground />
       <Navbar />
       
@@ -99,8 +99,8 @@ export default function HealthcarePage() {
                 viewport={{ once: true }}
                 className="card-hover group"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-secondary-blue to-accent-blue rounded-xl flex items-center justify-center mb-6 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
-                  <application.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-secondary-green to-accent-light-blue rounded-xl flex items-center justify-center mb-6 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
+                  <application.icon className="w-8 h-8 text-primary-white" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-display font-bold text-text-primary mb-4">{application.title}</h3>
                 <p className="text-text-secondary leading-relaxed text-sm">{application.description}</p>

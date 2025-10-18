@@ -104,7 +104,7 @@ export default function FloatingCard({
           {[...Array(6)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-1 h-1 bg-electric-cyan rounded-full opacity-30"
+              className="absolute w-1 h-1 bg-accent-light-blue rounded-full opacity-30"
               style={{
                 left: `${20 + i * 15}%`,
                 top: `${30 + (i % 2) * 40}%`

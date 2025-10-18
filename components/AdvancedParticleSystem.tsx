@@ -111,7 +111,7 @@ export default function AdvancedParticleSystem() {
       {[...Array(10)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-1 h-20 bg-gradient-to-b from-electric-cyan to-transparent"
+          className="absolute w-1 h-20 bg-gradient-to-b from-accent-light-blue to-transparent"
           style={{
             left: `${Math.random() * 100}%`,
             top: '100%',

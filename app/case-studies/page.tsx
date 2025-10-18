@@ -107,7 +107,7 @@ const industries = [
 
 export default function CaseStudiesPage() {
   return (
-    <main className="relative min-h-screen bg-deep-indigo">
+    <main className="relative min-h-screen bg-primary-blue">
       <ParticleBackground />
       <Navbar />
       
@@ -153,7 +153,7 @@ export default function CaseStudiesPage() {
                 className="flex items-center space-x-2 px-4 py-2 glass-panel-strong rounded-lg hover:bg-glass-white-strong transition-colors duration-200"
               >
                 <industry.icon className="w-4 h-4 text-electric-cyan" />
-                <span className="text-white text-sm">{industry.name}</span>
+                <span className="text-primary-white text-sm">{industry.name}</span>
                 <span className="text-white/60 text-xs">({industry.count})</span>
               </motion.button>
             ))}
@@ -171,18 +171,18 @@ export default function CaseStudiesPage() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-2xl font-display font-bold text-white mb-6">Featured Case Study</h2>
+            <h2 className="text-2xl font-display font-bold text-primary-white mb-6">Featured Case Study</h2>
             {caseStudies.filter(study => study.featured).map((study) => (
               <div key={study.id} className="glass-panel-strong rounded-2xl overflow-hidden">
                 <div className="grid lg:grid-cols-2 gap-8 p-8">
                   <div>
                     <div className="flex items-center space-x-4 mb-4">
-                      <span className="px-3 py-1 bg-electric-cyan/20 text-electric-cyan text-xs rounded-full">
+                      <span className="px-3 py-1 bg-accent-light-blue/20 text-electric-cyan text-xs rounded-full">
                         {study.industry}
                       </span>
                       <span className="text-white/60 text-sm">{study.duration}</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-4">{study.title}</h3>
+                    <h3 className="text-2xl font-bold text-primary-white mb-4">{study.title}</h3>
                     <div className="flex items-center space-x-4 text-sm text-white/60 mb-6">
                       <div className="flex items-center space-x-2">
                         <Users className="w-4 h-4" />
@@ -194,9 +194,9 @@ export default function CaseStudiesPage() {
                       </div>
                     </div>
                     <div className="mb-6">
-                      <h4 className="text-white font-semibold mb-2">Challenge</h4>
+                      <h4 className="text-primary-white font-semibold mb-2">Challenge</h4>
                       <p className="text-white/80 text-sm mb-4">{study.challenge}</p>
-                      <h4 className="text-white font-semibold mb-2">Solution</h4>
+                      <h4 className="text-primary-white font-semibold mb-2">Solution</h4>
                       <p className="text-white/80 text-sm">{study.solution}</p>
                     </div>
                     <motion.button
@@ -208,7 +208,7 @@ export default function CaseStudiesPage() {
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </motion.button>
                   </div>
-                  <div className="bg-gradient-to-br from-electric-cyan/20 to-violet-accent/20 rounded-xl flex items-center justify-center">
+                  <div className="bg-gradient-to-br from-accent-light-blue/20 to-secondary-green/20 rounded-xl flex items-center justify-center">
                     <Shield className="w-32 h-32 text-electric-cyan/50" />
                   </div>
                 </div>
@@ -228,7 +228,7 @@ export default function CaseStudiesPage() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-2xl font-display font-bold text-white mb-6">All Case Studies</h2>
+            <h2 className="text-2xl font-display font-bold text-primary-white mb-6">All Case Studies</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {caseStudies.filter(study => !study.featured).map((study, index) => (
                 <motion.article
@@ -241,12 +241,12 @@ export default function CaseStudiesPage() {
                 >
                   <div className="p-6">
                     <div className="flex items-center space-x-4 mb-4">
-                      <span className="px-3 py-1 bg-electric-cyan/20 text-electric-cyan text-xs rounded-full">
+                      <span className="px-3 py-1 bg-accent-light-blue/20 text-electric-cyan text-xs rounded-full">
                         {study.industry}
                       </span>
                       <span className="text-white/60 text-xs">{study.duration}</span>
                     </div>
-                    <h3 className="text-white font-semibold mb-3 line-clamp-2">{study.title}</h3>
+                    <h3 className="text-primary-white font-semibold mb-3 line-clamp-2">{study.title}</h3>
                     <div className="flex items-center space-x-4 text-xs text-white/60 mb-4">
                       <div className="flex items-center space-x-1">
                         <Users className="w-3 h-3" />
@@ -259,7 +259,7 @@ export default function CaseStudiesPage() {
                     </div>
                     <p className="text-white/70 text-sm mb-4 line-clamp-3">{study.challenge}</p>
                     <div className="mb-4">
-                      <h4 className="text-white font-medium text-sm mb-2">Key Results</h4>
+                      <h4 className="text-primary-white font-medium text-sm mb-2">Key Results</h4>
                       <ul className="space-y-1">
                         {study.results.slice(0, 2).map((result, resultIndex) => (
                           <li key={resultIndex} className="flex items-center space-x-2 text-xs text-white/60">
@@ -272,7 +272,7 @@ export default function CaseStudiesPage() {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="w-full flex items-center justify-center space-x-2 text-electric-cyan hover:text-white transition-colors duration-200 py-2"
+                      className="w-full flex items-center justify-center space-x-2 text-electric-cyan hover:text-primary-white transition-colors duration-200 py-2"
                     >
                       <span className="text-sm">View Details</span>
                       <ArrowRight className="w-4 h-4" />

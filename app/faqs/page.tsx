@@ -89,7 +89,7 @@ export default function FAQsPage() {
   }
 
   return (
-    <main className="relative min-h-screen bg-deep-indigo">
+    <main className="relative min-h-screen bg-primary-blue">
       <ParticleBackground />
       <Navbar />
       
@@ -114,8 +114,8 @@ export default function FAQsPage() {
       </section>
 
       {/* Search and Filter */}
-      <section className="py-8 bg-glass-white backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 section-enhanced thematic-bg-primary">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -132,7 +132,7 @@ export default function FAQsPage() {
                   placeholder="Search FAQs..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan"
+                  className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-xl text-primary-white placeholder-white/50 focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan"
                 />
               </div>
             </div>
@@ -151,8 +151,8 @@ export default function FAQsPage() {
                   onClick={() => setSelectedCategory(category.name)}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors duration-200 ${
                     selectedCategory === category.name
-                      ? 'bg-electric-cyan text-deep-indigo'
-                      : 'glass-panel-strong text-white hover:bg-glass-white-strong'
+                      ? 'bg-accent-light-blue text-deep-indigo'
+                      : 'glass-panel-strong text-primary-white hover:bg-glass-white-strong'
                   }`}
                 >
                   <category.icon className="w-4 h-4" />
@@ -166,8 +166,8 @@ export default function FAQsPage() {
       </section>
 
       {/* FAQs */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 section-enhanced thematic-bg-secondary">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -182,7 +182,7 @@ export default function FAQsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05, duration: 0.4 }}
                 viewport={{ once: true }}
-                className="glass-panel-strong rounded-xl overflow-hidden"
+                className="card-thematic group relative overflow-hidden"
               >
                 <button
                   onClick={() => toggleFAQ(faq.id)}
@@ -190,7 +190,7 @@ export default function FAQsPage() {
                 >
                   <div className="flex-1">
                     <div className="flex items-center space-x-3 mb-2">
-                      <span className="px-3 py-1 bg-electric-cyan/20 text-electric-cyan text-xs rounded-full">
+                      <span className="px-3 py-1 bg-accent-light-blue/20 text-electric-cyan text-xs rounded-full">
                         {faq.category}
                       </span>
                       <div className="flex space-x-1">
@@ -201,7 +201,7 @@ export default function FAQsPage() {
                         ))}
                       </div>
                     </div>
-                    <h3 className="text-white font-semibold text-left">{faq.question}</h3>
+                    <h3 className="text-primary-white font-semibold text-left">{faq.question}</h3>
                   </div>
                   <motion.div
                     animate={{ rotate: openFAQ === faq.id ? 180 : 0 }}
@@ -243,7 +243,7 @@ export default function FAQsPage() {
               className="text-center py-12"
             >
               <HelpCircle className="w-16 h-16 text-white/40 mx-auto mb-4" />
-              <h3 className="text-white font-semibold mb-2">No FAQs found</h3>
+              <h3 className="text-primary-white font-semibold mb-2">No FAQs found</h3>
               <p className="text-white/60 text-sm">
                 Try adjusting your search terms or category filter.
               </p>

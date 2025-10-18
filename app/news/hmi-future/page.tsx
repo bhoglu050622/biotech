@@ -9,7 +9,7 @@ import { MousePointer, Calendar, ArrowLeft } from 'lucide-react'
 
 export default function HMIBlogPage() {
   return (
-    <main className="relative min-h-screen bg-deep-indigo">
+    <main className="relative min-h-screen bg-primary-blue">
       <ParticleBackground />
       <Navbar />
       
@@ -31,8 +31,8 @@ export default function HMIBlogPage() {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-accent-blue to-light-blue rounded-xl flex items-center justify-center">
-                <MousePointer className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 bg-gradient-to-br from-accent-light-blue to-secondary-green rounded-xl flex items-center justify-center">
+                <MousePointer className="w-6 h-6 text-primary-white" />
               </div>
               <div className="flex items-center gap-2 text-text-tertiary text-sm">
                 <Calendar className="w-4 h-4" />

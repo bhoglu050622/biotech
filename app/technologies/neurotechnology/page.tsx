@@ -84,7 +84,7 @@ const competitiveEdge = [
 
 export default function NeurotechnologyPage() {
   return (
-    <main className="relative min-h-screen bg-deep-indigo">
+    <main className="relative min-h-screen bg-primary-blue">
       <ParticleBackground />
       <Navbar />
       
@@ -154,8 +154,8 @@ export default function NeurotechnologyPage() {
                 viewport={{ once: true }}
                 className="card-hover group"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center mb-6 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
-                  <capability.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-secondary-green rounded-xl flex items-center justify-center mb-6 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
+                  <capability.icon className="w-8 h-8 text-primary-white" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-display font-bold text-text-primary mb-4">{capability.title}</h3>
                 <p className="text-text-secondary leading-relaxed text-sm">{capability.description}</p>
@@ -166,8 +166,8 @@ export default function NeurotechnologyPage() {
       </section>
 
       {/* Advanced Research */}
-      <section className="py-16 sm:py-20 bg-glass-white backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 section-enhanced thematic-bg-primary">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -175,16 +175,16 @@ export default function NeurotechnologyPage() {
             viewport={{ once: true }}
             className="max-w-5xl mx-auto"
           >
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-primary mb-6 sm:mb-8 text-center">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-primary-white mb-6 sm:mb-8 text-center">
               Advanced Research
             </h2>
-            <p className="text-text-secondary mb-8 text-center">
+            <p className="text-white/85 mb-8 text-center font-medium">
               Where Science Meets Innovation
             </p>
-            <p className="text-text-secondary leading-relaxed mb-8">
+            <p className="text-white/85 leading-relaxed mb-8 font-medium">
               Our R&D division works at the edge of neuroscience and computation. We collaborate with leading institutions and defense organizations to advance the understanding of brain-computer communication and neural adaptability.
             </p>
-            <div className="space-y-4">
+            <div className="list-enhanced">
               {researchAreas.map((area, index) => (
                 <motion.div
                   key={index}
@@ -192,10 +192,10 @@ export default function NeurotechnologyPage() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.4 }}
                   viewport={{ once: true }}
-                  className="flex items-start gap-3"
+                  className="list-enhanced-item"
                 >
-                  <CheckCircle className="w-5 h-5 text-primary-blue mt-0.5 flex-shrink-0" />
-                  <p className="text-text-secondary leading-relaxed text-sm">{area}</p>
+                  <CheckCircle className="bullet-icon-primary" />
+                  <p className="bullet-text leading-relaxed text-sm">{area}</p>
                 </motion.div>
               ))}
             </div>
@@ -231,8 +231,8 @@ export default function NeurotechnologyPage() {
                 viewport={{ once: true }}
                 className="card-hover group"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-accent-blue to-light-blue rounded-xl flex items-center justify-center mb-6 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
-                  <application.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-accent-light-blue to-secondary-green rounded-xl flex items-center justify-center mb-6 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
+                  <application.icon className="w-8 h-8 text-primary-white" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-display font-bold text-text-primary mb-4">{application.title}</h3>
                 <p className="text-text-secondary leading-relaxed text-sm">{application.description}</p>
@@ -258,7 +258,7 @@ export default function NeurotechnologyPage() {
             <p className="text-text-secondary leading-relaxed mb-8">
               What sets Sentient Biotech apart is our deep integration of biology and computation. Our technologies are not just diagnostic; they are adaptive, predictive, and evolutionary.
             </p>
-            <div className="space-y-4">
+            <div className="list-enhanced">
               {competitiveEdge.map((edge, index) => (
                 <motion.div
                   key={index}
@@ -266,10 +266,10 @@ export default function NeurotechnologyPage() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.4 }}
                   viewport={{ once: true }}
-                  className="flex items-start gap-3"
+                  className="list-enhanced-item"
                 >
-                  <CheckCircle className="w-5 h-5 text-primary-blue mt-0.5 flex-shrink-0" />
-                  <p className="text-text-secondary leading-relaxed text-sm">{edge}</p>
+                  <CheckCircle className="bullet-icon-secondary" />
+                  <p className="bullet-text leading-relaxed text-sm">{edge}</p>
                 </motion.div>
               ))}
             </div>

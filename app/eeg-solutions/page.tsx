@@ -102,7 +102,7 @@ export default function EEGSolutionsPage() {
   ])
 
   return (
-    <main className="relative min-h-screen bg-deep-indigo">
+    <main className="relative min-h-screen bg-primary-blue">
       <JsonLd data={eegProductSchema} />
       <JsonLd data={breadcrumbSchema} />
       <ParticleBackground />
@@ -180,7 +180,7 @@ export default function EEGSolutionsPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-primary-white mb-6">
               Our Capabilities
             </h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -228,7 +228,7 @@ export default function EEGSolutionsPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-primary-white mb-6">
               Advanced Research
             </h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -276,7 +276,7 @@ export default function EEGSolutionsPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-primary-white mb-6">
               Product Lines and Commercial Offerings
             </h2>
           </motion.div>
@@ -290,10 +290,10 @@ export default function EEGSolutionsPage() {
               viewport={{ once: true }}
               className="glass-panel-strong rounded-2xl p-8"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center mb-6">
-                <Monitor className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-secondary-green rounded-xl flex items-center justify-center mb-6">
+                <Monitor className="w-8 h-8 text-primary-white" />
               </div>
-              <h3 className="text-2xl font-display font-bold text-white mb-4">
+              <h3 className="text-2xl font-display font-bold text-primary-white mb-4">
                 A. Commercial EEG Systems for Research Centers and Hospitals
               </h3>
               <p className="text-white/80 mb-6">
@@ -322,11 +322,11 @@ export default function EEGSolutionsPage() {
                 </div>
               </div>
               <div className="mb-4">
-                <h4 className="text-lg font-semibold text-white mb-2">Ideal for:</h4>
+                <h4 className="text-lg font-semibold text-primary-white mb-2">Ideal for:</h4>
                 <p className="text-white/80 text-sm">Neurocognitive research, medical diagnostics, sleep studies, brain-computer interface development, and clinical psychology.</p>
               </div>
               <div>
-                <h4 className="text-lg font-semibold text-white mb-2">Commercial Plans:</h4>
+                <h4 className="text-lg font-semibold text-primary-white mb-2">Commercial Plans:</h4>
                 <ul className="text-white/80 text-sm space-y-1">
                   <li>• Enterprise License: Lifetime access with AI analytics suite and cloud integration</li>
                   <li>• Academic Research Plan: Annual subscription for universities and labs with open data frameworks</li>
@@ -343,10 +343,10 @@ export default function EEGSolutionsPage() {
               viewport={{ once: true }}
               className="glass-panel-strong rounded-2xl p-8"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-secondary-blue to-accent-blue rounded-xl flex items-center justify-center mb-6">
-                <Smartphone className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-br from-secondary-green to-accent-light-blue rounded-xl flex items-center justify-center mb-6">
+                <Smartphone className="w-8 h-8 text-primary-white" />
               </div>
-              <h3 className="text-2xl font-display font-bold text-white mb-4">
+              <h3 className="text-2xl font-display font-bold text-primary-white mb-4">
                 B. Handheld EEG Systems for Healthcare Professionals
               </h3>
               <p className="text-white/80 mb-6">
@@ -375,11 +375,11 @@ export default function EEGSolutionsPage() {
                 </div>
               </div>
               <div className="mb-4">
-                <h4 className="text-lg font-semibold text-white mb-2">Ideal for:</h4>
+                <h4 className="text-lg font-semibold text-primary-white mb-2">Ideal for:</h4>
                 <p className="text-white/80 text-sm">Neurologists, psychiatrists, and healthcare practitioners conducting on-site or remote assessments.</p>
               </div>
               <div>
-                <h4 className="text-lg font-semibold text-white mb-2">Plans:</h4>
+                <h4 className="text-lg font-semibold text-primary-white mb-2">Plans:</h4>
                 <ul className="text-white/80 text-sm space-y-1">
                   <li>• Professional Kit: One-time purchase with cloud-based analytics tools</li>
                   <li>• Clinical Subscription: Monthly plan with data analytics and service support</li>
@@ -395,10 +395,10 @@ export default function EEGSolutionsPage() {
               viewport={{ once: true }}
               className="glass-panel-strong rounded-2xl p-8"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-accent-blue to-light-blue rounded-xl flex items-center justify-center mb-6">
-                <Users className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-br from-accent-light-blue to-secondary-green rounded-xl flex items-center justify-center mb-6">
+                <Users className="w-8 h-8 text-primary-white" />
               </div>
-              <h3 className="text-2xl font-display font-bold text-white mb-4">
+              <h3 className="text-2xl font-display font-bold text-primary-white mb-4">
                 C. Personal EEG Devices for Individuals
               </h3>
               <p className="text-white/80 mb-6">
@@ -427,11 +427,11 @@ export default function EEGSolutionsPage() {
                 </div>
               </div>
               <div className="mb-4">
-                <h4 className="text-lg font-semibold text-white mb-2">Ideal for:</h4>
+                <h4 className="text-lg font-semibold text-primary-white mb-2">Ideal for:</h4>
                 <p className="text-white/80 text-sm">Personal wellness, cognitive enhancement, and mental health monitoring.</p>
               </div>
               <div>
-                <h4 className="text-lg font-semibold text-white mb-2">Plans:</h4>
+                <h4 className="text-lg font-semibold text-primary-white mb-2">Plans:</h4>
                 <ul className="text-white/80 text-sm space-y-1">
                   <li>• Wellness Plan: App-based monitoring with AI-guided mental exercises</li>
                   <li>• Premium Plan: Advanced neurofeedback and customized data analytics</li>
@@ -452,7 +452,7 @@ export default function EEGSolutionsPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-primary-white mb-6">
               Development Platforms and Ecosystem
             </h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -468,10 +468,10 @@ export default function EEGSolutionsPage() {
               viewport={{ once: true }}
               className="glass-panel-strong rounded-2xl p-8"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center mb-6">
-                <Cpu className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-secondary-green rounded-xl flex items-center justify-center mb-6">
+                <Cpu className="w-8 h-8 text-primary-white" />
               </div>
-              <h3 className="text-xl font-display font-bold text-white mb-4">NeuroCore Engine</h3>
+              <h3 className="text-xl font-display font-bold text-primary-white mb-4">NeuroCore Engine</h3>
               <p className="text-white/80">Proprietary signal processing framework that extracts meaningful features from complex neural data.</p>
             </motion.div>
 
@@ -482,10 +482,10 @@ export default function EEGSolutionsPage() {
               viewport={{ once: true }}
               className="glass-panel-strong rounded-2xl p-8"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-secondary-blue to-accent-blue rounded-xl flex items-center justify-center mb-6">
-                <Brain className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-br from-secondary-green to-accent-light-blue rounded-xl flex items-center justify-center mb-6">
+                <Brain className="w-8 h-8 text-primary-white" />
               </div>
-              <h3 className="text-xl font-display font-bold text-white mb-4">Sentient NeuroAI Suite</h3>
+              <h3 className="text-xl font-display font-bold text-primary-white mb-4">Sentient NeuroAI Suite</h3>
               <p className="text-white/80">Machine learning platform that trains models for cognitive and emotional recognition.</p>
             </motion.div>
 
@@ -496,10 +496,10 @@ export default function EEGSolutionsPage() {
               viewport={{ once: true }}
               className="glass-panel-strong rounded-2xl p-8"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-accent-blue to-light-blue rounded-xl flex items-center justify-center mb-6">
-                <Database className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-br from-accent-light-blue to-secondary-green rounded-xl flex items-center justify-center mb-6">
+                <Database className="w-8 h-8 text-primary-white" />
               </div>
-              <h3 className="text-xl font-display font-bold text-white mb-4">NeuroSync Cloud</h3>
+              <h3 className="text-xl font-display font-bold text-primary-white mb-4">NeuroSync Cloud</h3>
               <p className="text-white/80">Secure cloud platform for EEG data storage, visualization, and collaborative research.</p>
             </motion.div>
 
@@ -510,10 +510,10 @@ export default function EEGSolutionsPage() {
               viewport={{ once: true }}
               className="glass-panel-strong rounded-2xl p-8"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-light-blue to-primary-blue rounded-xl flex items-center justify-center mb-6">
-                <Settings className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-br from-secondary-green to-primary-blue rounded-xl flex items-center justify-center mb-6">
+                <Settings className="w-8 h-8 text-primary-white" />
               </div>
-              <h3 className="text-xl font-display font-bold text-white mb-4">BioLink SDK</h3>
+              <h3 className="text-xl font-display font-bold text-primary-white mb-4">BioLink SDK</h3>
               <p className="text-white/80">Developer kit allowing third-party integration with Sentient EEG systems for custom research or application development.</p>
             </motion.div>
 
@@ -524,10 +524,10 @@ export default function EEGSolutionsPage() {
               viewport={{ once: true }}
               className="glass-panel-strong rounded-2xl p-8"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-accent-blue rounded-xl flex items-center justify-center mb-6">
-                <Globe className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-accent-light-blue rounded-xl flex items-center justify-center mb-6">
+                <Globe className="w-8 h-8 text-primary-white" />
               </div>
-              <h3 className="text-xl font-display font-bold text-white mb-4">Cross-Device Integration</h3>
+              <h3 className="text-xl font-display font-bold text-primary-white mb-4">Cross-Device Integration</h3>
               <p className="text-white/80">Compatibility with AR headgear, HMI systems, and biomedical instruments for multi-sensor fusion.</p>
             </motion.div>
           </div>
@@ -544,7 +544,7 @@ export default function EEGSolutionsPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-primary-white mb-6">
               Future of EEG Systems
             </h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -562,7 +562,7 @@ export default function EEGSolutionsPage() {
             <p className="text-lg text-white/80 mb-6">
               Our vision is to create EEG systems that not only read brain signals but also understand intent - enabling seamless mind-machine communication for defense, healthcare, and human development.
             </p>
-            <p className="text-xl text-white font-medium">
+            <p className="text-xl text-primary-white font-medium">
               At Sentient Biotech Private Limited, we are redefining how humanity understands the brain. Our EEG systems merge neuroscience with artificial intelligence to illuminate the unseen - transforming thought into knowledge, and knowledge into progress.
             </p>
             <p className="text-2xl font-display font-bold gradient-text mt-8">
@@ -582,7 +582,7 @@ export default function EEGSolutionsPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-primary-white mb-6">
               Frequently Asked Questions (FAQs)
             </h2>
           </motion.div>
@@ -600,7 +600,7 @@ export default function EEGSolutionsPage() {
                 <div className="flex items-start gap-4">
                   <HelpCircle className="w-6 h-6 text-electric-cyan flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">{faq.question}</h3>
+                    <h3 className="text-lg font-semibold text-primary-white mb-2">{faq.question}</h3>
                     <p className="text-white/80">{faq.answer}</p>
                   </div>
                 </div>

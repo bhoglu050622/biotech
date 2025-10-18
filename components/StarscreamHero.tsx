@@ -30,7 +30,7 @@ export default function StarscreamHero() {
       {/* Advanced Background Animation System */}
       <div className="absolute inset-0">
         {/* Static gradient fallback */}
-        <div className="absolute inset-0 bg-gradient-to-br from-deep-indigo via-electric-cyan/5 to-violet-accent/5" />
+        <div className="absolute inset-0 bg-gradient-to-br from-deep-indigo via-electric-cyan/5 to-secondary-green/5" />
         
         {/* Animated gradient layers */}
         <motion.div
@@ -98,7 +98,7 @@ export default function StarscreamHero() {
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-electric-cyan rounded-full"
+            className="absolute w-1 h-1 bg-accent-light-blue rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -137,7 +137,7 @@ export default function StarscreamHero() {
                 Starscream
               </span>
               <br />
-              <span className="text-white">
+              <span className="text-primary-white">
                 Next-Gen Flight Helmet
               </span>
             </motion.h1>
@@ -280,8 +280,8 @@ export default function StarscreamHero() {
                     className="absolute top-8 left-8 glass-panel-strong rounded-xl p-3 neural-glow"
                   >
                     <div className="flex items-center space-x-2">
-                      <div className="w-3 h-3 bg-electric-cyan rounded-full neural-pulse-enhanced"></div>
-                      <span className="text-sm text-white font-medium">HUD Active</span>
+                      <div className="w-3 h-3 bg-accent-light-blue rounded-full neural-pulse-enhanced"></div>
+                      <span className="text-sm text-primary-white font-medium">HUD Active</span>
                     </div>
                   </motion.div>
 
@@ -293,7 +293,7 @@ export default function StarscreamHero() {
                   >
                     <div className="flex items-center space-x-2">
                       <div className="w-3 h-3 bg-violet-accent rounded-full neural-pulse-enhanced"></div>
-                      <span className="text-sm text-white font-medium">Neural Link</span>
+                      <span className="text-sm text-primary-white font-medium">Neural Link</span>
                     </div>
                   </motion.div>
 
@@ -305,7 +305,7 @@ export default function StarscreamHero() {
                   >
                     <div className="flex items-center space-x-2">
                       <div className="w-3 h-3 bg-soft-teal rounded-full neural-pulse-enhanced"></div>
-                      <span className="text-sm text-white font-medium">AI Powered</span>
+                      <span className="text-sm text-primary-white font-medium">AI Powered</span>
                     </div>
                   </motion.div>
                 </div>
@@ -319,8 +319,8 @@ export default function StarscreamHero() {
                 className="absolute -top-4 -right-4 glass-panel-strong rounded-lg p-3 neural-glow"
               >
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-electric-cyan rounded-full neural-pulse"></div>
-                  <span className="text-xs text-white font-medium">HUD Active</span>
+                  <div className="w-2 h-2 bg-accent-light-blue rounded-full neural-pulse"></div>
+                  <span className="text-xs text-primary-white font-medium">HUD Active</span>
                 </div>
               </motion.div>
 
@@ -332,7 +332,7 @@ export default function StarscreamHero() {
               >
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-violet-accent rounded-full neural-pulse"></div>
-                  <span className="text-xs text-white font-medium">Neural Link</span>
+                  <span className="text-xs text-primary-white font-medium">Neural Link</span>
                 </div>
               </motion.div>
 
@@ -401,7 +401,7 @@ export default function StarscreamHero() {
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-3 bg-electric-cyan rounded-full mt-2"
+            className="w-1 h-3 bg-accent-light-blue rounded-full mt-2"
           />
         </motion.div>
       </motion.div>

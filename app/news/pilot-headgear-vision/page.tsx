@@ -9,7 +9,7 @@ import { Plane, Calendar, ArrowLeft } from 'lucide-react'
 
 export default function PilotHeadgearBlogPage() {
   return (
-    <main className="relative min-h-screen bg-deep-indigo">
+    <main className="relative min-h-screen bg-primary-blue">
       <ParticleBackground />
       <Navbar />
       
@@ -31,8 +31,8 @@ export default function PilotHeadgearBlogPage() {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-secondary-blue to-accent-blue rounded-xl flex items-center justify-center">
-                <Plane className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 bg-gradient-to-br from-secondary-green to-accent-light-blue rounded-xl flex items-center justify-center">
+                <Plane className="w-6 h-6 text-primary-white" />
               </div>
               <div className="flex items-center gap-2 text-text-tertiary text-sm">
                 <Calendar className="w-4 h-4" />
@@ -41,7 +41,7 @@ export default function PilotHeadgearBlogPage() {
             </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold gradient-text mb-6">
-              Next-Generation Pilot Headgear – Expanding Vision Beyond Limits
+              Starscream – Expanding Vision Beyond Limits
             </h1>
           </motion.div>
         </div>
@@ -51,7 +51,7 @@ export default function PilotHeadgearBlogPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none space-y-6 text-text-secondary leading-relaxed">
             <p>
-              In modern aerial combat, information is power. Our Next-Generation Pilot Headgear integrates multi-camera vision, AI-assisted overlays, and biometric tracking to provide pilots with unparalleled situational awareness. With features like 3D terrain mapping, AR-based navigation, and real-time health monitoring, this innovation brings a new dimension of safety, precision, and performance to the Indian Air Force.
+              In modern aerial combat, information is power. Our Starscream integrates multi-camera vision, AI-assisted overlays, and biometric tracking to provide pilots with unparalleled situational awareness. With features like 3D terrain mapping, AR-based navigation, and real-time health monitoring, this innovation brings a new dimension of safety, precision, and performance to the Indian Air Force.
             </p>
             
             <h2 className="text-2xl font-display font-bold text-text-primary mt-8 mb-4">

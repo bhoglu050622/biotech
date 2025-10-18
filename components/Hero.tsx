@@ -25,27 +25,33 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-      {/* Advanced Background Animation System */}
-      <div className="absolute inset-0">
-        {/* Static gradient fallback */}
-        <div className="absolute inset-0 bg-gradient-to-br from-deep-indigo via-electric-cyan/5 to-violet-accent/5" />
-        
-        {/* Simple animated gradient */}
-        <motion.div
-          animate={{
-            background: [
-              'radial-gradient(circle at 20% 30%, rgba(0, 230, 255, 0.1) 0%, transparent 70%)',
-              'radial-gradient(circle at 80% 70%, rgba(170, 100, 255, 0.1) 0%, transparent 70%)',
-              'radial-gradient(circle at 20% 30%, rgba(0, 230, 255, 0.1) 0%, transparent 70%)'
-            ]
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="absolute inset-0"
-        />
+        {/* Clinical Background with Defense Accents */}
+        <div className="absolute inset-0">
+          {/* Static gradient fallback */}
+          <div className="absolute inset-0 bg-gradient-to-br from-deep-indigo via-electric-cyan/5 to-violet-accent/5" />
+          
+          {/* Simple animated gradient */}
+          <motion.div
+            animate={{
+              background: [
+                'radial-gradient(circle at 20% 30%, rgba(0, 82, 204, 0.1) 0%, transparent 70%)',
+                'radial-gradient(circle at 80% 70%, rgba(85, 107, 47, 0.1) 0%, transparent 70%)',
+                'radial-gradient(circle at 20% 30%, rgba(0, 82, 204, 0.1) 0%, transparent 70%)'
+              ]
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+            className="absolute inset-0"
+          />
+          
+          {/* Defense Geometric Overlay */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute top-20 left-10 w-32 h-32 border border-olive-green/20 rotate-45" />
+            <div className="absolute bottom-20 right-10 w-24 h-24 border border-military-khaki/20 rotate-12" />
+          </div>
         
         {/* Simple waveform */}
         <motion.svg
@@ -113,7 +119,7 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12"
             >
               <motion.button
-                whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0, 230, 255, 0.3)" }}
+                whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0, 82, 204, 0.3)" }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleGetEarlyAccess}
                 className="btn-primary flex items-center justify-center space-x-2 text-lg px-8 py-4"
@@ -126,7 +132,7 @@ export default function Hero() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleSeeTheTech}
-                className="btn-secondary flex items-center justify-center space-x-2 text-lg px-8 py-4"
+                className="btn-defense flex items-center justify-center space-x-2 text-lg px-8 py-4"
               >
                 <Play className="w-5 h-5" />
                 <span>See the Tech</span>
@@ -141,34 +147,34 @@ export default function Hero() {
               className="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-white/60"
             >
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-electric-cyan rounded-full neural-pulse"></div>
-                <span>Non-invasive Technology</span>
+                <div className="w-2 h-2 bg-primary-blue rounded-full neural-pulse"></div>
+                <span>Clinical Precision</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-violet-accent rounded-full neural-pulse"></div>
-                <span>Real-time Feedback</span>
+                <div className="w-2 h-2 bg-olive-green rounded-full neural-pulse"></div>
+                <span>Defense-Grade Security</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-soft-teal rounded-full neural-pulse"></div>
-                <span>Privacy-First</span>
+                <div className="w-2 h-2 bg-saffron-orange rounded-full neural-pulse"></div>
+                <span>Made in India</span>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Right Column - 3D Device Render */}
+          {/* Right Column - Smaller Device Render */}
           <motion.div
             initial={{ opacity: 0, x: 50, scale: 0.9 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ delay: 0.3, duration: 1, ease: [0.2, 0.8, 0.2, 1] }}
             className="relative flex justify-center lg:justify-end"
           >
-            {/* Device Container */}
-            <div className="relative w-full max-w-lg">
+            {/* Device Container - Vertical Orientation */}
+            <div className="relative w-full max-w-sm">
               {/* Animated EEG Headset */}
               <motion.div
                 animate={{
-                  y: [0, -8, 0],
-                  rotateY: [0, 4, 0],
+                  y: [0, -6, 0],
+                  rotateY: [0, 3, 0],
                 }}
                 transition={{
                   duration: 6,
@@ -179,45 +185,45 @@ export default function Hero() {
               >
                 {/* Device Mockup */}
                 <div className="relative">
-                  {/* Main device body */}
-                  <div className="w-80 h-48 mx-auto glass-panel-strong rounded-2xl p-8 neural-glow">
-                    <div className="flex flex-col items-center space-y-4">
-                      {/* Device visual representation */}
-                      <div className="w-24 h-16 bg-gradient-to-br from-electric-cyan/30 to-violet-accent/30 rounded-lg flex items-center justify-center">
+                  {/* Main device body - Vertical */}
+                  <div className="w-48 h-64 mx-auto glass-panel-strong rounded-xl p-6 neural-glow">
+                    <div className="flex flex-col items-center space-y-4 h-full">
+                      {/* Device visual representation - Vertical */}
+                      <div className="w-16 h-20 bg-gradient-to-br from-primary-blue/30 to-olive-green/30 rounded-lg flex items-center justify-center">
                         <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                          <div className="w-4 h-4 bg-electric-cyan rounded-full neural-pulse"></div>
+                          <div className="w-4 h-4 bg-primary-blue rounded-full neural-pulse"></div>
                         </div>
                       </div>
                       
                       {/* Status indicators */}
-                      <div className="flex space-x-2">
-                        <div className="w-2 h-2 bg-electric-cyan rounded-full neural-pulse"></div>
-                        <div className="w-2 h-2 bg-violet-accent rounded-full neural-pulse" style={{ animationDelay: '0.5s' }}></div>
-                        <div className="w-2 h-2 bg-soft-teal rounded-full neural-pulse" style={{ animationDelay: '1s' }}></div>
+                      <div className="flex flex-col space-y-2">
+                        <div className="w-2 h-2 bg-primary-blue rounded-full neural-pulse"></div>
+                        <div className="w-2 h-2 bg-olive-green rounded-full neural-pulse" style={{ animationDelay: '0.5s' }}></div>
+                        <div className="w-2 h-2 bg-saffron-orange rounded-full neural-pulse" style={{ animationDelay: '1s' }}></div>
                       </div>
                       
-                      <div className="text-center">
-                        <h3 className="text-lg font-semibold text-white mb-1">EEG Headset</h3>
-                        <p className="text-sm text-white/60">Real-time neurofeedback</p>
+                      <div className="text-center flex-grow flex flex-col justify-center">
+                        <h3 className="text-base font-semibold text-white mb-1">EEG Headset</h3>
+                        <p className="text-xs text-white/60">Real-time neurofeedback</p>
                       </div>
                     </div>
                   </div>
                   
-                  {/* Floating elements around device */}
+                  {/* Floating elements around device - Vertical */}
                   <motion.div
                     animate={{ rotate: 360 }}
                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    className="absolute -top-4 -right-4 w-8 h-8 border border-electric-cyan/30 rounded-full"
+                    className="absolute -top-3 -right-3 w-6 h-6 border border-olive-green/30 rounded-full"
                   />
                   <motion.div
                     animate={{ rotate: -360 }}
                     transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                    className="absolute -bottom-4 -left-4 w-6 h-6 border border-violet-accent/30 rounded-full"
+                    className="absolute -bottom-3 -left-3 w-5 h-5 border border-military-khaki/30 rounded-full"
                   />
                 </div>
               </motion.div>
 
-              {/* Animated waveform overlay */}
+              {/* Animated waveform overlay - Smaller */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -226,14 +232,14 @@ export default function Hero() {
               >
                 <svg
                   className="w-full h-full"
-                  viewBox="0 0 400 300"
+                  viewBox="0 0 300 200"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <motion.path
-                    d="M50 150 Q100 100 150 150 T250 150 T350 150"
+                    d="M40 100 Q80 80 120 100 T200 100 T260 100"
                     stroke="url(#waveGradient)"
-                    strokeWidth="2"
+                    strokeWidth="1.5"
                     fill="none"
                     initial={{ pathLength: 0 }}
                     animate={{ pathLength: 1 }}
@@ -241,9 +247,9 @@ export default function Hero() {
                   />
                   <defs>
                     <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#00E6FF" stopOpacity="0.8" />
-                      <stop offset="50%" stopColor="#AA64FF" stopOpacity="0.6" />
-                      <stop offset="100%" stopColor="#6BE1C9" stopOpacity="0.8" />
+                      <stop offset="0%" stopColor="#0052CC" stopOpacity="0.8" />
+                      <stop offset="50%" stopColor="#556B2F" stopOpacity="0.6" />
+                      <stop offset="100%" stopColor="#FF9933" stopOpacity="0.8" />
                     </linearGradient>
                   </defs>
                 </svg>

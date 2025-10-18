@@ -12,10 +12,10 @@ const holographicData = [
 ]
 
 const systemMetrics = [
-  { icon: Cpu, label: "Processing Power", value: "99.8%", color: "from-electric-cyan to-violet-accent" },
-  { icon: Battery, label: "Power Level", value: "87%", color: "from-violet-accent to-soft-teal" },
-  { icon: Wifi, label: "Signal Strength", value: "Excellent", color: "from-soft-teal to-electric-cyan" },
-  { icon: Eye, label: "Visual Range", value: "360°", color: "from-electric-cyan to-violet-accent" }
+  { icon: Cpu, label: "Processing Power", value: "99.8%", color: "from-accent-light-blue to-secondary-green" },
+  { icon: Battery, label: "Power Level", value: "87%", color: "from-secondary-green to-soft-teal" },
+  { icon: Wifi, label: "Signal Strength", value: "Excellent", color: "from-soft-teal to-accent-light-blue" },
+  { icon: Eye, label: "Visual Range", value: "360°", color: "from-accent-light-blue to-secondary-green" }
 ]
 
 export default function StarscreamHolographic() {
@@ -71,7 +71,7 @@ export default function StarscreamHolographic() {
         {[...Array(50)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-electric-cyan rounded-full"
+            className="absolute w-1 h-1 bg-accent-light-blue rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -141,7 +141,7 @@ export default function StarscreamHolographic() {
             className="lg:col-span-1 order-2 lg:order-1"
           >
             <div className="glass-panel-strong rounded-2xl p-6 neural-glow-strong">
-              <h3 className="text-xl font-bold text-white mb-6 font-mono">SYSTEM STATUS</h3>
+              <h3 className="text-xl font-bold text-primary-white mb-6 font-mono">SYSTEM STATUS</h3>
               
               {holographicData.map((item, index) => (
                 <motion.div
@@ -157,7 +157,7 @@ export default function StarscreamHolographic() {
                       <motion.div
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 1, repeat: Infinity }}
-                        className={`w-2 h-2 rounded-full ${item.color.includes('electric') ? 'bg-electric-cyan' : item.color.includes('violet') ? 'bg-violet-accent' : 'bg-soft-teal'}`}
+                        className={`w-2 h-2 rounded-full ${item.color.includes('electric') ? 'bg-accent-light-blue' : item.color.includes('violet') ? 'bg-violet-accent' : 'bg-soft-teal'}`}
                       />
                       <span className={`text-sm font-mono ${item.color}`}>{item.value}</span>
                     </div>
@@ -171,7 +171,7 @@ export default function StarscreamHolographic() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1, duration: 0.5 }}
-                  className="mt-6 p-4 rounded-lg bg-gradient-to-r from-electric-cyan/10 to-violet-accent/10 border border-electric-cyan/30"
+                  className="mt-6 p-4 rounded-lg bg-gradient-to-r from-accent-light-blue/10 to-secondary-green/10 border border-electric-cyan/30"
                 >
                   <div className="text-center">
                     <div className="text-2xl font-mono text-electric-cyan">
@@ -262,8 +262,8 @@ export default function StarscreamHolographic() {
                 className="absolute -top-4 -right-4 glass-panel-strong rounded-xl p-3 neural-glow"
               >
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-electric-cyan rounded-full animate-pulse" />
-                  <span className="text-xs text-white font-mono">HUD ACTIVE</span>
+                  <div className="w-2 h-2 bg-accent-light-blue rounded-full animate-pulse" />
+                  <span className="text-xs text-primary-white font-mono">HUD ACTIVE</span>
                 </div>
               </motion.div>
             </div>
@@ -277,7 +277,7 @@ export default function StarscreamHolographic() {
             className="lg:col-span-1 order-3 lg:order-3"
           >
             <div className="glass-panel-strong rounded-2xl p-6 neural-glow-strong">
-              <h3 className="text-xl font-bold text-white mb-6 font-mono">PERFORMANCE METRICS</h3>
+              <h3 className="text-xl font-bold text-primary-white mb-6 font-mono">PERFORMANCE METRICS</h3>
               
               {systemMetrics.map((metric, index) => (
                 <motion.div
@@ -290,7 +290,7 @@ export default function StarscreamHolographic() {
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center space-x-3">
                       <div className={`w-8 h-8 bg-gradient-to-br ${metric.color} rounded-lg flex items-center justify-center`}>
-                        <metric.icon className="w-4 h-4 text-white" />
+                        <metric.icon className="w-4 h-4 text-primary-white" />
                       </div>
                       <span className="text-sm text-white/80 font-mono">{metric.label}</span>
                     </div>
@@ -314,7 +314,7 @@ export default function StarscreamHolographic() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.5, duration: 0.5 }}
-                className="mt-6 p-4 rounded-lg bg-gradient-to-r from-violet-accent/10 to-soft-teal/10 border border-violet-accent/30"
+                className="mt-6 p-4 rounded-lg bg-gradient-to-r from-secondary-green/10 to-soft-teal/10 border border-violet-accent/30"
               >
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-sm text-white/80 font-mono">THREAT SCAN</span>
@@ -323,7 +323,7 @@ export default function StarscreamHolographic() {
                 <div className="w-full bg-black/30 rounded-full h-2 overflow-hidden">
                   <motion.div
                     animate={{ width: `${scanProgress}%` }}
-                    className="h-full bg-gradient-to-r from-violet-accent to-soft-teal rounded-full"
+                    className="h-full bg-gradient-to-r from-secondary-green to-soft-teal rounded-full"
                   />
                 </div>
               </motion.div>

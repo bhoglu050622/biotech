@@ -9,19 +9,19 @@ const interactiveFeatures = [
     icon: RotateCcw,
     title: "360° Rotation",
     description: "Fully interactive 3D model with smooth rotation controls",
-    color: "from-electric-cyan to-violet-accent"
+    color: "from-accent-light-blue to-secondary-green"
   },
   {
     icon: ZoomIn,
     title: "Zoom & Pan",
     description: "Detailed inspection with zoom and pan capabilities",
-    color: "from-violet-accent to-soft-teal"
+    color: "from-secondary-green to-soft-teal"
   },
   {
     icon: Move3D,
     title: "3D Navigation",
     description: "Intuitive 3D navigation with gesture controls",
-    color: "from-soft-teal to-electric-cyan"
+    color: "from-soft-teal to-accent-light-blue"
   }
 ]
 
@@ -148,7 +148,7 @@ export default function Starscream3D() {
                     initial={{ opacity: 1 }}
                     animate={{ opacity: 0 }}
                     transition={{ delay: 3, duration: 1 }}
-                    className="absolute inset-0 bg-gradient-to-br from-deep-indigo to-electric-cyan/20 flex items-center justify-center z-20"
+                    className="absolute inset-0 bg-gradient-to-br from-deep-indigo to-accent-light-blue/20 flex items-center justify-center z-20"
                   >
                     <div className="text-center">
                       <motion.div
@@ -184,7 +184,7 @@ export default function Starscream3D() {
                   >
                     <div className="flex items-center space-x-2">
                       <Eye className="w-4 h-4 text-electric-cyan" />
-                      <span className="text-sm text-white font-medium">3D Active</span>
+                      <span className="text-sm text-primary-white font-medium">3D Active</span>
                     </div>
                   </motion.div>
 
@@ -196,7 +196,7 @@ export default function Starscream3D() {
                   >
                     <div className="flex items-center space-x-2">
                       <Settings className="w-4 h-4 text-violet-accent" />
-                      <span className="text-sm text-white font-medium">Interactive</span>
+                      <span className="text-sm text-primary-white font-medium">Interactive</span>
                     </div>
                   </motion.div>
 
@@ -208,7 +208,7 @@ export default function Starscream3D() {
                   >
                     <div className="flex items-center space-x-2">
                       <Layers className="w-4 h-4 text-soft-teal" />
-                      <span className="text-sm text-white font-medium">HD Quality</span>
+                      <span className="text-sm text-primary-white font-medium">HD Quality</span>
                     </div>
                   </motion.div>
                 </div>
@@ -238,7 +238,7 @@ export default function Starscream3D() {
           >
             {/* Interactive Features */}
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Interactive Features</h3>
+              <h3 className="text-2xl font-bold text-primary-white mb-6">Interactive Features</h3>
               <div className="space-y-4">
                 {interactiveFeatures.map((feature, index) => (
                   <motion.div
@@ -258,10 +258,10 @@ export default function Starscream3D() {
                   >
                     <div className="flex items-center space-x-4">
                       <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center`}>
-                        <feature.icon className="w-6 h-6 text-white" />
+                        <feature.icon className="w-6 h-6 text-primary-white" />
                       </div>
                       <div>
-                        <h4 className="text-lg font-semibold text-white mb-1">{feature.title}</h4>
+                        <h4 className="text-lg font-semibold text-primary-white mb-1">{feature.title}</h4>
                         <p className="text-white/70 text-sm">{feature.description}</p>
                       </div>
                     </div>
@@ -272,7 +272,7 @@ export default function Starscream3D() {
 
             {/* Technical Specifications */}
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Technical Specifications</h3>
+              <h3 className="text-2xl font-bold text-primary-white mb-6">Technical Specifications</h3>
               <div className="grid grid-cols-2 gap-4">
                 {helmetSpecs.map((spec, index) => (
                   <motion.div
@@ -284,7 +284,7 @@ export default function Starscream3D() {
                     className="glass-panel rounded-xl p-4 text-center"
                   >
                     <div className="text-2xl mb-2">{spec.icon}</div>
-                    <div className="text-lg font-semibold text-white mb-1">{spec.value}</div>
+                    <div className="text-lg font-semibold text-primary-white mb-1">{spec.value}</div>
                     <div className="text-sm text-white/60">{spec.label}</div>
                   </motion.div>
                 ))}
@@ -293,18 +293,18 @@ export default function Starscream3D() {
 
             {/* 3D Controls */}
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">3D Controls</h3>
+              <h3 className="text-2xl font-bold text-primary-white mb-6">3D Controls</h3>
               <div className="space-y-3">
                 <div className="flex items-center justify-between glass-panel rounded-xl p-4">
-                  <span className="text-white">Mouse/Touch Controls</span>
+                  <span className="text-primary-white">Mouse/Touch Controls</span>
                   <span className="text-electric-cyan text-sm">Active</span>
                 </div>
                 <div className="flex items-center justify-between glass-panel rounded-xl p-4">
-                  <span className="text-white">Auto-rotate</span>
+                  <span className="text-primary-white">Auto-rotate</span>
                   <span className="text-violet-accent text-sm">Enabled</span>
                 </div>
                 <div className="flex items-center justify-between glass-panel rounded-xl p-4">
-                  <span className="text-white">Quality</span>
+                  <span className="text-primary-white">Quality</span>
                   <span className="text-soft-teal text-sm">4K</span>
                 </div>
               </div>

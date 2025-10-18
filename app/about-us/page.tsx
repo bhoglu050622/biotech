@@ -4,6 +4,8 @@ import { Suspense } from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ParticleBackground from '@/components/ParticleBackground'
+import BackToTop from '@/components/BackToTop'
+import JsonLd, { organizationSchema } from '@/components/JsonLd'
 import CommonCTA from '@/components/CommonCTA'
 import { motion } from 'framer-motion'
 import { 
@@ -109,11 +111,13 @@ const coreValues = [
 export default function AboutPage() {
   return (
     <main className="relative min-h-screen bg-deep-indigo">
+      <JsonLd data={organizationSchema} />
       <ParticleBackground />
       <Navbar />
+      <BackToTop />
       
       {/* Hero Section */}
-      <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-20 overflow-hidden">
+      <section className="relative pt-12 pb-8 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -124,7 +128,7 @@ export default function AboutPage() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold gradient-text mb-4 sm:mb-6">
               About Sentient Biotech
             </h1>
-            <p className="text-base sm:text-lg text-text-secondary max-w-3xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-white/80 max-w-3xl mx-auto px-4">
               Pioneering human-machine synergy through advanced biotechnology and neurotechnology
             </p>
           </motion.div>
@@ -132,8 +136,8 @@ export default function AboutPage() {
       </section>
 
       {/* Who we are */}
-      <section className="py-16 sm:py-20 bg-glass-white backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 sm:py-10 md:py-12 section-enhanced thematic-bg-primary">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -141,10 +145,10 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="card-hover"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-text-primary mb-6 sm:mb-8 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white mb-6 sm:mb-8 text-center">
               About Sentient Biotech Private Limited
             </h2>
-            <div className="space-y-4 sm:space-y-6 text-text-secondary text-sm sm:text-base leading-relaxed max-w-5xl mx-auto">
+            <div className="space-y-4 sm:space-y-6 text-gray-200 text-sm sm:text-base leading-relaxed max-w-5xl mx-auto">
               <p>
                 Sentient Biotech Private Limited, founded in 2024, was born from a profound realization that even with humanity's remarkable progress in engineering and computation, the most intricate and powerful system still resides within us—the human brain. In an era where machines can analyze, predict, and evolve, true comprehension continues to be an inherently human strength. With this understanding, Sentient Biotech set out to bridge the gap between artificial intelligence and human cognition, merging the precision of technology with the adaptability of biology to pioneer a new paradigm of symbiotic intelligence.
               </p>
@@ -155,7 +159,7 @@ export default function AboutPage() {
                 Our work in neurotechnology and AI-driven biosensing explores the unseen layers of consciousness, emotion, and performance. Through advanced EEG systems, bio-integrated wearables, and immersive vision technologies, we are redefining how humans connect with their surroundings. Whether monitoring a pilot's cognitive state in flight or detecting stress patterns in medical patients, our innovations translate biological signals into actionable intelligence. Every development at Sentient Biotech is designed with a single purpose—to extend human capability safely and responsibly.
               </p>
               <p>
-                The Next-Generation Pilot Headgear stands as one of our landmark innovations, representing our commitment to human-centric design. This system enhances perception in both day and night environments, fuses multiple vision feeds into a unified field of awareness, and integrates biometric monitoring directly into the pilot's gear. The result is not merely a technological upgrade, it is a transformation in how human beings perceive and respond to the world around them. We aim to give every pilot, soldier, and professional the power of complete situational awareness, even when visibility, time, and conditions are against them.
+                The Starscream stands as one of our landmark innovations, representing our commitment to human-centric design. This system enhances perception in both day and night environments, fuses multiple vision feeds into a unified field of awareness, and integrates biometric monitoring directly into the pilot's gear. The result is not merely a technological upgrade, it is a transformation in how human beings perceive and respond to the world around them. We aim to give every pilot, soldier, and professional the power of complete situational awareness, even when visibility, time, and conditions are against them.
               </p>
               <p>
                 Our philosophy rests on the belief that technology should not only serve human needs but also understand human nature. Every product and solution developed at Sentient Biotech is guided by principles of safety, empathy, and sustainability. We are committed to ethical innovation—ensuring that the integration of biology and intelligence enhances humanity rather than replaces it. Through this vision, we aspire to build a future where machines amplify human intuition, not diminish it.
@@ -188,7 +192,7 @@ export default function AboutPage() {
           
           {/* Desktop Timeline */}
           <div className="relative max-w-5xl mx-auto hidden md:block">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-blue via-accent-blue to-light-blue rounded-full"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-blue via-accent-blue to-secondary-green rounded-full"></div>
             <div className="space-y-12 sm:space-y-16">
               {milestones.map((milestone, index) => (
                 <motion.div
@@ -205,23 +209,23 @@ export default function AboutPage() {
                         // Special layout for Company Founded milestone
                         <div className={`flex items-start space-x-4 mb-4 ${index % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
                           <div className="flex-1">
-                            <span className="text-white font-bold text-base sm:text-lg block mb-2">{milestone.year}</span>
+                            <span className="text-primary-white font-bold text-base sm:text-lg block mb-2">{milestone.year}</span>
                             <h3 className="text-text-primary font-semibold text-base sm:text-lg mb-2">{milestone.title}</h3>
                             <p className="text-text-secondary text-xs sm:text-sm leading-relaxed">{milestone.description}</p>
                           </div>
-                          <div className="w-20 h-20 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-lg flex items-center justify-center shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300 flex-shrink-0">
-                            <milestone.icon className="w-10 h-10 text-white" />
+                          <div className="w-20 h-20 bg-gradient-to-br from-primary-blue to-secondary-green rounded-lg flex items-center justify-center shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300 flex-shrink-0">
+                            <milestone.icon className="w-10 h-10 text-primary-white" />
                           </div>
                         </div>
                       ) : (
                         <div className={`flex items-start space-x-4 mb-4 ${index % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
                           {milestone.iconOnLeft ? (
                             <>
-                              <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-lg flex items-center justify-center shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300 flex-shrink-0">
-                                <milestone.icon className="w-8 h-8 text-white" />
+                              <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-secondary-green rounded-lg flex items-center justify-center shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300 flex-shrink-0">
+                                <milestone.icon className="w-8 h-8 text-primary-white" />
                               </div>
                               <div className="flex-1">
-                                <span className="text-white font-bold text-base sm:text-lg block mb-2">{milestone.year}</span>
+                                <span className="text-primary-white font-bold text-base sm:text-lg block mb-2">{milestone.year}</span>
                                 <h3 className="text-text-primary font-semibold text-base sm:text-lg mb-2">{milestone.title}</h3>
                                 <p className="text-text-secondary text-xs sm:text-sm leading-relaxed">{milestone.description}</p>
                               </div>
@@ -229,12 +233,12 @@ export default function AboutPage() {
                           ) : (
                             <>
                               <div className="flex-1">
-                                <span className="text-white font-bold text-base sm:text-lg block mb-2">{milestone.year}</span>
+                                <span className="text-primary-white font-bold text-base sm:text-lg block mb-2">{milestone.year}</span>
                                 <h3 className="text-text-primary font-semibold text-base sm:text-lg mb-2">{milestone.title}</h3>
                                 <p className="text-text-secondary text-xs sm:text-sm leading-relaxed">{milestone.description}</p>
                               </div>
-                              <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-lg flex items-center justify-center shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300 flex-shrink-0">
-                                <milestone.icon className="w-8 h-8 text-white" />
+                              <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-secondary-green rounded-lg flex items-center justify-center shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300 flex-shrink-0">
+                                <milestone.icon className="w-8 h-8 text-primary-white" />
                               </div>
                             </>
                           )}
@@ -251,7 +255,7 @@ export default function AboutPage() {
 
           {/* Mobile Timeline - Vertical */}
           <div className="relative max-w-3xl mx-auto md:hidden">
-            <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-blue via-accent-blue to-light-blue rounded-full"></div>
+            <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-blue via-accent-blue to-secondary-green rounded-full"></div>
             <div className="space-y-8">
               {milestones.map((milestone, index) => (
                 <motion.div
@@ -269,23 +273,23 @@ export default function AboutPage() {
                         // Special layout for Company Founded milestone on mobile
                         <>
                           <div className="flex-1">
-                            <span className="text-white font-bold text-sm block mb-2">{milestone.year}</span>
+                            <span className="text-primary-white font-bold text-sm block mb-2">{milestone.year}</span>
                             <h3 className="text-text-primary font-semibold text-base mb-2">{milestone.title}</h3>
                             <p className="text-text-secondary text-sm leading-relaxed">{milestone.description}</p>
                           </div>
-                          <div className="w-20 h-20 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-lg flex items-center justify-center shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300 flex-shrink-0">
-                            <milestone.icon className="w-10 h-10 text-white" />
+                          <div className="w-20 h-20 bg-gradient-to-br from-primary-blue to-secondary-green rounded-lg flex items-center justify-center shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300 flex-shrink-0">
+                            <milestone.icon className="w-10 h-10 text-primary-white" />
                           </div>
                         </>
                       ) : (
                         <>
                           {milestone.iconOnLeft ? (
                             <>
-                              <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-lg flex items-center justify-center shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300 flex-shrink-0">
-                                <milestone.icon className="w-8 h-8 text-white" />
+                              <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-secondary-green rounded-lg flex items-center justify-center shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300 flex-shrink-0">
+                                <milestone.icon className="w-8 h-8 text-primary-white" />
                               </div>
                               <div className="flex-1">
-                                <span className="text-white font-bold text-sm block mb-2">{milestone.year}</span>
+                                <span className="text-primary-white font-bold text-sm block mb-2">{milestone.year}</span>
                                 <h3 className="text-text-primary font-semibold text-base mb-2">{milestone.title}</h3>
                                 <p className="text-text-secondary text-sm leading-relaxed">{milestone.description}</p>
                               </div>
@@ -293,12 +297,12 @@ export default function AboutPage() {
                           ) : (
                             <>
                               <div className="flex-1">
-                                <span className="text-white font-bold text-sm block mb-2">{milestone.year}</span>
+                                <span className="text-primary-white font-bold text-sm block mb-2">{milestone.year}</span>
                                 <h3 className="text-text-primary font-semibold text-base mb-2">{milestone.title}</h3>
                                 <p className="text-text-secondary text-sm leading-relaxed">{milestone.description}</p>
                               </div>
-                              <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-lg flex items-center justify-center shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300 flex-shrink-0">
-                                <milestone.icon className="w-8 h-8 text-white" />
+                              <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-secondary-green rounded-lg flex items-center justify-center shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300 flex-shrink-0">
+                                <milestone.icon className="w-8 h-8 text-primary-white" />
                               </div>
                             </>
                           )}
@@ -341,11 +345,15 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 className="card-hover group text-center"
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
-                  <member.icon className="w-10 h-10 text-white" />
+                <div className="w-20 h-20 bg-gradient-to-br from-primary-blue to-secondary-green rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
+                  <member.icon className="w-10 h-10 text-primary-white" />
                 </div>
                 <h3 className="text-text-primary font-semibold text-lg mb-2">{member.name}</h3>
-                <p className="text-primary-blue text-sm mb-3 font-medium">{member.role}</p>
+                <p className={`text-sm mb-3 font-bold ${
+                  ['Founder', 'Defence Solutions Director', 'Co-Founder', 'Electrical and Electronics Engineer'].includes(member.role)
+                    ? 'text-gray-900 bg-white/90 px-3 py-1 rounded-lg shadow-lg'
+                    : 'text-primary-blue font-medium'
+                }`}>{member.role}</p>
                 <p className="text-text-secondary text-sm mb-2 leading-relaxed">{member.expertise}</p>
                 {member.experience && <p className="text-text-tertiary text-xs">{member.experience}</p>}
               </motion.div>

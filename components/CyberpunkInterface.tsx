@@ -74,7 +74,7 @@ export default function CyberpunkInterface() {
             className="space-y-4 order-2 lg:order-1"
           >
             <div className="glass-panel-strong rounded-xl p-4 neural-glow">
-              <h3 className="text-lg font-bold text-white mb-4 font-mono">SYSTEM STATUS</h3>
+              <h3 className="text-lg font-bold text-primary-white mb-4 font-mono">SYSTEM STATUS</h3>
               {systemStatus.map((system, index) => (
                 <motion.div
                   key={system.name}
@@ -92,7 +92,7 @@ export default function CyberpunkInterface() {
                       initial={{ width: 0 }}
                       animate={{ width: `${system.efficiency}%` }}
                       transition={{ delay: 0.5 + index * 0.1, duration: 1 }}
-                      className={`h-full bg-gradient-to-r ${system.color.includes('electric') ? 'from-electric-cyan to-violet-accent' : system.color.includes('violet') ? 'from-violet-accent to-soft-teal' : 'from-soft-teal to-electric-cyan'} rounded-full`}
+                      className={`h-full bg-gradient-to-r ${system.color.includes('electric') ? 'from-accent-light-blue to-secondary-green' : system.color.includes('violet') ? 'from-secondary-green to-soft-teal' : 'from-soft-teal to-accent-light-blue'} rounded-full`}
                     />
                   </div>
                 </motion.div>
@@ -107,7 +107,7 @@ export default function CyberpunkInterface() {
                 transition={{ delay: 1, duration: 0.5 }}
                 className="glass-panel-strong rounded-xl p-4 neural-glow"
               >
-                <h3 className="text-lg font-bold text-white mb-4 font-mono">MISSION TIME</h3>
+                <h3 className="text-lg font-bold text-primary-white mb-4 font-mono">MISSION TIME</h3>
                 <div className="text-center">
                   <div className="text-3xl font-mono text-electric-cyan mb-2">
                     {currentTime.toLocaleTimeString()}
@@ -195,8 +195,8 @@ export default function CyberpunkInterface() {
                 className="absolute -top-6 -left-6 glass-panel-strong rounded-xl p-3 neural-glow"
               >
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-electric-cyan rounded-full animate-pulse" />
-                  <span className="text-xs text-white font-mono">HUD ACTIVE</span>
+                  <div className="w-2 h-2 bg-accent-light-blue rounded-full animate-pulse" />
+                  <span className="text-xs text-primary-white font-mono">HUD ACTIVE</span>
                 </div>
               </motion.div>
 
@@ -207,7 +207,7 @@ export default function CyberpunkInterface() {
               >
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-violet-accent rounded-full animate-pulse" />
-                  <span className="text-xs text-white font-mono">AI LINKED</span>
+                  <span className="text-xs text-primary-white font-mono">AI LINKED</span>
                 </div>
               </motion.div>
             </div>
@@ -221,7 +221,7 @@ export default function CyberpunkInterface() {
             className="space-y-4 order-3 lg:order-3"
           >
             <div className="glass-panel-strong rounded-xl p-4 neural-glow">
-              <h3 className="text-lg font-bold text-white mb-4 font-mono">THREAT DETECTION</h3>
+              <h3 className="text-lg font-bold text-primary-white mb-4 font-mono">THREAT DETECTION</h3>
               <div className="space-y-3">
                 {combatData.map((threat, index) => (
                   <motion.div
@@ -236,7 +236,7 @@ export default function CyberpunkInterface() {
                     }`}
                   >
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm font-mono text-white">{threat.type}</span>
+                      <span className="text-sm font-mono text-primary-white">{threat.type}</span>
                       <span className={`text-xs font-mono ${
                         threat.type === 'THREAT' ? 'text-red-400' :
                         threat.type === 'FRIENDLY' ? 'text-green-400' :
@@ -258,7 +258,7 @@ export default function CyberpunkInterface() {
               transition={{ delay: 1.5, duration: 0.5 }}
               className="glass-panel-strong rounded-xl p-4 neural-glow"
             >
-              <h3 className="text-lg font-bold text-white mb-4 font-mono">SCAN STATUS</h3>
+              <h3 className="text-lg font-bold text-primary-white mb-4 font-mono">SCAN STATUS</h3>
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-white/80 font-mono">360° SCAN</span>
@@ -267,7 +267,7 @@ export default function CyberpunkInterface() {
                 <div className="w-full bg-black/50 rounded-full h-2 overflow-hidden">
                   <motion.div
                     animate={{ width: `${scanProgress}%` }}
-                    className="h-full bg-gradient-to-r from-electric-cyan to-violet-accent rounded-full"
+                    className="h-full bg-gradient-to-r from-accent-light-blue to-secondary-green rounded-full"
                   />
                 </div>
                 <div className="text-xs text-white/60 font-mono">

@@ -20,7 +20,7 @@ export default function ProgressIndicator() {
       style={{ opacity }}
     >
       <motion.div
-        className="h-full bg-gradient-to-r from-electric-cyan via-violet-accent to-soft-teal"
+        className="h-full bg-gradient-to-r from-accent-light-blue via-violet-accent to-soft-teal"
         style={{ scaleX, transformOrigin: "left" }}
       />
       

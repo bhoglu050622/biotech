@@ -9,7 +9,7 @@ import { Brain, Calendar, ArrowLeft } from 'lucide-react'
 
 export default function NeurotechnologyBlogPage() {
   return (
-    <main className="relative min-h-screen bg-deep-indigo">
+    <main className="relative min-h-screen bg-primary-blue">
       <ParticleBackground />
       <Navbar />
       
@@ -31,8 +31,8 @@ export default function NeurotechnologyBlogPage() {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center">
-                <Brain className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 bg-gradient-to-br from-primary-blue to-secondary-green rounded-xl flex items-center justify-center">
+                <Brain className="w-6 h-6 text-primary-white" />
               </div>
               <div className="flex items-center gap-2 text-text-tertiary text-sm">
                 <Calendar className="w-4 h-4" />

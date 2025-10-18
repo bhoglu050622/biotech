@@ -9,7 +9,7 @@ const features = [
     title: "Total Situational Awareness",
     description: "A wide-field-of-view augmented reality interface fuses flight data, sensor feeds, and threat intelligence into a single, unified display, allowing the pilot to see and understand everything without looking down.",
     color: "text-electric-cyan",
-    bgColor: "bg-electric-cyan/10"
+    bgColor: "bg-accent-light-blue/10"
   },
   {
     icon: Brain,
@@ -30,7 +30,7 @@ const features = [
     title: "Uncompromising Performance",
     description: "Constructed from advanced, lightweight composite materials, the headgear provides superior protection and comfort for long-duration missions without sacrificing agility.",
     color: "text-electric-cyan",
-    bgColor: "bg-electric-cyan/10"
+    bgColor: "bg-accent-light-blue/10"
   }
 ]
 
@@ -43,15 +43,15 @@ const specs = [
 
 export default function StarscreamFeatures() {
   return (
-    <section id="features" className="py-24 relative overflow-hidden">
-      {/* Background Effects */}
+    <section id="features" className="py-24 relative overflow-hidden section-enhanced thematic-bg-defense">
+      {/* Defense-themed Background Effects */}
       <div className="absolute inset-0">
         <motion.div
           animate={{
             background: [
-              'radial-gradient(circle at 30% 20%, rgba(0, 230, 255, 0.05) 0%, transparent 70%)',
-              'radial-gradient(circle at 70% 80%, rgba(170, 100, 255, 0.05) 0%, transparent 70%)',
-              'radial-gradient(circle at 30% 20%, rgba(0, 230, 255, 0.05) 0%, transparent 70%)'
+              'radial-gradient(circle at 25% 25%, rgba(85, 107, 47, 0.1) 0%, transparent 70%)',
+              'radial-gradient(circle at 75% 75%, rgba(139, 69, 19, 0.08) 0%, transparent 70%)',
+              'radial-gradient(circle at 25% 25%, rgba(85, 107, 47, 0.1) 0%, transparent 70%)'
             ]
           }}
           transition={{
@@ -61,6 +61,13 @@ export default function StarscreamFeatures() {
           }}
           className="absolute inset-0"
         />
+        
+        {/* Defense geometric patterns */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-32 h-32 border border-olive-green/20 rotate-45" />
+          <div className="absolute bottom-20 right-10 w-24 h-24 border border-military-khaki/20 rotate-12" />
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-olive-drab/20 -rotate-12" />
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -90,13 +97,17 @@ export default function StarscreamFeatures() {
                 scale: 1.05, 
                 boxShadow: "0 20px 40px rgba(0, 230, 255, 0.2)" 
               }}
-              className="glass-panel-strong rounded-2xl p-8 neural-glow hover:neural-glow-strong transition-all duration-300"
+              className="card-thematic group relative defense-border"
             >
-              <div className={`w-16 h-16 ${feature.bgColor} rounded-xl flex items-center justify-center mb-6`}>
-                <feature.icon className={`w-8 h-8 ${feature.color}`} />
+              <div className="w-16 h-16 bg-gradient-to-br from-olive-green to-military-khaki rounded-xl flex items-center justify-center mb-6 defense-glow group-hover:shadow-lg group-hover:shadow-olive-green/20 transition-shadow duration-300">
+                <feature.icon className="w-8 h-8 text-primary-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-              <p className="text-white/70 leading-relaxed">{feature.description}</p>
+              <h3 className="text-2xl font-bold text-primary-white mb-4 card-title-hover-defense">{feature.title}</h3>
+              <p className="text-white/85 leading-relaxed font-medium">{feature.description}</p>
+              
+              {/* Defense-themed accent elements */}
+              <div className="absolute top-4 right-4 w-2 h-2 bg-olive-green rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute bottom-4 left-4 w-1 h-1 bg-military-khaki rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-300"></div>
             </motion.div>
           ))}
         </div>
@@ -107,10 +118,10 @@ export default function StarscreamFeatures() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="glass-panel-strong rounded-3xl p-12 neural-glow"
+          className="card-thematic defense-border"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-white mb-4">Technical Specifications</h3>
+            <h3 className="text-3xl font-bold text-primary-white mb-4">Technical Specifications</h3>
             <p className="text-white/70">Military-grade performance metrics</p>
           </div>
           
@@ -124,11 +135,11 @@ export default function StarscreamFeatures() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-electric-cyan/20 to-violet-accent/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <spec.icon className="w-8 h-8 text-electric-cyan" />
+                <div className="w-16 h-16 bg-gradient-to-br from-olive-green to-military-khaki rounded-xl flex items-center justify-center mx-auto mb-4 defense-glow">
+                  <spec.icon className="w-8 h-8 text-primary-white" />
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{spec.value}</div>
-                <div className="text-white/60">{spec.label}</div>
+                <div className="text-3xl font-bold text-primary-white mb-2">{spec.value}</div>
+                <div className="text-white/80 font-medium">{spec.label}</div>
               </motion.div>
             ))}
           </div>

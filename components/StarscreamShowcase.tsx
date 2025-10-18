@@ -51,18 +51,18 @@ export default function StarscreamShowcase() {
           className="mb-20"
         >
           <div className="relative rounded-3xl overflow-hidden neural-glow">
-            <div className="aspect-video bg-gradient-to-br from-deep-indigo to-electric-cyan/20 flex items-center justify-center">
+            <div className="aspect-video bg-gradient-to-br from-deep-indigo to-accent-light-blue/20 flex items-center justify-center">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 className="w-20 h-20 bg-white/20 backdrop-blur-xl rounded-full flex items-center justify-center border border-white/30"
               >
-                <Play className="w-8 h-8 text-white ml-1" />
+                <Play className="w-8 h-8 text-primary-white ml-1" />
               </motion.button>
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
             <div className="absolute bottom-8 left-8">
-              <h3 className="text-2xl font-bold text-white mb-2">Starscream in Action</h3>
+              <h3 className="text-2xl font-bold text-primary-white mb-2">Starscream in Action</h3>
               <p className="text-white/80">Watch the helmet in real combat scenarios</p>
             </div>
           </div>

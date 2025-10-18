@@ -9,19 +9,19 @@ const combatFeatures = [
     title: "Real-Time Threat Detection",
     description: "AI-powered threat assessment with 360-degree situational awareness and predictive analytics.",
     icon: Target,
-    color: "from-electric-cyan to-violet-accent"
+    color: "from-accent-light-blue to-secondary-green"
   },
   {
     title: "Neural Interface Control",
     description: "Direct brain-computer interface for instant command execution and enhanced decision making.",
     icon: Zap,
-    color: "from-violet-accent to-soft-teal"
+    color: "from-secondary-green to-soft-teal"
   },
   {
     title: "Advanced HUD System",
     description: "Augmented reality display with mission-critical data, navigation, and threat prioritization.",
     icon: Shield,
-    color: "from-soft-teal to-electric-cyan"
+    color: "from-soft-teal to-accent-light-blue"
   }
 ]
 
@@ -112,7 +112,7 @@ export default function StarscreamCombat() {
           className="mb-20"
         >
           <div className="relative rounded-3xl overflow-hidden neural-glow-strong">
-            <div className="aspect-video bg-gradient-to-br from-deep-indigo via-electric-cyan/10 to-violet-accent/10 flex items-center justify-center relative">
+            <div className="aspect-video bg-gradient-to-br from-deep-indigo via-electric-cyan/10 to-secondary-green/10 flex items-center justify-center relative">
               {/* Combat Simulation Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-deep-indigo to-black/50" />
               
@@ -129,7 +129,7 @@ export default function StarscreamCombat() {
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="absolute top-1/4 left-1/4 w-4 h-4 bg-electric-cyan rounded-full"
+                  className="absolute top-1/4 left-1/4 w-4 h-4 bg-accent-light-blue rounded-full"
                 />
                 <motion.div
                   animate={{
@@ -168,12 +168,12 @@ export default function StarscreamCombat() {
                 onClick={() => setIsVideoPlaying(!isVideoPlaying)}
                 className="relative z-10 w-24 h-24 bg-white/20 backdrop-blur-xl rounded-full flex items-center justify-center border-2 border-white/30 neural-glow"
               >
-                <Play className="w-10 h-10 text-white ml-1" />
+                <Play className="w-10 h-10 text-primary-white ml-1" />
               </motion.button>
 
               {/* Video Overlay Content */}
               <div className="absolute bottom-8 left-8 z-10">
-                <h3 className="text-3xl font-bold text-white mb-2">Starscream in Combat</h3>
+                <h3 className="text-3xl font-bold text-primary-white mb-2">Starscream in Combat</h3>
                 <p className="text-white/80 mb-4">Watch real combat scenarios and mission briefings</p>
                 <div className="flex items-center space-x-4 text-sm text-white/60">
                   <div className="flex items-center space-x-2">
@@ -198,7 +198,7 @@ export default function StarscreamCombat() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h3 className="text-3xl font-bold text-white text-center mb-12">Combat-Ready Features</h3>
+          <h3 className="text-3xl font-bold text-primary-white text-center mb-12">Combat-Ready Features</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {combatFeatures.map((feature, index) => (
               <motion.div
@@ -214,9 +214,9 @@ export default function StarscreamCombat() {
                 className="glass-panel-strong rounded-2xl p-8 neural-glow"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6`}>
-                  <feature.icon className="w-8 h-8 text-white" />
+                  <feature.icon className="w-8 h-8 text-primary-white" />
                 </div>
-                <h4 className="text-xl font-bold text-white mb-4">{feature.title}</h4>
+                <h4 className="text-xl font-bold text-primary-white mb-4">{feature.title}</h4>
                 <p className="text-white/70 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}

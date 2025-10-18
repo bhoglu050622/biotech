@@ -19,8 +19,8 @@ const products = [
       'Real-time neurofeedback',
       'Enhances mental, emotional and cognitive abilities'
     ],
-    gradient: 'from-electric-cyan to-violet-accent',
-    bgGradient: 'from-electric-cyan/10 to-violet-accent/10'
+    gradient: 'from-accent-light-blue to-secondary-green',
+    bgGradient: 'from-accent-light-blue/10 to-secondary-green/10'
   },
   {
     id: 'smart-wrist-wearable',
@@ -34,8 +34,8 @@ const products = [
       'Improves sleep quality',
       'Monitors daily activities'
     ],
-    gradient: 'from-violet-accent to-soft-teal',
-    bgGradient: 'from-violet-accent/10 to-soft-teal/10'
+    gradient: 'from-secondary-green to-soft-teal',
+    bgGradient: 'from-secondary-green/10 to-soft-teal/10'
   }
 ]
 
@@ -111,10 +111,10 @@ export default function ProductSpotlight() {
                           transition={{ duration: 0.6 }}
                           className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${product.gradient} flex items-center justify-center`}
                         >
-                          <IconComponent className="w-8 h-8 text-white" />
+                          <IconComponent className="w-8 h-8 text-primary-white" />
                         </motion.div>
                         <div>
-                          <h3 className="text-2xl font-display font-bold text-white mb-2">
+                          <h3 className="text-2xl font-display font-bold text-primary-white mb-2">
                             {product.title}
                           </h3>
                           <p className="text-white/70 text-sm leading-relaxed">
@@ -143,7 +143,7 @@ export default function ProductSpotlight() {
                           className="space-y-4"
                         >
                           <div className="border-t border-glass-white-strong pt-6">
-                            <h4 className="text-lg font-semibold text-white mb-4">Key Features</h4>
+                            <h4 className="text-lg font-semibold text-primary-white mb-4">Key Features</h4>
                             <div className="space-y-3">
                               {product.features.map((feature, featureIndex) => {
                                 const FeatureIcon = featureIcons[feature as keyof typeof featureIcons] || Target
@@ -171,7 +171,7 @@ export default function ProductSpotlight() {
                             transition={{ delay: 0.3, duration: 0.3 }}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className={`w-full mt-6 py-3 px-6 rounded-lg bg-gradient-to-r ${product.gradient} text-white font-semibold flex items-center justify-center space-x-2 transition-all duration-300 hover:shadow-lg`}
+                            className={`w-full mt-6 py-3 px-6 rounded-lg bg-gradient-to-r ${product.gradient} text-primary-white font-semibold flex items-center justify-center space-x-2 transition-all duration-300 hover:shadow-lg`}
                           >
                             <span>Learn More</span>
                             <ArrowRight className="w-4 h-4" />
@@ -218,7 +218,7 @@ export default function ProductSpotlight() {
 
                   {/* Hover Effect */}
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-electric-cyan/5 to-violet-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    className="absolute inset-0 bg-gradient-to-r from-accent-light-blue/5 to-secondary-green/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     initial={false}
                   />
                 </motion.div>

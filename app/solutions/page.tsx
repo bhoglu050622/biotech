@@ -4,6 +4,8 @@ import { Suspense } from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ParticleBackground from '@/components/ParticleBackground'
+import BackToTop from '@/components/BackToTop'
+import JsonLd, { organizationSchema } from '@/components/JsonLd'
 import CommonCTA from '@/components/CommonCTA'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
@@ -106,11 +108,13 @@ const solutions = [
 export default function SolutionsPage() {
   return (
     <main className="relative min-h-screen bg-deep-indigo">
+      <JsonLd data={organizationSchema} />
       <ParticleBackground />
       <Navbar />
+      <BackToTop />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-12 pb-8 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -121,22 +125,22 @@ export default function SolutionsPage() {
             <h1 className="text-5xl md:text-7xl font-display font-bold gradient-text mb-6">
               Solutions
             </h1>
-            <p className="text-lg text-text-secondary max-w-3xl mx-auto mb-10">
+            <p className="text-lg text-white/80 max-w-3xl mx-auto mb-10">
               Transforming neurotechnology into actionable solutions across defense, healthcare, 
               research, and training sectors.
             </p>
-            <div className="flex flex-wrap justify-center gap-6">
-              <span className="flex items-center gap-2 text-text-secondary">
-                <CheckCircle className="w-5 h-5 text-success-green" />
-                <span className="font-medium">Industry-Leading</span>
+            <div className="flex flex-wrap justify-center gap-4">
+              <span className="bullet-point-enhanced bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-primary-blue/20">
+                <CheckCircle className="bullet-icon-primary" />
+                <span className="bullet-text-strong">Industry-Leading</span>
               </span>
-              <span className="flex items-center gap-2 text-text-secondary">
-                <CheckCircle className="w-5 h-5 text-primary-blue" />
-                <span className="font-medium">Mission-Critical</span>
+              <span className="bullet-point-enhanced bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
+                <CheckCircle className="bullet-icon-secondary" />
+                <span className="bullet-text-strong">Mission-Critical</span>
               </span>
-              <span className="flex items-center gap-2 text-text-secondary">
-                <CheckCircle className="w-5 h-5 text-accent-blue" />
-                <span className="font-medium">Proven Results</span>
+              <span className="bullet-point-enhanced bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
+                <CheckCircle className="bullet-icon-accent" />
+                <span className="bullet-text-strong">Proven Results</span>
               </span>
             </div>
           </motion.div>
@@ -144,8 +148,8 @@ export default function SolutionsPage() {
       </section>
 
       {/* Solutions Overview */}
-      <section className="py-30 bg-glass-white backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+      <section className="py-30 section-enhanced thematic-bg-primary">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 relative z-10">
           {solutions.map((solution, index) => (
             <motion.div
               key={solution.title}
@@ -153,12 +157,12 @@ export default function SolutionsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05, duration: 0.5 }}
               viewport={{ once: true }}
-              className="card-hover group"
+              className="card-thematic group relative"
             >
               {/* Header */}
               <div className="flex flex-col md:flex-row items-start gap-8 mb-10">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-2xl flex items-center justify-center flex-shrink-0 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
-                  <solution.icon className="w-10 h-10 text-white" />
+                <div className="w-20 h-20 bg-gradient-to-br from-primary-blue to-secondary-green rounded-2xl flex items-center justify-center flex-shrink-0 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
+                  <solution.icon className="w-10 h-10 text-primary-white" />
                 </div>
                 <div className="flex-1">
                   <h2 className="text-3xl md:text-4xl font-display font-bold text-text-primary mb-3">
@@ -187,7 +191,7 @@ export default function SolutionsPage() {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: capIndex * 0.08, duration: 0.4 }}
                       viewport={{ once: true }}
-                      className="bg-glass-white-strong backdrop-blur-sm rounded-xl p-6 border border-primary-blue/20 hover:border-primary-blue/40 transition-all duration-300 hover:shadow-soft"
+                      className="bg-glass-white-strong backdrop-blur-sm rounded-xl p-6 border border-primary-white border-opacity-20 hover:border-primary-white border-opacity-40 transition-all duration-300 hover:shadow-soft"
                     >
                       <h4 className="text-text-primary font-semibold text-base mb-3">
                         {capability.title}

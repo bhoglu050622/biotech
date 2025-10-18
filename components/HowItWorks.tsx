@@ -50,8 +50,8 @@ export default function HowItWorks() {
     <section id="how-it-works" className="py-20 relative">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-0 w-96 h-96 bg-gradient-to-r from-electric-cyan/10 to-violet-accent/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-gradient-to-r from-violet-accent/10 to-soft-teal/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-0 w-96 h-96 bg-gradient-to-r from-accent-light-blue/10 to-secondary-green/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-gradient-to-r from-secondary-green/10 to-soft-teal/10 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -82,7 +82,7 @@ export default function HowItWorks() {
         >
           <div className="text-center mb-12">
             <h3 className="text-2xl sm:text-3xl font-display font-bold mb-4">
-              <span className="text-white">Brain-Computer Interface</span>
+              <span className="text-primary-white">Brain-Computer Interface</span>
             </h3>
             <p className="text-white/70 max-w-2xl mx-auto">
               Revolutionary technology that allows direct communication between the brain and external devices, 
@@ -105,7 +105,7 @@ export default function HowItWorks() {
                 >
                   {/* Connection Line */}
                   {index < bciSteps.length - 1 && (
-                    <div className="hidden md:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-electric-cyan/50 to-transparent z-0" />
+                    <div className="hidden md:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-accent-light-blue/50 to-transparent z-0" />
                   )}
 
                   <div className="glass-panel-strong rounded-2xl p-8 h-full relative z-10 neural-glow">
@@ -113,14 +113,14 @@ export default function HowItWorks() {
                     <motion.div
                       whileHover={{ rotate: 360, scale: 1.1 }}
                       transition={{ duration: 0.6 }}
-                      className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-electric-cyan to-violet-accent flex items-center justify-center"
+                      className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-accent-light-blue to-secondary-green flex items-center justify-center"
                     >
-                      <IconComponent className="w-8 h-8 text-white" />
+                      <IconComponent className="w-8 h-8 text-primary-white" />
                     </motion.div>
 
                     {/* Content */}
                     <div className="text-center">
-                      <h4 className="text-xl font-display font-bold text-white mb-3">
+                      <h4 className="text-xl font-display font-bold text-primary-white mb-3">
                         {step.title}
                       </h4>
                       <p className="text-white/80 mb-4 leading-relaxed">
@@ -146,7 +146,7 @@ export default function HowItWorks() {
         >
           <div className="text-center mb-12">
             <h3 className="text-2xl sm:text-3xl font-display font-bold mb-4">
-              <span className="text-white">Equilibrium Psychology</span>
+              <span className="text-primary-white">Equilibrium Psychology</span>
             </h3>
             <p className="text-white/70 max-w-2xl mx-auto">
               A novel psychological framework that balances positive and negative aspects of human experience, 
@@ -172,14 +172,14 @@ export default function HowItWorks() {
                     <motion.div
                       whileHover={{ rotate: 360, scale: 1.1 }}
                       transition={{ duration: 0.6 }}
-                      className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-violet-accent to-soft-teal flex items-center justify-center"
+                      className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-secondary-green to-soft-teal flex items-center justify-center"
                     >
-                      <IconComponent className="w-8 h-8 text-white" />
+                      <IconComponent className="w-8 h-8 text-primary-white" />
                     </motion.div>
 
                     {/* Content */}
                     <div className="text-center">
-                      <h4 className="text-xl font-display font-bold text-white mb-3">
+                      <h4 className="text-xl font-display font-bold text-primary-white mb-3">
                         {concept.title}
                       </h4>
                       <p className="text-white/80 mb-4 leading-relaxed">
@@ -208,9 +208,9 @@ export default function HowItWorks() {
             <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              className="w-24 h-24 mx-auto mb-8 rounded-3xl bg-gradient-to-br from-electric-cyan via-violet-accent to-soft-teal flex items-center justify-center"
+              className="w-24 h-24 mx-auto mb-8 rounded-3xl bg-gradient-to-br from-accent-light-blue via-violet-accent to-soft-teal flex items-center justify-center"
             >
-              <Brain className="w-12 h-12 text-white" />
+              <Brain className="w-12 h-12 text-primary-white" />
             </motion.div>
             
             <h3 className="text-2xl sm:text-3xl font-display font-bold mb-6">

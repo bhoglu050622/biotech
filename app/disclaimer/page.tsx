@@ -57,7 +57,7 @@ const complianceInfo = [
 
 export default function DisclaimerPage() {
   return (
-    <main className="relative min-h-screen bg-deep-indigo">
+    <main className="relative min-h-screen bg-primary-blue">
       <ParticleBackground />
       <Navbar />
       <BackToTop />
@@ -106,7 +106,7 @@ export default function DisclaimerPage() {
               <div className="flex items-start gap-4 mb-6">
                 <Info className="w-8 h-8 text-electric-cyan flex-shrink-0 mt-1" />
                 <div>
-                  <h2 className="text-2xl sm:text-3xl font-display font-bold text-white mb-4">
+                  <h2 className="text-2xl sm:text-3xl font-display font-bold text-primary-white mb-4">
                     Important Notice
                   </h2>
                   <p className="text-white/80 text-lg leading-relaxed">
@@ -148,11 +148,11 @@ export default function DisclaimerPage() {
                 className="glass-panel-strong rounded-2xl p-8"
               >
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center flex-shrink-0">
-                    <section.icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-secondary-green rounded-xl flex items-center justify-center flex-shrink-0">
+                    <section.icon className="w-8 h-8 text-primary-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl sm:text-2xl font-display font-bold text-white mb-4">
+                    <h3 className="text-xl sm:text-2xl font-display font-bold text-primary-white mb-4">
                       {section.title}
                     </h3>
                     <p className="text-white/80 leading-relaxed">
@@ -220,7 +220,7 @@ export default function DisclaimerPage() {
             viewport={{ once: true }}
             className="glass-panel-strong rounded-2xl p-8 md:p-12 text-center"
           >
-            <h2 className="text-2xl sm:text-3xl font-display font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl font-display font-bold text-primary-white mb-6">
               Questions or Concerns?
             </h2>
             <p className="text-white/80 text-lg mb-8 max-w-3xl mx-auto">
@@ -231,7 +231,7 @@ export default function DisclaimerPage() {
                 href="/contact"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-blue to-secondary-blue text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:shadow-blue-lg"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-blue to-secondary-green text-primary-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:shadow-blue-lg"
               >
                 Contact Legal Team
               </motion.a>
@@ -239,7 +239,7 @@ export default function DisclaimerPage() {
                 href="/support"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 border border-primary-blue text-primary-blue px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:bg-primary-blue hover:text-white"
+                className="inline-flex items-center gap-2 border border-primary-blue text-primary-blue px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:bg-primary-blue hover:text-primary-white"
               >
                 Technical Support
               </motion.a>

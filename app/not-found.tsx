@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-deep-indigo flex items-center justify-center px-4">
+    <div className="min-h-screen bg-primary-blue flex items-center justify-center px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ export default function NotFound() {
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary-blue to-secondary-blue text-white px-8 py-4 rounded-lg font-semibold hover:from-secondary-blue hover:to-accent-blue transition-all duration-200 shadow-blue hover:shadow-blue-lg w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary-blue to-secondary-green text-primary-white px-8 py-4 rounded-lg font-semibold hover:from-secondary-green hover:to-accent-light-blue transition-all duration-200 shadow-blue hover:shadow-blue-lg w-full sm:w-auto"
             >
               <Home className="w-5 h-5" />
               <span>Back to Home</span>
@@ -66,7 +66,7 @@ export default function NotFound() {
             onClick={() => window.history.back()}
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-200 w-full sm:w-auto"
+            className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm text-primary-white border border-white/20 px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-200 w-full sm:w-auto"
           >
             <ArrowLeft className="w-5 h-5" />
             <span>Go Back</span>
@@ -77,7 +77,7 @@ export default function NotFound() {
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-          className="absolute top-20 right-20 w-20 h-20 border border-primary-blue/20 rounded-2xl opacity-30 hidden lg:block"
+          className="absolute top-20 right-20 w-20 h-20 border border-primary-white border-opacity-20 rounded-2xl opacity-30 hidden lg:block"
         />
         <motion.div
           animate={{ rotate: -360 }}

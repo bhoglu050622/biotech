@@ -229,13 +229,13 @@ export default function LiveDemo() {
             viewport={{ once: true }}
           >
             <div className="glass-panel-strong rounded-2xl p-8 neural-glow">
-              <h3 className="text-2xl font-display font-bold text-white mb-6">
+              <h3 className="text-2xl font-display font-bold text-primary-white mb-6">
                 Brainwave Simulator
               </h3>
 
               {/* Mode Selection */}
               <div className="space-y-4 mb-8">
-                <h4 className="text-lg font-semibold text-white mb-4">Simulate Mental State:</h4>
+                <h4 className="text-lg font-semibold text-primary-white mb-4">Simulate Mental State:</h4>
                 {waveformModes.map((mode) => (
                   <motion.button
                     key={mode.id}
@@ -244,7 +244,7 @@ export default function LiveDemo() {
                     onClick={() => handleModeChange(mode)}
                     className={`w-full p-4 rounded-xl border-2 transition-all duration-300 ${
                       activeMode.id === mode.id
-                        ? 'border-electric-cyan bg-electric-cyan/10'
+                        ? 'border-electric-cyan bg-accent-light-blue/10'
                         : 'border-glass-white-strong bg-glass-white hover:bg-glass-white-strong'
                     }`}
                   >
@@ -254,7 +254,7 @@ export default function LiveDemo() {
                         style={{ backgroundColor: mode.color }}
                       />
                       <div className="text-left">
-                        <div className="font-semibold text-white">{mode.label}</div>
+                        <div className="font-semibold text-primary-white">{mode.label}</div>
                         <div className="text-sm text-white/60">{mode.description}</div>
                       </div>
                     </div>
@@ -270,8 +270,8 @@ export default function LiveDemo() {
                   onClick={handlePlayPause}
                   className={`flex-1 py-3 px-6 rounded-lg font-semibold flex items-center justify-center space-x-2 ${
                     isPlaying 
-                      ? 'bg-violet-accent text-white' 
-                      : 'bg-electric-cyan text-deep-indigo'
+                      ? 'bg-violet-accent text-primary-white' 
+                      : 'bg-accent-light-blue text-deep-indigo'
                   }`}
                 >
                   {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
@@ -282,7 +282,7 @@ export default function LiveDemo() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleReset}
-                  className="px-6 py-3 rounded-lg glass-panel text-white hover:bg-glass-white-strong transition-colors duration-200"
+                  className="px-6 py-3 rounded-lg glass-panel text-primary-white hover:bg-glass-white-strong transition-colors duration-200"
                 >
                   <RotateCcw className="w-5 h-5" />
                 </motion.button>
@@ -291,12 +291,12 @@ export default function LiveDemo() {
               {/* Energy Meter */}
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-white font-medium">Energy Level</span>
+                  <span className="text-primary-white font-medium">Energy Level</span>
                   <span className="text-electric-cyan font-bold">{Math.round(energyLevel)}%</span>
                 </div>
                 <div className="w-full h-3 bg-glass-white rounded-full overflow-hidden">
                   <motion.div
-                    className="h-full bg-gradient-to-r from-electric-cyan to-violet-accent rounded-full"
+                    className="h-full bg-gradient-to-r from-accent-light-blue to-secondary-green rounded-full"
                     style={{ width: `${energyLevel}%` }}
                     transition={{ duration: 0.3 }}
                   />
@@ -313,7 +313,7 @@ export default function LiveDemo() {
             viewport={{ once: true }}
           >
             <div className="glass-panel-strong rounded-2xl p-8 neural-glow">
-              <h3 className="text-2xl font-display font-bold text-white mb-6 text-center">
+              <h3 className="text-2xl font-display font-bold text-primary-white mb-6 text-center">
                 Real-time Brainwave Visualization
               </h3>
 
@@ -321,7 +321,7 @@ export default function LiveDemo() {
               <div className="relative mb-6">
                 <canvas
                   ref={canvasRef}
-                  className="w-full h-48 rounded-lg bg-deep-indigo/50 border border-glass-white-strong"
+                  className="w-full h-48 rounded-lg bg-primary-blue/50 border border-glass-white-strong"
                 />
                 
                 {/* Overlay indicators */}
@@ -352,7 +352,7 @@ export default function LiveDemo() {
                       className="w-3 h-3 rounded-full"
                       style={{ backgroundColor: activeMode.color }}
                     />
-                    <span className="text-lg font-semibold text-white">
+                    <span className="text-lg font-semibold text-primary-white">
                       {activeMode.label} State
                     </span>
                   </div>
@@ -371,7 +371,7 @@ export default function LiveDemo() {
               viewport={{ once: true }}
               className="mt-8 glass-panel rounded-xl p-6"
             >
-              <h4 className="text-lg font-semibold text-white mb-3">
+              <h4 className="text-lg font-semibold text-primary-white mb-3">
                 How Neurofeedback Works
               </h4>
               <p className="text-white/70 text-sm leading-relaxed">

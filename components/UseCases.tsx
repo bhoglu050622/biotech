@@ -22,8 +22,8 @@ const useCases = [
       'Long-term stress reduction',
       'Improved emotional regulation'
     ],
-    gradient: 'from-electric-cyan to-violet-accent',
-    bgGradient: 'from-electric-cyan/10 to-violet-accent/10'
+    gradient: 'from-accent-light-blue to-secondary-green',
+    bgGradient: 'from-accent-light-blue/10 to-secondary-green/10'
   },
   {
     icon: Moon,
@@ -35,8 +35,8 @@ const useCases = [
       'Sleep quality optimization',
       'Circadian rhythm alignment'
     ],
-    gradient: 'from-violet-accent to-soft-teal',
-    bgGradient: 'from-violet-accent/10 to-soft-teal/10'
+    gradient: 'from-secondary-green to-soft-teal',
+    bgGradient: 'from-secondary-green/10 to-soft-teal/10'
   },
   {
     icon: Target,
@@ -48,8 +48,8 @@ const useCases = [
       'Faster decision making',
       'Increased mental clarity'
     ],
-    gradient: 'from-soft-teal to-electric-cyan',
-    bgGradient: 'from-soft-teal/10 to-electric-cyan/10'
+    gradient: 'from-soft-teal to-accent-light-blue',
+    bgGradient: 'from-soft-teal/10 to-accent-light-blue/10'
   },
   {
     icon: Heart,
@@ -61,8 +61,8 @@ const useCases = [
       'Emotional balance training',
       'Wellness habit formation'
     ],
-    gradient: 'from-electric-cyan to-soft-teal',
-    bgGradient: 'from-electric-cyan/10 to-soft-teal/10'
+    gradient: 'from-accent-light-blue to-soft-teal',
+    bgGradient: 'from-accent-light-blue/10 to-soft-teal/10'
   },
   {
     icon: Zap,
@@ -74,8 +74,8 @@ const useCases = [
       'Recovery monitoring',
       'Mental resilience building'
     ],
-    gradient: 'from-violet-accent to-electric-cyan',
-    bgGradient: 'from-violet-accent/10 to-electric-cyan/10'
+    gradient: 'from-secondary-green to-accent-light-blue',
+    bgGradient: 'from-secondary-green/10 to-accent-light-blue/10'
   },
   {
     icon: Shield,
@@ -87,8 +87,8 @@ const useCases = [
       'Health trend analysis',
       'Personalized recommendations'
     ],
-    gradient: 'from-soft-teal to-violet-accent',
-    bgGradient: 'from-soft-teal/10 to-violet-accent/10'
+    gradient: 'from-soft-teal to-secondary-green',
+    bgGradient: 'from-soft-teal/10 to-secondary-green/10'
   }
 ]
 
@@ -97,8 +97,8 @@ export default function UseCases() {
     <section id="use-cases" className="py-20 relative">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-gradient-to-r from-electric-cyan/5 to-violet-accent/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-to-r from-violet-accent/5 to-soft-teal/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-gradient-to-r from-accent-light-blue/5 to-secondary-green/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-to-r from-secondary-green/5 to-soft-teal/5 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -145,11 +145,11 @@ export default function UseCases() {
                       transition={{ duration: 0.6 }}
                       className={`w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br ${useCase.gradient} flex items-center justify-center`}
                     >
-                      <IconComponent className="w-8 h-8 text-white" />
+                      <IconComponent className="w-8 h-8 text-primary-white" />
                     </motion.div>
 
                     {/* Title & Description */}
-                    <h3 className="text-xl font-display font-bold text-white mb-3">
+                    <h3 className="text-xl font-display font-bold text-primary-white mb-3">
                       {useCase.title}
                     </h3>
                     <p className="text-white/70 mb-6 leading-relaxed">
@@ -166,7 +166,7 @@ export default function UseCases() {
                           transition={{ delay: benefitIndex * 0.1, duration: 0.3 }}
                           className="flex items-center space-x-2"
                         >
-                          <div className="w-1.5 h-1.5 bg-electric-cyan rounded-full flex-shrink-0" />
+                          <div className="w-1.5 h-1.5 bg-accent-light-blue rounded-full flex-shrink-0" />
                           <span className="text-white/60 text-sm">{benefit}</span>
                         </motion.div>
                       ))}
@@ -175,7 +175,7 @@ export default function UseCases() {
 
                   {/* Hover Effect */}
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-electric-cyan/5 to-violet-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"
+                    className="absolute inset-0 bg-gradient-to-r from-accent-light-blue/5 to-secondary-green/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"
                     initial={false}
                   />
                 </div>

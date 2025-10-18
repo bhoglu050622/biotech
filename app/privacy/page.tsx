@@ -111,7 +111,7 @@ const securityMeasures = [
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="relative min-h-screen bg-deep-indigo">
+    <main className="relative min-h-screen bg-primary-blue">
       <ParticleBackground />
       <Navbar />
       
@@ -159,7 +159,7 @@ export default function PrivacyPolicyPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
+            <h2 className="text-3xl font-display font-bold text-primary-white mb-4">
               Our Privacy Principles
             </h2>
             <p className="text-white/80 max-w-2xl mx-auto">
@@ -177,10 +177,10 @@ export default function PrivacyPolicyPage() {
                 viewport={{ once: true }}
                 className="glass-panel-strong rounded-xl p-6 text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <principle.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-accent-light-blue to-secondary-green rounded-full flex items-center justify-center mx-auto mb-4">
+                  <principle.icon className="w-8 h-8 text-primary-white" />
                 </div>
-                <h3 className="text-white font-semibold mb-3">{principle.title}</h3>
+                <h3 className="text-primary-white font-semibold mb-3">{principle.title}</h3>
                 <p className="text-white/70 text-sm">{principle.description}</p>
               </motion.div>
             ))}
@@ -198,7 +198,7 @@ export default function PrivacyPolicyPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
+            <h2 className="text-3xl font-display font-bold text-primary-white mb-4">
               Data We Collect
             </h2>
             <p className="text-white/80 max-w-2xl mx-auto">
@@ -216,9 +216,9 @@ export default function PrivacyPolicyPage() {
                 viewport={{ once: true }}
                 className="glass-panel-strong rounded-xl p-6"
               >
-                <h3 className="text-white font-semibold mb-4">{dataType.category}</h3>
+                <h3 className="text-primary-white font-semibold mb-4">{dataType.category}</h3>
                 <div className="mb-4">
-                  <h4 className="text-white font-medium mb-2">Examples:</h4>
+                  <h4 className="text-primary-white font-medium mb-2">Examples:</h4>
                   <ul className="space-y-1">
                     {dataType.examples.map((example, exampleIndex) => (
                       <li key={exampleIndex} className="flex items-center space-x-2 text-sm text-white/70">
@@ -229,7 +229,7 @@ export default function PrivacyPolicyPage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="text-white font-medium mb-2">Purpose:</h4>
+                  <h4 className="text-primary-white font-medium mb-2">Purpose:</h4>
                   <p className="text-white/70 text-sm">{dataType.purpose}</p>
                 </div>
               </motion.div>
@@ -248,7 +248,7 @@ export default function PrivacyPolicyPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
+            <h2 className="text-3xl font-display font-bold text-primary-white mb-4">
               Your Data Rights
             </h2>
             <p className="text-white/80 max-w-2xl mx-auto">
@@ -267,10 +267,10 @@ export default function PrivacyPolicyPage() {
                 className="glass-panel-strong rounded-xl p-6"
               >
                 <div className="flex items-center space-x-3 mb-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-lg flex items-center justify-center">
-                    <right.icon className="w-5 h-5 text-white" />
+                  <div className="w-10 h-10 bg-gradient-to-br from-accent-light-blue to-secondary-green rounded-lg flex items-center justify-center">
+                    <right.icon className="w-5 h-5 text-primary-white" />
                   </div>
-                  <h3 className="text-white font-semibold">{right.right}</h3>
+                  <h3 className="text-primary-white font-semibold">{right.right}</h3>
                 </div>
                 <p className="text-white/70 text-sm">{right.description}</p>
               </motion.div>
@@ -289,7 +289,7 @@ export default function PrivacyPolicyPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
+            <h2 className="text-3xl font-display font-bold text-primary-white mb-4">
               Security Measures
             </h2>
             <p className="text-white/80 max-w-2xl mx-auto">
@@ -300,7 +300,7 @@ export default function PrivacyPolicyPage() {
           <div className="glass-panel-strong rounded-xl p-8">
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-white font-semibold mb-4">Technical Safeguards</h3>
+                <h3 className="text-primary-white font-semibold mb-4">Technical Safeguards</h3>
                 <ul className="space-y-3">
                   {securityMeasures.slice(0, 4).map((measure, index) => (
                     <li key={index} className="flex items-start space-x-3 text-sm text-white/80">
@@ -311,7 +311,7 @@ export default function PrivacyPolicyPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-white font-semibold mb-4">Organizational Safeguards</h3>
+                <h3 className="text-primary-white font-semibold mb-4">Organizational Safeguards</h3>
                 <ul className="space-y-3">
                   {securityMeasures.slice(4).map((measure, index) => (
                     <li key={index} className="flex items-start space-x-3 text-sm text-white/80">
@@ -336,7 +336,7 @@ export default function PrivacyPolicyPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
+            <h2 className="text-3xl font-display font-bold text-primary-white mb-4">
               Data Sharing
             </h2>
             <p className="text-white/80 max-w-2xl mx-auto">
@@ -346,7 +346,7 @@ export default function PrivacyPolicyPage() {
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="glass-panel-strong rounded-xl p-6">
-              <h3 className="text-white font-semibold mb-4">We DO NOT share data with:</h3>
+              <h3 className="text-primary-white font-semibold mb-4">We DO NOT share data with:</h3>
               <ul className="space-y-2 text-sm text-white/80">
                 <li className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-electric-cyan" />
@@ -368,7 +368,7 @@ export default function PrivacyPolicyPage() {
             </div>
             
             <div className="glass-panel-strong rounded-xl p-6">
-              <h3 className="text-white font-semibold mb-4">We MAY share data with:</h3>
+              <h3 className="text-primary-white font-semibold mb-4">We MAY share data with:</h3>
               <ul className="space-y-2 text-sm text-white/80">
                 <li className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-electric-cyan" />
@@ -390,7 +390,7 @@ export default function PrivacyPolicyPage() {
             </div>
             
             <div className="glass-panel-strong rounded-xl p-6">
-              <h3 className="text-white font-semibold mb-4">Data Retention</h3>
+              <h3 className="text-primary-white font-semibold mb-4">Data Retention</h3>
               <ul className="space-y-2 text-sm text-white/80">
                 <li className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-electric-cyan" />
@@ -424,7 +424,7 @@ export default function PrivacyPolicyPage() {
             viewport={{ once: true }}
             className="glass-panel-strong rounded-2xl p-8 text-center"
           >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
+            <h2 className="text-3xl font-display font-bold text-primary-white mb-4">
               Privacy Questions?
             </h2>
             <p className="text-white/80 mb-8 max-w-2xl mx-auto">
@@ -433,7 +433,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <div className="text-left">
-                <h3 className="text-white font-semibold mb-4">Data Protection Officer</h3>
+                <h3 className="text-primary-white font-semibold mb-4">Data Protection Officer</h3>
                 <div className="space-y-2 text-sm text-white/80">
                   <p>Email: privacy@sentientbiotech.in</p>
                   <p>Phone: +91-7070360676</p>
@@ -441,7 +441,7 @@ export default function PrivacyPolicyPage() {
                 </div>
               </div>
               <div className="text-left">
-                <h3 className="text-white font-semibold mb-4">Response Times</h3>
+                <h3 className="text-primary-white font-semibold mb-4">Response Times</h3>
                 <div className="space-y-2 text-sm text-white/80">
                   <p>Data access requests: 30 days</p>
                   <p>Data correction requests: 7 days</p>

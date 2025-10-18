@@ -12,9 +12,9 @@ const navItems = [
   },
   { 
     label: 'About Us', 
-    href: '/who-we-are',
+    href: '/about-us',
     dropdown: [
-      { label: 'Who We Are', href: '/who-we-are' },
+      { label: 'About Sentient Biotech', href: '/about-us' },
       { label: 'Mission & Vision', href: '/mission-vision' },
       { label: 'Core Values', href: '/core-values' }
     ]
@@ -36,7 +36,7 @@ const navItems = [
     href: '/eeg-solutions',
     dropdown: [
       { label: 'EEG Systems', href: '/eeg-solutions' },
-      { label: 'Next-Generation Pilot Headgear', href: '/starscream' }
+      { label: 'Starscream', href: '/starscream' }
     ]
   },
   { 
@@ -105,8 +105,8 @@ export default function Navbar() {
         transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'h-18 glass-panel-strong shadow-soft-lg' 
-            : 'h-18 bg-transparent'
+            ? 'h-16 glass-panel-strong shadow-soft-lg border-b border-olive-green/20' 
+            : 'h-16 bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
@@ -118,9 +118,9 @@ export default function Navbar() {
               transition={{ duration: 0.2 }}
               className="flex items-center space-x-2 sm:space-x-3 focus-ring rounded-lg"
             >
-              <div className="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 rounded-xl overflow-hidden">
+              <div className={`w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 rounded-xl overflow-hidden ${!isScrolled ? 'pt-1 sm:pt-2' : 'pt-1 pb-1'}`}>
                 <img 
-                  src="/logo.png" 
+                  src="/logo.webp" 
                   alt="Sentient Biotech Logo" 
                   className="w-full h-full object-contain"
                   style={{ 
@@ -131,13 +131,13 @@ export default function Navbar() {
                     // Fallback to gradient if logo fails to load
                     e.currentTarget.style.display = 'none';
                     if (e.currentTarget.parentElement) {
-                      e.currentTarget.parentElement.className = 'w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center shadow-blue';
+                      e.currentTarget.parentElement.className = `w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center shadow-blue ${!isScrolled ? 'pt-1 sm:pt-2' : 'pt-1 pb-1'}`;
                       e.currentTarget.parentElement.innerHTML = '<div class="w-6 h-6 bg-white rounded-full subtle-pulse"></div>';
                     }
                   }}
                 />
               </div>
-              <span className="text-sm sm:text-base md:text-lg font-display font-bold text-white hidden xs:inline">
+              <span className="text-base sm:text-lg md:text-xl lg:text-2xl font-display font-bold text-white hidden xs:inline">
                 Sentient Biotech
               </span>
             </motion.a>
@@ -167,7 +167,11 @@ export default function Navbar() {
                       />
                     )}
                     <motion.div
-                      className="absolute bottom-0 left-3 right-3 h-0.5 bg-gradient-to-r from-primary-blue to-accent-blue opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                      className={`absolute bottom-0 left-3 right-3 h-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ${
+                        item.label === 'Industries' || item.label === 'Products' 
+                          ? 'bg-gradient-to-r from-olive-green to-military-khaki'
+                          : 'bg-gradient-to-r from-primary-blue to-accent-blue'
+                      }`}
                       initial={false}
                     />
                   </motion.button>
@@ -259,7 +263,7 @@ export default function Navbar() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.96, y: -20 }}
               transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-              className="fixed top-20 left-4 right-4 max-h-[calc(100vh-6rem)] overflow-y-auto glass-panel-strong rounded-2xl p-4 sm:p-6 z-50 lg:hidden shadow-soft-xl border border-primary-blue/20"
+              className="fixed top-16 left-4 right-4 max-h-[calc(100vh-6rem)] overflow-y-auto glass-panel-strong rounded-2xl p-4 sm:p-6 z-50 lg:hidden shadow-soft-xl border border-primary-blue/20"
             >
               <div className="space-y-2">
                 {navItems.map((item, index) => (
@@ -321,7 +325,7 @@ export default function Navbar() {
                 <div className="pt-4 border-t border-primary-blue/20">
                   <div className="flex flex-col sm:flex-row gap-3">
                     <motion.a
-                      href="mailto:jasmeet@sentientbiotech.in"
+                      href="mailto:support@sentientbiotech.in"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.3, duration: 0.2 }}

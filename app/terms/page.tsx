@@ -26,7 +26,7 @@ import {
 
 export default function TermsOfUsePage() {
   return (
-    <main className="relative min-h-screen bg-deep-indigo">
+    <main className="relative min-h-screen bg-primary-blue">
       <ParticleBackground />
       <Navbar />
       
@@ -67,15 +67,15 @@ export default function TermsOfUsePage() {
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-panel-strong rounded-xl p-6">
-            <h2 className="text-white font-semibold mb-4 text-center">Quick Navigation</h2>
+            <h2 className="text-primary-white font-semibold mb-4 text-center">Quick Navigation</h2>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="#terms" className="px-6 py-2 bg-gradient-to-r from-electric-cyan to-violet-accent rounded-lg text-white font-medium hover:scale-105 transition-transform">
+              <a href="#terms" className="px-6 py-2 bg-gradient-to-r from-accent-light-blue to-secondary-green rounded-lg text-primary-white font-medium hover:scale-105 transition-transform">
                 Terms & Conditions
               </a>
-              <a href="#privacy" className="px-6 py-2 bg-gradient-to-r from-electric-cyan to-violet-accent rounded-lg text-white font-medium hover:scale-105 transition-transform">
+              <a href="#privacy" className="px-6 py-2 bg-gradient-to-r from-accent-light-blue to-secondary-green rounded-lg text-primary-white font-medium hover:scale-105 transition-transform">
                 Privacy Policy
               </a>
-              <a href="#disclaimer" className="px-6 py-2 bg-gradient-to-r from-electric-cyan to-violet-accent rounded-lg text-white font-medium hover:scale-105 transition-transform">
+              <a href="#disclaimer" className="px-6 py-2 bg-gradient-to-r from-accent-light-blue to-secondary-green rounded-lg text-primary-white font-medium hover:scale-105 transition-transform">
                 Disclaimer
               </a>
             </div>
@@ -93,7 +93,7 @@ export default function TermsOfUsePage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-display font-bold text-white mb-4">
+            <h2 className="text-4xl font-display font-bold text-primary-white mb-4">
               Terms & Conditions
             </h2>
           </motion.div>
@@ -101,7 +101,7 @@ export default function TermsOfUsePage() {
           <div className="space-y-8">
             {/* 1. Introduction */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <FileText className="w-6 h-6 text-electric-cyan mr-3" />
                 1. Introduction
               </h3>
@@ -114,7 +114,7 @@ export default function TermsOfUsePage() {
 
             {/* 2. Company Details */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Building className="w-6 h-6 text-electric-cyan mr-3" />
                 2. Company Details
               </h3>
@@ -128,7 +128,7 @@ export default function TermsOfUsePage() {
 
             {/* 3. Use of Website & Services */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Globe className="w-6 h-6 text-electric-cyan mr-3" />
                 3. Use of Website & Services
               </h3>
@@ -141,12 +141,12 @@ export default function TermsOfUsePage() {
 
             {/* 4. Intellectual Property Rights */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Lock className="w-6 h-6 text-electric-cyan mr-3" />
                 4. Intellectual Property Rights (IPR)
               </h3>
               <ul className="text-white/80 space-y-3 list-disc list-inside">
-                <li>All trademarks, trade names, logos, patents, and copyrights, including product designs, schematics, algorithms, and device specifications (such as EEG Systems and Next-Generation Pilot Headgear) are the exclusive property of Sentient Biotech Private Limited.</li>
+                <li>All trademarks, trade names, logos, patents, and copyrights, including product designs, schematics, algorithms, and device specifications (such as EEG Systems and Starscream) are the exclusive property of Sentient Biotech Private Limited.</li>
                 <li>Unauthorized use, reproduction, or redistribution of such materials may lead to civil and criminal liability under The Copyright Act, 1957, The Patents Act, 1970, and The Trademarks Act, 1999.</li>
                 <li>You may not use our brand name, logo, or product references without express written permission.</li>
               </ul>
@@ -154,7 +154,7 @@ export default function TermsOfUsePage() {
 
             {/* 5. Product Usage Disclaimer */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <AlertTriangle className="w-6 h-6 text-electric-cyan mr-3" />
                 5. Product Usage Disclaimer
               </h3>
@@ -167,7 +167,7 @@ export default function TermsOfUsePage() {
 
             {/* 6. Confidentiality & Export Control */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Shield className="w-6 h-6 text-electric-cyan mr-3" />
                 6. Confidentiality & Export Control
               </h3>
@@ -180,7 +180,7 @@ export default function TermsOfUsePage() {
 
             {/* 7. Data Privacy & Protection */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Lock className="w-6 h-6 text-electric-cyan mr-3" />
                 7. Data Privacy & Protection
               </h3>
@@ -193,7 +193,7 @@ export default function TermsOfUsePage() {
 
             {/* 8. Warranties & Liability Limitations */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Shield className="w-6 h-6 text-electric-cyan mr-3" />
                 8. Warranties & Liability Limitations
               </h3>
@@ -212,7 +212,7 @@ export default function TermsOfUsePage() {
 
             {/* 9. Third-Party Links */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Globe className="w-6 h-6 text-electric-cyan mr-3" />
                 9. Third-Party Links & External Resources
               </h3>
@@ -221,7 +221,7 @@ export default function TermsOfUsePage() {
 
             {/* 10. Indemnification */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Scale className="w-6 h-6 text-electric-cyan mr-3" />
                 10. Indemnification
               </h3>
@@ -230,7 +230,7 @@ export default function TermsOfUsePage() {
 
             {/* 11. Governing Law & Jurisdiction */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Scale className="w-6 h-6 text-electric-cyan mr-3" />
                 11. Governing Law & Jurisdiction
               </h3>
@@ -243,7 +243,7 @@ export default function TermsOfUsePage() {
 
             {/* 12. Amendments */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <FileText className="w-6 h-6 text-electric-cyan mr-3" />
                 12. Amendments
               </h3>
@@ -252,7 +252,7 @@ export default function TermsOfUsePage() {
 
             {/* 13. Contact Information */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Mail className="w-6 h-6 text-electric-cyan mr-3" />
                 13. Contact Information
               </h3>
@@ -276,7 +276,7 @@ export default function TermsOfUsePage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-display font-bold text-white mb-4">
+            <h2 className="text-4xl font-display font-bold text-primary-white mb-4">
               Privacy Policy
             </h2>
             <p className="text-white/80 max-w-3xl mx-auto">Effective Date: 06-Oct-2025</p>
@@ -285,19 +285,19 @@ export default function TermsOfUsePage() {
           <div className="space-y-8">
             {/* 1. Introduction */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Shield className="w-6 h-6 text-electric-cyan mr-3" />
                 1. Introduction
               </h3>
               <div className="text-white/80 space-y-3">
-                <p>This Privacy Policy explains how <strong>Sentient Biotech Private Limited</strong> ("Company", "we", "us", or "our") collects, uses, processes, and safeguards your personal, biometric, and technical data when you visit <a href="https://sentientbiotech.in" className="text-electric-cyan hover:underline">https://sentientbiotech.in</a> or use our products, including EEG Systems and Next-Generation Pilot Headgear.</p>
+                <p>This Privacy Policy explains how <strong>Sentient Biotech Private Limited</strong> ("Company", "we", "us", or "our") collects, uses, processes, and safeguards your personal, biometric, and technical data when you visit <a href="https://sentientbiotech.in" className="text-electric-cyan hover:underline">https://sentientbiotech.in</a> or use our products, including EEG Systems and Starscream.</p>
                 <p>By using our website, products, or services, you consent to the terms of this Privacy Policy in accordance with the Digital Personal Data Protection Act, 2023, and Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011.</p>
               </div>
             </div>
 
             {/* 2. Scope */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Users className="w-6 h-6 text-electric-cyan mr-3" />
                 2. Scope
               </h3>
@@ -311,7 +311,7 @@ export default function TermsOfUsePage() {
 
             {/* 3. Information We Collect */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Info className="w-6 h-6 text-electric-cyan mr-3" />
                 3. Information We Collect
               </h3>
@@ -319,7 +319,7 @@ export default function TermsOfUsePage() {
               
               <div className="space-y-4">
                 <div>
-                  <h4 className="text-white font-semibold mb-2">(a) Personal Data</h4>
+                  <h4 className="text-primary-white font-semibold mb-2">(a) Personal Data</h4>
                   <ul className="text-white/80 space-y-2 list-disc list-inside ml-4">
                     <li>Name, email address, phone number, organization, and designation.</li>
                     <li>Identity or contact details shared via contact forms or business correspondence.</li>
@@ -327,7 +327,7 @@ export default function TermsOfUsePage() {
                 </div>
 
                 <div>
-                  <h4 className="text-white font-semibold mb-2">(b) Biometric & Neuro-Data (Special Category Data)</h4>
+                  <h4 className="text-primary-white font-semibold mb-2">(b) Biometric & Neuro-Data (Special Category Data)</h4>
                   <ul className="text-white/80 space-y-2 list-disc list-inside ml-4">
                     <li>EEG signals, thermal data, SpO₂ levels, pulse, or stress indicators collected through devices.</li>
                     <li>Data collected only for research, medical, or defense-related authorized purposes.</li>
@@ -335,7 +335,7 @@ export default function TermsOfUsePage() {
                 </div>
 
                 <div>
-                  <h4 className="text-white font-semibold mb-2">(c) Device & Technical Data</h4>
+                  <h4 className="text-primary-white font-semibold mb-2">(c) Device & Technical Data</h4>
                   <ul className="text-white/80 space-y-2 list-disc list-inside ml-4">
                     <li>IP address, browser type, device ID, and cookies.</li>
                     <li>Location or telemetry data for authorized equipment testing.</li>
@@ -343,7 +343,7 @@ export default function TermsOfUsePage() {
                 </div>
 
                 <div>
-                  <h4 className="text-white font-semibold mb-2">(d) Research & R&D Data</h4>
+                  <h4 className="text-primary-white font-semibold mb-2">(d) Research & R&D Data</h4>
                   <ul className="text-white/80 space-y-2 list-disc list-inside ml-4">
                     <li>Experimental logs, sensor test data, prototype results, and environmental readings.</li>
                     <li>Such data remains confidential and is used strictly for internal R&D and performance improvement.</li>
@@ -354,7 +354,7 @@ export default function TermsOfUsePage() {
 
             {/* 4. Purpose of Data Collection */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <CheckCircle className="w-6 h-6 text-electric-cyan mr-3" />
                 4. Purpose of Data Collection
               </h3>
@@ -371,7 +371,7 @@ export default function TermsOfUsePage() {
 
             {/* 5. Data Processing Principles */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Shield className="w-6 h-6 text-electric-cyan mr-3" />
                 5. Data Processing Principles
               </h3>
@@ -387,7 +387,7 @@ export default function TermsOfUsePage() {
 
             {/* 6. Data Sharing & Disclosure */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Users className="w-6 h-6 text-electric-cyan mr-3" />
                 6. Data Sharing & Disclosure
               </h3>
@@ -404,7 +404,7 @@ export default function TermsOfUsePage() {
 
             {/* 7. Data Protection & Security Measures */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Lock className="w-6 h-6 text-electric-cyan mr-3" />
                 7. Data Protection & Security Measures
               </h3>
@@ -423,7 +423,7 @@ export default function TermsOfUsePage() {
 
             {/* 8. Your Rights */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Award className="w-6 h-6 text-electric-cyan mr-3" />
                 8. Your Rights (Under Indian & Global Law)
               </h3>
@@ -442,7 +442,7 @@ export default function TermsOfUsePage() {
 
             {/* 9. Children's Data */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Users className="w-6 h-6 text-electric-cyan mr-3" />
                 9. Children's Data
               </h3>
@@ -451,7 +451,7 @@ export default function TermsOfUsePage() {
 
             {/* 10. Cross-Border Data Transfer */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Globe className="w-6 h-6 text-electric-cyan mr-3" />
                 10. Cross-Border Data Transfer
               </h3>
@@ -467,7 +467,7 @@ export default function TermsOfUsePage() {
 
             {/* 11. Cookies & Analytics */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Info className="w-6 h-6 text-electric-cyan mr-3" />
                 11. Cookies & Analytics
               </h3>
@@ -480,7 +480,7 @@ export default function TermsOfUsePage() {
 
             {/* 12. Retention Policy */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Calendar className="w-6 h-6 text-electric-cyan mr-3" />
                 12. Retention Policy
               </h3>
@@ -492,7 +492,7 @@ export default function TermsOfUsePage() {
 
             {/* 13. Third-Party Services */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Globe className="w-6 h-6 text-electric-cyan mr-3" />
                 13. Third-Party Services
               </h3>
@@ -501,7 +501,7 @@ export default function TermsOfUsePage() {
 
             {/* 14. Legal Compliance References */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Scale className="w-6 h-6 text-electric-cyan mr-3" />
                 14. Legal Compliance References
               </h3>
@@ -520,7 +520,7 @@ export default function TermsOfUsePage() {
 
             {/* 15. Updates to This Policy */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <FileText className="w-6 h-6 text-electric-cyan mr-3" />
                 15. Updates to This Policy
               </h3>
@@ -529,7 +529,7 @@ export default function TermsOfUsePage() {
 
             {/* 16. Contact Information */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Mail className="w-6 h-6 text-electric-cyan mr-3" />
                 16. Contact Information
               </h3>
@@ -555,7 +555,7 @@ export default function TermsOfUsePage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-display font-bold text-white mb-4">
+            <h2 className="text-4xl font-display font-bold text-primary-white mb-4">
               Disclaimer
             </h2>
           </motion.div>
@@ -563,7 +563,7 @@ export default function TermsOfUsePage() {
           <div className="space-y-8">
             {/* 1. General Information */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Info className="w-6 h-6 text-electric-cyan mr-3" />
                 1. General Information
               </h3>
@@ -575,7 +575,7 @@ export default function TermsOfUsePage() {
 
             {/* 2. No Medical or Defense Advice */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <AlertTriangle className="w-6 h-6 text-electric-cyan mr-3" />
                 2. No Medical or Defense Advice
               </h3>
@@ -584,7 +584,7 @@ export default function TermsOfUsePage() {
 
             {/* 3. Intellectual Property Rights */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Lock className="w-6 h-6 text-electric-cyan mr-3" />
                 3. Intellectual Property Rights
               </h3>
@@ -602,7 +602,7 @@ export default function TermsOfUsePage() {
 
             {/* 4. Product Use & Liability */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <AlertTriangle className="w-6 h-6 text-electric-cyan mr-3" />
                 4. Product Use & Liability
               </h3>
@@ -614,7 +614,7 @@ export default function TermsOfUsePage() {
 
             {/* 5. Third-Party Links */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Globe className="w-6 h-6 text-electric-cyan mr-3" />
                 5. Third-Party Links
               </h3>
@@ -623,7 +623,7 @@ export default function TermsOfUsePage() {
 
             {/* 6. Limitation of Liability */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Shield className="w-6 h-6 text-electric-cyan mr-3" />
                 6. Limitation of Liability
               </h3>
@@ -634,7 +634,7 @@ export default function TermsOfUsePage() {
 
             {/* 7. Jurisdiction */}
             <div className="glass-panel-strong rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <h3 className="text-2xl font-semibold text-primary-white mb-4 flex items-center">
                 <Scale className="w-6 h-6 text-electric-cyan mr-3" />
                 7. Jurisdiction
               </h3>
@@ -654,7 +654,7 @@ export default function TermsOfUsePage() {
             viewport={{ once: true }}
             className="glass-panel-strong rounded-2xl p-8 text-center"
           >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
+            <h2 className="text-3xl font-display font-bold text-primary-white mb-4">
               Questions or Concerns?
             </h2>
             <p className="text-white/80 mb-8 max-w-2xl mx-auto">
@@ -662,30 +662,30 @@ export default function TermsOfUsePage() {
             </p>
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-accent-light-blue to-secondary-green rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-8 h-8 text-primary-white" />
                 </div>
-                <h3 className="text-white font-semibold mb-2">Email Us</h3>
+                <h3 className="text-primary-white font-semibold mb-2">Email Us</h3>
                 <a href="mailto:privacy@sentientbiotech.in" className="text-electric-cyan hover:underline text-sm">
                   privacy@sentientbiotech.in
                 </a>
               </div>
               
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-accent-light-blue to-secondary-green rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-8 h-8 text-primary-white" />
                 </div>
-                <h3 className="text-white font-semibold mb-2">Call Us</h3>
+                <h3 className="text-primary-white font-semibold mb-2">Call Us</h3>
                 <a href="tel:+917070360676" className="text-electric-cyan hover:underline text-sm">
                   +91-70703-60676
                 </a>
               </div>
               
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-accent-light-blue to-secondary-green rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-8 h-8 text-primary-white" />
                 </div>
-                <h3 className="text-white font-semibold mb-2">Visit Us</h3>
+                <h3 className="text-primary-white font-semibold mb-2">Visit Us</h3>
                 <p className="text-white/80 text-sm">
                   VGN Coasta, 14th Floor, Flat No.B<br />
                   Muttukadu, Chinglepet<br />

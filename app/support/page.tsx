@@ -202,7 +202,7 @@ const faqCategories = [
 
 export default function SupportPage() {
   return (
-    <main className="relative min-h-screen bg-deep-indigo">
+    <main className="relative min-h-screen bg-primary-blue">
       <ParticleBackground />
       <Navbar />
       
@@ -222,18 +222,18 @@ export default function SupportPage() {
               Comprehensive support services to ensure your neurotechnology solutions 
               operate at peak performance. We're here to help every step of the way.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-white/60">
-              <span className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-electric-cyan" />
-                24/7 Support Available
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <span className="bullet-point-enhanced bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
+                <CheckCircle className="bullet-icon-primary" />
+                <span className="bullet-text-strong">24/7 Support Available</span>
               </span>
-              <span className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-electric-cyan" />
-                Expert Training
+              <span className="bullet-point-enhanced bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
+                <CheckCircle className="bullet-icon-secondary" />
+                <span className="bullet-text-strong">Expert Training</span>
               </span>
-              <span className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-electric-cyan" />
-                Comprehensive Documentation
+              <span className="bullet-point-enhanced bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
+                <CheckCircle className="bullet-icon-accent" />
+                <span className="bullet-text-strong">Comprehensive Documentation</span>
               </span>
             </div>
           </motion.div>
@@ -250,7 +250,7 @@ export default function SupportPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
+            <h2 className="text-3xl font-display font-bold text-primary-white mb-4">
               Support Services
             </h2>
             <p className="text-white/80 max-w-2xl mx-auto">
@@ -268,19 +268,19 @@ export default function SupportPage() {
                 viewport={{ once: true }}
                 className="glass-panel-strong rounded-xl p-6"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <service.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-accent-light-blue to-secondary-green rounded-full flex items-center justify-center mx-auto mb-4">
+                  <service.icon className="w-8 h-8 text-primary-white" />
                 </div>
-                <h3 className="text-white font-semibold mb-3 text-center">{service.title}</h3>
+                <h3 className="text-primary-white font-semibold mb-3 text-center">{service.title}</h3>
                 <p className="text-white/70 text-sm mb-4 text-center">{service.description}</p>
-                <ul className="space-y-2 mb-4">
+                <div className="list-enhanced mb-4">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start space-x-2 text-sm text-white/60">
-                      <CheckCircle className="w-4 h-4 text-electric-cyan flex-shrink-0 mt-0.5" />
-                      <span>{feature}</span>
-                    </li>
+                    <div key={featureIndex} className="list-enhanced-item">
+                      <CheckCircle className="bullet-icon-primary" />
+                      <span className="bullet-text">{feature}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
                 <div className="border-t border-white/10 pt-4">
                   <div className="flex justify-between items-center text-sm">
                     <span className="text-white/60">Availability:</span>
@@ -307,7 +307,7 @@ export default function SupportPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
+            <h2 className="text-3xl font-display font-bold text-primary-white mb-4">
               Get in Touch
             </h2>
             <p className="text-white/80 max-w-2xl mx-auto">
@@ -325,10 +325,10 @@ export default function SupportPage() {
                 viewport={{ once: true }}
                 className="glass-panel-strong rounded-xl p-6 text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <channel.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-accent-light-blue to-secondary-green rounded-full flex items-center justify-center mx-auto mb-4">
+                  <channel.icon className="w-8 h-8 text-primary-white" />
                 </div>
-                <h3 className="text-white font-semibold mb-2">{channel.name}</h3>
+                <h3 className="text-primary-white font-semibold mb-2">{channel.name}</h3>
                 <p className="text-electric-cyan text-sm font-medium mb-3">{channel.contact}</p>
                 <p className="text-white/70 text-sm mb-4">{channel.description}</p>
                 <div className="space-y-2 text-sm">
@@ -357,7 +357,7 @@ export default function SupportPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
+            <h2 className="text-3xl font-display font-bold text-primary-white mb-4">
               Training Programs
             </h2>
             <p className="text-white/80 max-w-2xl mx-auto">
@@ -376,8 +376,8 @@ export default function SupportPage() {
                 className="glass-panel-strong rounded-xl p-6"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-white font-semibold">{program.title}</h3>
-                  <span className="px-3 py-1 bg-electric-cyan/20 text-electric-cyan text-xs rounded-full">
+                  <h3 className="text-primary-white font-semibold">{program.title}</h3>
+                  <span className="px-3 py-1 bg-accent-light-blue/20 text-electric-cyan text-xs rounded-full">
                     {program.level}
                   </span>
                 </div>
@@ -389,15 +389,15 @@ export default function SupportPage() {
                 </div>
                 <p className="text-white/70 text-sm mb-4">{program.description}</p>
                 <div className="mb-4">
-                  <h4 className="text-white font-medium text-sm mb-2">Key Topics:</h4>
-                  <ul className="space-y-1">
+                  <h4 className="text-primary-white font-medium text-sm mb-2">Key Topics:</h4>
+                  <div className="space-y-2">
                     {program.topics.slice(0, 3).map((topic, topicIndex) => (
-                      <li key={topicIndex} className="flex items-start space-x-2 text-sm text-white/60">
-                        <CheckCircle className="w-3 h-3 text-electric-cyan flex-shrink-0 mt-0.5" />
-                        <span>{topic}</span>
-                      </li>
+                      <div key={topicIndex} className="bullet-point-enhanced">
+                        <CheckCircle className="bullet-icon-accent" />
+                        <span className="bullet-text text-sm">{topic}</span>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -422,7 +422,7 @@ export default function SupportPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
+            <h2 className="text-3xl font-display font-bold text-primary-white mb-4">
               Documentation Library
             </h2>
             <p className="text-white/80 max-w-2xl mx-auto">
@@ -440,10 +440,10 @@ export default function SupportPage() {
                 viewport={{ once: true }}
                 className="glass-panel-strong rounded-xl p-6"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-lg flex items-center justify-center mb-4">
-                  <doc.icon className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-accent-light-blue to-secondary-green rounded-lg flex items-center justify-center mb-4">
+                  <doc.icon className="w-6 h-6 text-primary-white" />
                 </div>
-                <h3 className="text-white font-semibold mb-2">{doc.title}</h3>
+                <h3 className="text-primary-white font-semibold mb-2">{doc.title}</h3>
                 <p className="text-white/70 text-sm mb-4">{doc.description}</p>
                 <div className="space-y-2 text-sm text-white/60 mb-4">
                   <div className="flex justify-between">
@@ -458,7 +458,7 @@ export default function SupportPage() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full flex items-center justify-center space-x-2 text-electric-cyan hover:text-white transition-colors duration-200 py-2"
+                  className="w-full flex items-center justify-center space-x-2 text-electric-cyan hover:text-primary-white transition-colors duration-200 py-2"
                 >
                   <Download className="w-4 h-4" />
                   <span className="text-sm">Download</span>
@@ -479,7 +479,7 @@ export default function SupportPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
+            <h2 className="text-3xl font-display font-bold text-primary-white mb-4">
               Quick Help
             </h2>
             <p className="text-white/80 max-w-2xl mx-auto">
@@ -497,15 +497,15 @@ export default function SupportPage() {
                 viewport={{ once: true }}
                 className="glass-panel-strong rounded-xl p-6 text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <category.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-accent-light-blue to-secondary-green rounded-full flex items-center justify-center mx-auto mb-4">
+                  <category.icon className="w-8 h-8 text-primary-white" />
                 </div>
-                <h3 className="text-white font-semibold mb-2">{category.category}</h3>
+                <h3 className="text-primary-white font-semibold mb-2">{category.category}</h3>
                 <p className="text-white/60 text-sm mb-4">{category.count} articles</p>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="text-electric-cyan hover:text-white transition-colors duration-200"
+                  className="text-electric-cyan hover:text-primary-white transition-colors duration-200"
                 >
                   Browse FAQs →
                 </motion.button>
@@ -525,7 +525,7 @@ export default function SupportPage() {
             viewport={{ once: true }}
             className="glass-panel-strong rounded-2xl p-8 text-center"
           >
-            <h2 className="text-3xl font-display font-bold text-white mb-4">
+            <h2 className="text-3xl font-display font-bold text-primary-white mb-4">
               Need Immediate Assistance?
             </h2>
             <p className="text-white/80 mb-8 max-w-2xl mx-auto">

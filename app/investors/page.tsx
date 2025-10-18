@@ -26,13 +26,13 @@ const dualMarkets = [
     title: 'Revolutionizing Healthcare',
     description: 'The global mental health crisis and the demand for effective neurological diagnostics represent a massive market in need of objective, scalable tools. Our Neuroimaging products and Deep-Learning Modules are designed to become the new standard for clinical diagnosis and monitoring.',
     icon: Brain,
-    gradient: 'from-secondary-blue to-accent-blue'
+    gradient: 'from-secondary-green to-accent-light-blue'
   },
   {
     title: 'Modernizing National Security',
     description: 'The global shift towards technologically superior defense hardware is undeniable. Our Next-Gen Headgear and underlying biosensor technology directly address the critical need for enhanced pilot safety, cognitive performance, and mission effectiveness.',
     icon: Shield,
-    gradient: 'from-primary-blue to-secondary-blue'
+    gradient: 'from-primary-blue to-secondary-green'
   }
 ]
 
@@ -61,7 +61,7 @@ const strategicAdvantages = [
 
 export default function InvestorsPage() {
   return (
-    <main className="relative min-h-screen bg-deep-indigo">
+    <main className="relative min-h-screen bg-primary-blue">
       <ParticleBackground />
       <Navbar />
       
@@ -77,7 +77,7 @@ export default function InvestorsPage() {
             <h1 className="text-4xl md:text-6xl font-display font-bold gradient-text mb-6">
               INVESTORS
             </h1>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-white mb-6">
               Partnering for a Future of Intelligence and Innovation
             </h2>
             <p className="text-xl text-white/80 max-w-4xl mx-auto mb-8">
@@ -102,7 +102,7 @@ export default function InvestorsPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-primary-white mb-6">
               The Investment Thesis: A Dual-Market Opportunity
             </h2>
             <p className="text-xl text-white/80 max-w-4xl mx-auto">
@@ -123,9 +123,9 @@ export default function InvestorsPage() {
                 className="glass-panel-strong rounded-xl p-8"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${market.gradient} rounded-full flex items-center justify-center mb-6`}>
-                  <market.icon className="w-8 h-8 text-white" />
+                  <market.icon className="w-8 h-8 text-primary-white" />
                 </div>
-                <h3 className="text-2xl font-display font-bold text-white mb-4">
+                <h3 className="text-2xl font-display font-bold text-primary-white mb-4">
                   {market.title}
                 </h3>
                 <p className="text-white/80 text-lg leading-relaxed">
@@ -147,7 +147,7 @@ export default function InvestorsPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-primary-white mb-6">
               Our Strategic Advantage
             </h2>
             <p className="text-xl text-white/80 max-w-4xl mx-auto">
@@ -166,10 +166,10 @@ export default function InvestorsPage() {
                 viewport={{ once: true }}
                 className="glass-panel-strong rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-electric-cyan to-violet-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <advantage.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-accent-light-blue to-secondary-green rounded-full flex items-center justify-center mx-auto mb-4">
+                  <advantage.icon className="w-8 h-8 text-primary-white" />
                 </div>
-                <h3 className="text-white font-semibold text-lg mb-3">{advantage.title}</h3>
+                <h3 className="text-primary-white font-semibold text-lg mb-3">{advantage.title}</h3>
                 <p className="text-white/70 text-sm leading-relaxed">{advantage.description}</p>
               </motion.div>
             ))}

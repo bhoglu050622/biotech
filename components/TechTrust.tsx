@@ -30,25 +30,25 @@ const trustBadges = [
     icon: Shield,
     title: 'Non-invasive',
     description: 'Safe, comfortable technology that doesn\'t require any surgical procedures',
-    color: 'from-electric-cyan to-violet-accent'
+    color: 'from-accent-light-blue to-secondary-green'
   },
   {
     icon: Lock,
     title: 'Data-first Privacy',
     description: 'Your data stays local when possible, with end-to-end encryption',
-    color: 'from-violet-accent to-soft-teal'
+    color: 'from-secondary-green to-soft-teal'
   },
   {
     icon: Users,
     title: 'Made for Everyday Use',
     description: 'Designed for comfort and ease of use in daily life',
-    color: 'from-soft-teal to-electric-cyan'
+    color: 'from-soft-teal to-accent-light-blue'
   },
   {
     icon: Award,
     title: 'Research-backed',
     description: 'Built on decades of neuroscience and psychology research',
-    color: 'from-electric-cyan to-soft-teal'
+    color: 'from-accent-light-blue to-soft-teal'
   }
 ]
 
@@ -80,8 +80,8 @@ export default function TechTrust() {
     <section className="py-20 relative">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-electric-cyan/5 to-violet-accent/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-r from-violet-accent/5 to-soft-teal/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-accent-light-blue/5 to-secondary-green/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-r from-secondary-green/5 to-soft-teal/5 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -111,7 +111,7 @@ export default function TechTrust() {
             viewport={{ once: true }}
           >
             <div className="glass-panel-strong rounded-2xl p-8 neural-glow">
-              <h3 className="text-2xl font-display font-bold text-white mb-6">
+              <h3 className="text-2xl font-display font-bold text-primary-white mb-6">
                 Our Technology Stack
               </h3>
               
@@ -128,14 +128,14 @@ export default function TechTrust() {
                   >
                     <div className="flex items-center justify-center space-x-2">
                       <CheckCircle className="w-4 h-4 text-electric-cyan flex-shrink-0" />
-                      <span className="text-sm font-medium text-white">{tech}</span>
+                      <span className="text-sm font-medium text-primary-white">{tech}</span>
                     </div>
                   </motion.div>
                 ))}
               </div>
 
               <div className="border-t border-glass-white-strong pt-6">
-                <h4 className="text-lg font-semibold text-white mb-4">Safety & Privacy</h4>
+                <h4 className="text-lg font-semibold text-primary-white mb-4">Safety & Privacy</h4>
                 <p className="text-white/70 text-sm leading-relaxed">
                   Our technology is designed with privacy and safety as core principles. 
                   We use non-invasive methods that don't require any medication or surgical procedures. 
@@ -172,11 +172,11 @@ export default function TechTrust() {
                         transition={{ duration: 0.6 }}
                         className={`w-12 h-12 rounded-xl bg-gradient-to-br ${badge.color} flex items-center justify-center flex-shrink-0`}
                       >
-                        <IconComponent className="w-6 h-6 text-white" />
+                        <IconComponent className="w-6 h-6 text-primary-white" />
                       </motion.div>
                       
                       <div>
-                        <h4 className="text-lg font-semibold text-white mb-2">
+                        <h4 className="text-lg font-semibold text-primary-white mb-2">
                           {badge.title}
                         </h4>
                         <p className="text-white/70 text-sm leading-relaxed">
@@ -225,12 +225,12 @@ export default function TechTrust() {
                   <motion.div
                     whileHover={{ rotate: 360, scale: 1.1 }}
                     transition={{ duration: 0.6 }}
-                    className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-electric-cyan to-violet-accent flex items-center justify-center group-hover:shadow-lg group-hover:shadow-electric-cyan/25"
+                    className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-accent-light-blue to-secondary-green flex items-center justify-center group-hover:shadow-lg group-hover:shadow-electric-cyan/25"
                   >
-                    <IconComponent className="w-8 h-8 text-white" />
+                    <IconComponent className="w-8 h-8 text-primary-white" />
                   </motion.div>
                   
-                  <h4 className="text-lg font-semibold text-white mb-2">
+                  <h4 className="text-lg font-semibold text-primary-white mb-2">
                     {area.title}
                   </h4>
                   

@@ -46,7 +46,7 @@ export default function SimpleAnimatedDivider({ variant = 'wave', className = ''
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
-            className="w-3 h-3 rounded-full bg-gradient-to-r from-electric-cyan to-violet-accent"
+            className="w-3 h-3 rounded-full bg-gradient-to-r from-accent-light-blue to-secondary-green"
             animate={{
               scale: [1, 1.5, 1],
               opacity: [0.5, 1, 0.5]
@@ -72,7 +72,7 @@ export default function SimpleAnimatedDivider({ variant = 'wave', className = ''
           viewport={{ once: true }}
         />
         <motion.div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-electric-cyan"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-accent-light-blue"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.7, 1, 0.7]

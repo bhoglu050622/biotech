@@ -15,7 +15,7 @@ import {
 } from 'lucide-react'
 
 const capabilities = [
-  'Next-Generation Pilot Headgear: Systems like Starscream with XR overlays, multi-sensor fusion, day and night vision, and real-time bio-metric monitoring',
+  'Starscream: Systems like Starscream with XR overlays, multi-sensor fusion, day and night vision, and real-time bio-metric monitoring',
   'Human-Machine Interfaces: Adaptive HMI platforms translating pilot or operator intent into precise machine responses',
   'Data Fusion and Visualization: Real-time integration of IR, EO, radar, and neural signals into unified operational maps',
   'EEG Systems: Continuous neural monitoring for fatigue detection and cognitive performance optimization',
@@ -33,7 +33,7 @@ const applications = [
 
 export default function DefenceAerospacePage() {
   return (
-    <main className="relative min-h-screen bg-deep-indigo">
+    <main className="relative min-h-screen bg-primary-blue">
       <ParticleBackground />
       <Navbar />
       
@@ -55,14 +55,14 @@ export default function DefenceAerospacePage() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20 bg-glass-white backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 section-enhanced thematic-bg-defense">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="max-w-5xl mx-auto space-y-6 text-text-secondary text-sm sm:text-base leading-relaxed"
+            className="max-w-5xl mx-auto space-y-6 text-white/85 text-sm sm:text-base leading-relaxed"
           >
             <p>
               Sentient Biotech Private Limited delivers advanced solutions for the defence and aerospace sector, combining neurotechnology, artificial intelligence, human-machine interfaces, bio-integrated sensors, data fusion, and XR systems to enhance operational performance, situational awareness, and mission safety.
@@ -79,7 +79,7 @@ export default function DefenceAerospacePage() {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-primary mb-12 text-center">
             Core Capabilities
           </h2>
-          <div className="max-w-5xl mx-auto space-y-4">
+          <div className="list-enhanced max-w-5xl mx-auto">
             {capabilities.map((capability, index) => (
               <motion.div
                 key={index}
@@ -87,19 +87,19 @@ export default function DefenceAerospacePage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.4 }}
                 viewport={{ once: true }}
-                className="flex items-start gap-3"
+                className="list-enhanced-item"
               >
-                <CheckCircle className="w-5 h-5 text-primary-blue mt-0.5 flex-shrink-0" />
-                <p className="text-text-secondary leading-relaxed text-sm">{capability}</p>
+                <CheckCircle className="bullet-icon-defense" />
+                <p className="bullet-text leading-relaxed text-sm">{capability}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 sm:py-20 bg-glass-white backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-primary mb-12 text-center">
+      <section className="py-16 sm:py-20 section-enhanced thematic-bg-defense">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-primary-white mb-12 text-center">
             Applications
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
@@ -110,13 +110,17 @@ export default function DefenceAerospacePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 viewport={{ once: true }}
-                className="card-hover group"
+                className="card-thematic group relative defense-border"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center mb-6 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
-                  <application.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-olive-green to-military-khaki rounded-xl flex items-center justify-center mb-6 defense-glow group-hover:shadow-lg group-hover:shadow-olive-green/20 transition-shadow duration-300">
+                  <application.icon className="w-8 h-8 text-primary-white" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-display font-bold text-text-primary mb-4">{application.title}</h3>
-                <p className="text-text-secondary leading-relaxed text-sm">{application.description}</p>
+                <h3 className="text-lg sm:text-xl font-display font-bold text-primary-white mb-4 card-title-hover-defense">{application.title}</h3>
+                <p className="text-white/85 leading-relaxed text-sm font-medium">{application.description}</p>
+                
+                {/* Defense-themed accent elements */}
+                <div className="absolute top-4 right-4 w-2 h-2 bg-olive-green rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 w-1 h-1 bg-military-khaki rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-300"></div>
               </motion.div>
             ))}
           </div>

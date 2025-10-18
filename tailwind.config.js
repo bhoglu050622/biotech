@@ -18,27 +18,40 @@ module.exports = {
     extend: {
       colors: {
         // Clinical/Medical Blue Palette - Professional & Trustworthy
-        'deep-indigo': '#0A0E1A',
-        'dark-navy': '#0B1120',
+        'deep-indigo': '#0A1628',
+        'dark-navy': '#0A1628',
         
-        // Primary Blues
-        'primary-blue': '#0066FF',
+        // Clinical/Medical (Dominant)
+        'primary-blue': '#0052CC', // Crisp Clinical Blue
         'secondary-blue': '#0747A6',
-        'accent-blue': '#2684FF',
-        'light-blue': '#4C9AFF',
+        'accent-blue': '#4C9AFF', // Sky Blue
+        'light-blue': '#E3F2FD', // Light Medical Blue
+        
+        // Defense/Military (Strategic Accents)
+        'olive-green': '#556B2F', // DarkOliveGreen
+        'olive-drab': '#6B8E23', // OliveDrab
+        'military-khaki': '#8B864E',
+        'khaki-light': '#9C8F5F',
+        
+        // Patriotic (Minimal)
+        'saffron-orange': '#FF9933', // Indian flag saffron
+        
+        // Supporting Colors
+        'steel-gray': '#546E7A',
+        'steel-light': '#78909C',
         
         // Additional Colors
         'success-green': '#00875A',
         'warning-amber': '#FF991F',
         
         // Backward compatibility
-        'electric-cyan': '#0066FF',
+        'electric-cyan': '#0052CC',
         'violet-accent': '#0747A6',
-        'soft-teal': '#2684FF',
+        'soft-teal': '#4C9AFF',
         
-        // Glass Effects
-        'glass-white': 'rgba(255, 255, 255, 0.05)',
-        'glass-white-strong': 'rgba(255, 255, 255, 0.10)',
+        // Glass Effects - Crisper Clinical Aesthetic
+        'glass-white': 'rgba(255, 255, 255, 0.08)',
+        'glass-white-strong': 'rgba(255, 255, 255, 0.15)',
         
         // Gray Scale
         'gray-50': '#FAFBFC',

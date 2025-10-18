@@ -69,7 +69,7 @@ export default function StarscreamCTA() {
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-6">
               <span className="gradient-text">Ready for</span>
               <br />
-              <span className="text-white">Next-Gen Combat?</span>
+              <span className="text-primary-white">Next-Gen Combat?</span>
             </h2>
             
             <p className="text-xl text-white/70 mb-8 leading-relaxed">
@@ -79,7 +79,7 @@ export default function StarscreamCTA() {
 
             <div className="space-y-4 mb-8">
               <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-electric-cyan rounded-full neural-pulse"></div>
+                <div className="w-2 h-2 bg-accent-light-blue rounded-full neural-pulse"></div>
                 <span className="text-white/80">Military-grade security clearance</span>
               </div>
               <div className="flex items-center space-x-3">
@@ -122,15 +122,15 @@ export default function StarscreamCTA() {
             viewport={{ once: true }}
             className="glass-panel-strong rounded-3xl p-8 neural-glow"
           >
-            <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+            <h3 className="text-2xl font-bold text-primary-white mb-6">Get in Touch</h3>
             
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-electric-cyan/20 rounded-xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-accent-light-blue/20 rounded-xl flex items-center justify-center">
                   <Mail className="w-6 h-6 text-electric-cyan" />
                 </div>
                 <div>
-                  <div className="text-white font-medium">Email</div>
+                  <div className="text-primary-white font-medium">Email</div>
                   <div className="text-white/60">sales@starscream.tech</div>
                 </div>
               </div>
@@ -140,7 +140,7 @@ export default function StarscreamCTA() {
                   <Phone className="w-6 h-6 text-violet-accent" />
                 </div>
                 <div>
-                  <div className="text-white font-medium">Phone</div>
+                  <div className="text-primary-white font-medium">Phone</div>
                   <div className="text-white/60">+1 (555) 123-4567</div>
                 </div>
               </div>
@@ -150,7 +150,7 @@ export default function StarscreamCTA() {
                   <MapPin className="w-6 h-6 text-soft-teal" />
                 </div>
                 <div>
-                  <div className="text-white font-medium">Headquarters</div>
+                  <div className="text-primary-white font-medium">Headquarters</div>
                   <div className="text-white/60">Silicon Valley, CA</div>
                 </div>
               </div>

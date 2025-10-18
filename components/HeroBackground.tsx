@@ -427,7 +427,7 @@ export default function HeroBackground() {
           repeat: Infinity,
           ease: [0.2, 0.8, 0.2, 1]
         }}
-        className="absolute inset-0 bg-gradient-radial from-violet-accent/20 via-electric-cyan/10 to-transparent blur-3xl"
+        className="absolute inset-0 bg-gradient-radial from-secondary-green/20 via-electric-cyan/10 to-transparent blur-3xl"
       />
 
       {/* Layer 3: Particle Field */}
@@ -479,7 +479,7 @@ export default function HeroBackground() {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="absolute top-1/2 right-1/4 w-96 h-96 bg-gradient-to-r from-electric-cyan/20 to-violet-accent/20 rounded-full blur-3xl"
+        className="absolute top-1/2 right-1/4 w-96 h-96 bg-gradient-to-r from-accent-light-blue/20 to-secondary-green/20 rounded-full blur-3xl"
       />
 
       {/* Layer 6: Interaction Overlay */}
@@ -508,8 +508,8 @@ export default function HeroBackground() {
               onClick={() => switchMode(mode)}
               className={`px-3 py-1 rounded text-xs font-medium transition-all duration-200 ${
                 currentMode.id === mode.id
-                  ? 'bg-electric-cyan text-deep-indigo'
-                  : 'text-white/70 hover:text-white hover:bg-glass-white-strong'
+                  ? 'bg-accent-light-blue text-deep-indigo'
+                  : 'text-white/70 hover:text-primary-white hover:bg-glass-white-strong'
               }`}
             >
               {mode.name}
@@ -520,7 +520,7 @@ export default function HeroBackground() {
         {/* Pause Toggle */}
         <button
           onClick={togglePause}
-          className="glass-panel rounded-lg p-2 text-white/70 hover:text-white hover:bg-glass-white-strong transition-all duration-200"
+          className="glass-panel rounded-lg p-2 text-white/70 hover:text-primary-white hover:bg-glass-white-strong transition-all duration-200"
           aria-label={isPaused ? 'Resume animation' : 'Pause animation'}
         >
           {isPaused ? '▶️' : '⏸️'}
@@ -529,7 +529,7 @@ export default function HeroBackground() {
 
       {/* Reduced Motion Fallback */}
       {reducedMotion && (
-        <div className="absolute inset-0 bg-gradient-to-br from-deep-indigo via-electric-cyan/5 to-violet-accent/5" />
+        <div className="absolute inset-0 bg-gradient-to-br from-deep-indigo via-electric-cyan/5 to-secondary-green/5" />
       )}
     </div>
   )

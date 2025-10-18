@@ -38,7 +38,7 @@ const whyJoinReasons = [
 
 export default function CareersPage() {
   return (
-    <main className="relative min-h-screen bg-deep-indigo">
+    <main className="relative min-h-screen bg-primary-blue">
       <ParticleBackground />
       <Navbar />
       
@@ -54,7 +54,7 @@ export default function CareersPage() {
             <h1 className="text-5xl md:text-7xl font-display font-bold gradient-text mb-6">
               CAREERS
             </h1>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-white mb-6">
               "Work on Problems that Matter"
             </h2>
             <div className="text-base text-text-secondary max-w-4xl mx-auto space-y-6 leading-relaxed">
@@ -70,8 +70,8 @@ export default function CareersPage() {
       </section>
 
       {/* Why Join Section */}
-      <section className="py-30 bg-glass-white backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-30 section-enhanced thematic-bg-secondary">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -95,8 +95,8 @@ export default function CareersPage() {
                 className="card-hover group"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-primary-blue to-secondary-blue rounded-xl flex items-center justify-center flex-shrink-0 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
-                    <reason.icon className="w-7 h-7 text-white" />
+                  <div className="w-14 h-14 bg-gradient-to-br from-primary-blue to-secondary-green rounded-xl flex items-center justify-center flex-shrink-0 shadow-blue group-hover:shadow-blue-lg transition-shadow duration-300">
+                    <reason.icon className="w-7 h-7 text-primary-white" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-display font-bold text-text-primary mb-3">{reason.title}</h3>

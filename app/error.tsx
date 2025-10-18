@@ -17,7 +17,7 @@ export default function Error({
   }, [error])
 
   return (
-    <div className="min-h-screen bg-deep-indigo flex items-center justify-center px-4">
+    <div className="min-h-screen bg-primary-blue flex items-center justify-center px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -64,7 +64,7 @@ export default function Error({
             onClick={() => reset()}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary-blue to-secondary-blue text-white px-6 py-3 rounded-lg font-semibold hover:from-secondary-blue hover:to-accent-blue transition-all duration-200 shadow-blue hover:shadow-blue-lg"
+            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary-blue to-secondary-green text-primary-white px-6 py-3 rounded-lg font-semibold hover:from-secondary-green hover:to-accent-light-blue transition-all duration-200 shadow-blue hover:shadow-blue-lg"
           >
             <RefreshCw className="w-5 h-5" />
             <span>Try Again</span>
@@ -74,7 +74,7 @@ export default function Error({
             href="/"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm text-white border border-white/20 px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-200"
+            className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm text-primary-white border border-white/20 px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-200"
           >
             <Home className="w-5 h-5" />
             <span>Go Home</span>
